@@ -1,0 +1,98 @@
+{
+  "id": "29fa6603-37a4-48c7-b73e-004fcb0ca332",
+  "version": "2.0",
+  "name": "UK-OLX-Testing",
+  "url": "https://www.olx.bg",
+  "tests": [{
+    "id": "6fdeff4e-429e-4a0b-b300-2268d9603ffb",
+    "name": "LoginWithInvalidData",
+    "commands": [{
+      "id": "46be7bf6-8f24-421a-af12-5ab3de840aaa",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c695464b-4eee-43e3-a692-7d8399d8c442",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1ca7586-c9e8-491c-855d-ff7b472de6c5",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "imeil@gmail.com"
+    }, {
+      "id": "332dcc53-de29-4075-8386-0d65c5894397",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "151ac88f-f8eb-476d-9cfa-e19339d485ac",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "parola"
+    }, {
+      "id": "f1baf824-32c0-4998-81d2-24be503cf86e",
+      "comment": "",
+      "command": "click",
+      "target": "id=Login",
+      "targets": [
+        ["id=Login", "id"],
+        ["css=#Login", "css:finder"],
+        ["xpath=//button[@id='Login']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/button[2]", "xpath:idRelative"],
+        ["xpath=//form/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4ab18def-163f-47fd-a012-94d6746c8483",
+    "name": "LoginSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6fdeff4e-429e-4a0b-b300-2268d9603ffb"]
+  }],
+  "urls": ["https://www.olx.bg/"],
+  "plugins": []
+}
