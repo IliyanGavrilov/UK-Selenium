@@ -10,6 +10,13 @@
       "id": "db1fccdb-1ece-4548-bcd8-f9a08226dfd4",
       "comment": "",
       "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a84ecb30-b1df-4c93-8431-fcc87705151e",
+      "comment": "",
+      "command": "run",
       "target": "LogInIfLoggedOut",
       "targets": [],
       "value": ""
@@ -81,26 +88,18 @@
     "id": "32201624-1c34-469d-aa95-4d1cd75c23da",
     "name": "LogOut",
     "commands": [{
-      "id": "559a9797-ef45-43ab-8a05-da1c478c4821",
+      "id": "f652b41b-1148-4121-8108-40da494d1e06",
       "comment": "",
-      "command": "open",
-      "target": "/",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
       "targets": [],
       "value": ""
     }, {
-      "id": "f652b41b-1148-4121-8108-40da494d1e06",
+      "id": "c4e9d805-ea67-4859-9858-9dda46859fc4",
       "comment": "",
-      "command": "click",
-      "target": "linkText=Изход",
-      "targets": [
-        ["linkText=Изход", "linkText"],
-        ["css=.css-wlas2m > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Изход')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/div[2]/ul[2]/li[3]/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, 'https://www.olx.bg/account/logout')]", "xpath:href"],
-        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Изход')]", "xpath:innerText"]
-      ],
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
       "value": ""
     }, {
       "id": "d1360d59-91ff-4d0e-9305-3193aa6535ac",
