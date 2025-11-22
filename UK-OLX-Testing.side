@@ -4,122 +4,21 @@
   "name": "UK-OLX-Testing",
   "url": "https://www.olx.bg",
   "tests": [{
-    "id": "6fdeff4e-429e-4a0b-b300-2268d9603ffb",
-    "name": "LoginWithInvalidData",
-    "commands": [{
-      "id": "46be7bf6-8f24-421a-af12-5ab3de840aaa",
-      "comment": "",
-      "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c695464b-4eee-43e3-a692-7d8399d8c442",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "d1ca7586-c9e8-491c-855d-ff7b472de6c5",
-      "comment": "",
-      "command": "type",
-      "target": "id=username",
-      "targets": [
-        ["id=username", "id"],
-        ["name=username", "name"],
-        ["css=#username", "css:finder"],
-        ["xpath=//input[@id='username']", "xpath:attributes"],
-        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "imeil@gmail.com"
-    }, {
-      "id": "332dcc53-de29-4075-8386-0d65c5894397",
-      "comment": "",
-      "command": "click",
-      "target": "id=password",
-      "targets": [
-        ["id=password", "id"],
-        ["name=password", "name"],
-        ["css=#password", "css:finder"],
-        ["xpath=//input[@id='password']", "xpath:attributes"],
-        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "151ac88f-f8eb-476d-9cfa-e19339d485ac",
-      "comment": "",
-      "command": "type",
-      "target": "id=password",
-      "targets": [
-        ["id=password", "id"],
-        ["name=password", "name"],
-        ["css=#password", "css:finder"],
-        ["xpath=//input[@id='password']", "xpath:attributes"],
-        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
-      ],
-      "value": "parola"
-    }, {
-      "id": "f1baf824-32c0-4998-81d2-24be503cf86e",
-      "comment": "",
-      "command": "click",
-      "target": "id=Login",
-      "targets": [
-        ["id=Login", "id"],
-        ["css=#Login", "css:finder"],
-        ["xpath=//button[@id='Login']", "xpath:attributes"],
-        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/button[2]", "xpath:idRelative"],
-        ["xpath=//form/button[2]", "xpath:position"]
-      ],
-      "value": ""
-    }]
-  }, {
     "id": "46fe3d5d-f98c-414c-83d9-3b5e598f00fb",
-    "name": "Search_func_existing_item",
+    "name": "SearchWithExistingItem",
     "commands": [{
+      "id": "dddaab59-efce-47b7-a760-1402fa0830b4",
+      "comment": "",
+      "command": "store",
+      "target": "обувки",
+      "targets": [],
+      "value": "message"
+    }, {
       "id": "a18d41fd-331e-43cc-b291-538b813a6b94",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "7d5401ab-300f-4e8d-9689-8ece2e5cc7d8",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1114x850",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "00386ba5-1246-4144-bb43-37f94c1d160d",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,306)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "e639ae6d-212b-4ce4-a121-c4bf79e566b2",
-      "comment": "",
-      "command": "click",
-      "target": "id=search",
-      "targets": [
-        ["id=search", "id"],
-        ["css=#search", "css:finder"],
-        ["xpath=//input[@id='search']", "xpath:attributes"],
-        ["xpath=//div[@id='searchmain-container']/div/div[2]/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
       "value": ""
     }, {
       "id": "ad680943-5bc9-46fb-a752-d7a04d11d094",
@@ -133,7 +32,7 @@
         ["xpath=//div[@id='searchmain-container']/div/div[2]/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "Balenciaga Track"
+      "value": "${message}"
     }, {
       "id": "939b6911-b7ac-402b-b8eb-3887160ac627",
       "comment": "",
@@ -148,97 +47,52 @@
       ],
       "value": "${KEY_ENTER}"
     }, {
-      "id": "419197c7-d692-4ca3-98c6-6251eb570958",
+      "id": "188efc35-02ca-46dc-b926-e830b94988e2",
       "comment": "",
-      "command": "mouseOver",
-      "target": "css=.css-1rf165i",
-      "targets": [
-        ["css=.css-1rf165i", "css:finder"],
-        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
-        ["xpath=//div[@id='mainContent']/div/div[3]/form/div[3]/div[4]/div/div/div/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[4]/div/div/div/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'...')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "a95e70a4-592a-4510-ae3b-d1e4aa56f241",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "css=.css-1rf165i",
-      "targets": [
-        ["css=.css-1rf165i", "css:finder"],
-        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
-        ["xpath=//div[@id='mainContent']/div/div[3]/form/div[3]/div[4]/div/div/div/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[4]/div/div/div/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'...')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "98c1a6e7-a123-4a44-a0bf-e1d39b2bf253",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,231)",
+      "command": "pause",
+      "target": "1500",
       "targets": [],
       "value": ""
     }, {
-      "id": "61917be0-8dd2-40aa-a3be-ec96f0f344bd",
+      "id": "33667099-6af7-4ab0-9282-86dc667a1f63",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,1321)",
+      "command": "storeText",
+      "target": "css=[data-testid='total-count']",
       "targets": [],
-      "value": ""
+      "value": "CountText"
     }, {
-      "id": "f65432d8-e197-4f14-89e2-f4867fc87705",
+      "id": "81ee72b1-f42a-4f85-82cd-3c1dcba2abad",
       "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=Balenciaga Track Последени бройки 37,38,39",
-      "targets": [
-        ["linkText=Balenciaga Track Последени бройки 37,38,39", "linkText"],
-        ["css=#\\31 45752621 .css-1apmciz .css-1tqlkj0", "css:finder"],
-        ["xpath=//div[@id='145752621']/div/div/div[2]/div/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '/d/ad/balenciaga-track-posledeni-broyki-37-38-39-CID655-ID9RyUJ.html')])[2]", "xpath:href"],
-        ["xpath=//div[6]/div/div/div[2]/div/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Balenciaga Track Последени бройки 37,38,39')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "93903bd2-6b85-4ecf-abf5-fb31e9ff2334",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "linkText=Balenciaga Track Последени бройки 37,38,39",
-      "targets": [
-        ["linkText=Balenciaga Track Последени бройки 37,38,39", "linkText"],
-        ["css=#\\31 45752621 .css-1apmciz .css-1tqlkj0", "css:finder"],
-        ["xpath=//div[@id='145752621']/div/div/div[2]/div/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '/d/ad/balenciaga-track-posledeni-broyki-37-38-39-CID655-ID9RyUJ.html')])[2]", "xpath:href"],
-        ["xpath=//div[6]/div/div/div[2]/div/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Balenciaga Track Последени бройки 37,38,39')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "0a46419b-6e4c-461e-9008-945b80708c3f",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Balenciaga Track",
-      "targets": [
-        ["linkText=Balenciaga Track", "linkText"],
-        ["xpath=//div[@id='146098157']/div/div/div[2]/div/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '/d/ad/balenciaga-track-CID655-ID9T0NT.html')])[2]", "xpath:href"],
-        ["xpath=//div[5]/div/div/div[2]/div/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "0700f6a0-2943-4809-aec9-d5786e70aacf",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,31)",
+      "command": "executeScript",
+      "target": "return ${CountText}.match(/\\d+/)[0]",
       "targets": [],
-      "value": ""
+      "value": "CountOfListings"
+    }, {
+      "id": "8f54db57-d197-4206-9595-5c2502517dc6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return parseInt(${CountOfListings}) > 0",
+      "targets": [],
+      "value": "MoreThanZero"
+    }, {
+      "id": "0ac9ba2a-c083-41de-931a-cc0a298a4737",
+      "comment": "",
+      "command": "assert",
+      "target": "MoreThanZero",
+      "targets": [],
+      "value": "true"
     }]
   }, {
     "id": "847b61a6-3188-4870-acb7-212fa496d182",
-    "name": "Search_func_non-existing_item",
+    "name": "SearchWithNonExistingItem",
     "commands": [{
+      "id": "f558abc3-2a1a-4837-be62-8296f5c7b0de",
+      "comment": "",
+      "command": "store",
+      "target": "iwo jima",
+      "targets": [],
+      "value": "message"
+    }, {
       "id": "61f414ef-1379-412b-9125-998fa0a99769",
       "comment": "",
       "command": "open",
@@ -246,27 +100,7 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "0a901b7e-0268-4b3e-82c9-45da1dd868a1",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1247x805",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9bc4373f-d27a-4632-9509-4534d85596eb",
-      "comment": "",
-      "command": "click",
-      "target": "id=search",
-      "targets": [
-        ["id=search", "id"],
-        ["css=#search", "css:finder"],
-        ["xpath=//input[@id='search']", "xpath:attributes"],
-        ["xpath=//div[@id='searchmain-container']/div/div[2]/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "6c0ee9e1-c878-44ea-aa98-d2a0592d8629",
+      "id": "d7313d70-b2ab-4835-bef0-1db8f7b8f8ff",
       "comment": "",
       "command": "type",
       "target": "id=search",
@@ -277,7 +111,7 @@
         ["xpath=//div[@id='searchmain-container']/div/div[2]/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "Iwo Jima"
+      "value": "${message}"
     }, {
       "id": "1f46846d-9de0-4106-9f04-e492c9d82946",
       "comment": "",
@@ -292,143 +126,56 @@
       ],
       "value": "${KEY_ENTER}"
     }, {
-      "id": "20fc84bb-ceed-45b4-8b3b-02f9fc35a636",
+      "id": "cb816920-e69f-4a42-af6c-5881de4aa982",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,510)",
+      "command": "pause",
+      "target": "1500",
       "targets": [],
       "value": ""
     }, {
-      "id": "1b072dad-6e3d-4f71-8042-88dff53077e5",
+      "id": "a45cdd44-f43f-4e16-af69-1251f134c092",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,1510)",
+      "command": "storeText",
+      "target": "css=[data-testid='total-count']",
       "targets": [],
-      "value": ""
+      "value": "CountText"
     }, {
-      "id": "fe58ab8f-3a8f-4dca-946a-be723004c7f9",
+      "id": "7c662054-9f87-4287-af2c-eab650241d65",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,592)",
+      "command": "executeScript",
+      "target": "return ${CountText}.match(/\\d+/)[0]",
       "targets": [],
-      "value": ""
+      "value": "CountOfListings"
     }, {
-      "id": "cfe078ea-17b2-4542-833d-b9f95a92bdfb",
+      "id": "fd372f79-1697-48aa-895d-bb65fb270424",
       "comment": "",
-      "command": "mouseOver",
-      "target": "css=.css-1rf165i",
-      "targets": [
-        ["css=.css-1rf165i", "css:finder"],
-        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
-        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[4]/div/div/div/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[4]/div/div/div/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Препоръчано')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "96c9f3aa-f333-4085-803b-ab411c838852",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,558)",
+      "command": "executeScript",
+      "target": "return parseInt(${CountOfListings}) == 0",
       "targets": [],
-      "value": ""
+      "value": "ExactlyZero"
     }, {
-      "id": "ced3a147-8408-44b3-b7dc-f63c821ec7b4",
+      "id": "26593fc8-b3d1-4c27-9f6c-31a442e54faf",
       "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=Дамски Balenciaga track 37,38,39",
-      "targets": [
-        ["linkText=Дамски Balenciaga track 37,38,39", "linkText"],
-        ["css=#\\31 46091345 .css-1apmciz .css-1tqlkj0", "css:finder"],
-        ["xpath=//div[@id='146091345']/div/div/div[2]/div/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '/d/ad/damski-balenciaga-track-37-38-39-CID655-ID9SZ21.html?reason=extended_search_no_results_last_resort')])[2]", "xpath:href"],
-        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Дамски Balenciaga track 37,38,39')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "4db832d9-4e47-487d-b284-d75fae6a3953",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "linkText=Дамски Balenciaga track 37,38,39",
-      "targets": [
-        ["linkText=Дамски Balenciaga track 37,38,39", "linkText"],
-        ["css=#\\31 46091345 .css-1apmciz .css-1tqlkj0", "css:finder"],
-        ["xpath=//div[@id='146091345']/div/div/div[2]/div/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '/d/ad/damski-balenciaga-track-37-38-39-CID655-ID9SZ21.html?reason=extended_search_no_results_last_resort')])[2]", "xpath:href"],
-        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Дамски Balenciaga track 37,38,39')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "f24077bd-19ce-494c-9b56-b1735637a112",
-      "comment": "",
-      "command": "click",
-      "target": "css=.css-d4ctjd:nth-child(2)",
-      "targets": [
-        ["css=.css-d4ctjd:nth-child(2)", "css:finder"],
-        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[4]/div[2]", "xpath:idRelative"],
-        ["xpath=//div[4]/div[2]", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "365bca68-9292-4f47-a4f7-32553fb99d64",
-      "comment": "",
-      "command": "click",
-      "target": "css=.css-wsrviy",
-      "targets": [
-        ["css=.css-wsrviy", "css:finder"],
-        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[5]/div/div[4]", "xpath:idRelative"],
-        ["xpath=//div[5]/div/div[4]", "xpath:position"]
-      ],
-      "value": ""
+      "command": "assert",
+      "target": "ExactlyZero",
+      "targets": [],
+      "value": "true"
     }]
   }, {
     "id": "333e9ae1-9aa0-4960-b26c-2126162599ba",
-    "name": "Filter_func_reasonable_data",
+    "name": "FilterFuncNotFilteringBadResults",
     "commands": [{
+      "id": "08cfefc6-23cc-4a2a-833f-59886af275ee",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "7a30d149-d6dc-4d60-a5c3-9ea596467573",
       "comment": "",
       "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "d6b9d6bb-6913-404c-9c71-7d82dde3daa9",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1520x858",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c3337fbc-4f6f-4e69-b672-fa7094de2d49",
-      "comment": "",
-      "command": "click",
-      "target": "css=.css-1gw3rcq > .css-lpehs7",
-      "targets": [
-        ["css=.css-1gw3rcq > .css-lpehs7", "css:finder"],
-        ["xpath=//img[contains(@src,'https://categories.olxcdn.com/assets/categories/olxbg/elektronika-632-1x.png')]", "xpath:img"],
-        ["xpath=//div[@id='searchmain-container']/div[2]/div/div/div/a[5]/img", "xpath:idRelative"],
-        ["xpath=//a[5]/img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "4f417043-f62a-4026-a323-aad9464127bd",
-      "comment": "",
-      "command": "click",
-      "target": "css=.css-1vegftz:nth-child(1) > span",
-      "targets": [
-        ["css=.css-1vegftz:nth-child(1) > span", "css:finder"],
-        ["xpath=//div[@id='searchmain-container']/div[2]/div/div/div/div[4]/div/div/a/span", "xpath:idRelative"],
-        ["xpath=//div[4]/div/div/a/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Аудио техника')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "b9096c4d-5406-482a-a0a5-f8211a7aa2a3",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
+      "target": "/elektronika/audio-tehnika/",
       "targets": [],
       "value": ""
     }, {
@@ -444,13 +191,6 @@
         ["xpath=//div/div/div/button", "xpath:position"],
         ["xpath=//button[contains(.,'Всички категории')]", "xpath:innerText"]
       ],
-      "value": ""
-    }, {
-      "id": "146db28b-292d-4477-840e-5d7b07640551",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,157)",
-      "targets": [],
       "value": ""
     }, {
       "id": "b42335e7-12a5-4178-b056-353a9e885630",
@@ -496,20 +236,6 @@
         ["xpath=//button[3]/div/span", "xpath:position"],
         ["xpath=//span[contains(.,'Системи за домашно кино')]", "xpath:innerText"]
       ],
-      "value": ""
-    }, {
-      "id": "29c5f9f3-1ec1-459d-8b0a-e41572dc189e",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,1220)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ca36e212-4967-4fad-b73d-81f9c34a16eb",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,686)",
-      "targets": [],
       "value": ""
     }, {
       "id": "9bac9536-ccd0-4c82-ad86-cc0e151096b0",
@@ -571,20 +297,6 @@
       ],
       "value": ""
     }, {
-      "id": "34b7a31e-496b-4ff8-8100-af21c5572421",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,1176)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "713f51da-61e9-461e-a544-b78c182aec03",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,1074)",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "083f830f-c901-4efb-a6cd-9ef08d886f1a",
       "comment": "",
       "command": "click",
@@ -599,28 +311,10 @@
       ],
       "value": ""
     }, {
-      "id": "69b3b402-3044-42c0-bf4b-69c67986b5b7",
+      "id": "22bb9f8e-3d8c-438f-8065-f4a91e3366db",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c8942019-0f45-41ec-a56a-19fdff8a5768",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.css-o7mc1q",
-      "targets": [
-        ["css=.css-o7mc1q", "css:finder"],
-        ["xpath=//div[@id='hydrate-root']/header/div/a/span/span", "xpath:idRelative"],
-        ["xpath=//span/span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "2e9e2efe-b23a-4b55-8eff-064c7a878f7d",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,867)",
+      "command": "pause",
+      "target": "2500",
       "targets": [],
       "value": ""
     }, {
@@ -631,31 +325,10 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "9ed5a251-1678-4756-8a44-d795f859d368",
+      "id": "8faf8d22-145b-4f76-93aa-e5baff9df76e",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,900)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "4692758f-4594-4eec-9e2d-5b92cd66642a",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,204)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "af8d9ba3-079d-4eda-bdb2-c043320e880d",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,1306)",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "6c93d28f-1321-4622-aa49-d72de9b2d7bc",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,1204)",
+      "command": "pause",
+      "target": "2500",
       "targets": [],
       "value": ""
     }, {
@@ -671,62 +344,35 @@
       ],
       "value": ""
     }, {
-      "id": "465cd8a0-3a73-4bbb-b237-74eeda9f3185",
+      "id": "72c4d00b-1d1e-4e22-8e41-c01d2df76603",
       "comment": "",
-      "command": "runScript",
-      "target": "window.scrollTo(0,0)",
+      "command": "pause",
+      "target": "2500",
       "targets": [],
       "value": ""
     }, {
-      "id": "d425db72-8b1a-41d5-a6b8-80c976ec7fa7",
+      "id": "c2c42551-401f-4a90-89ad-44abf6374192",
       "comment": "",
-      "command": "mouseOver",
-      "target": "css=.css-1kpgv52",
-      "targets": [
-        ["css=.css-1kpgv52", "css:finder"],
-        ["xpath=//div[@id='hydrate-root']/header/div/a/span", "xpath:idRelative"],
-        ["xpath=//span", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "57e396b5-ed8a-4d19-8ef1-6a89ea741a18",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "linkText=Добави обява",
-      "targets": [
-        ["linkText=Добави обява", "linkText"],
-        ["css=.css-1eusu7s", "css:finder"],
-        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/a[2]", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '/adding')]", "xpath:href"],
-        ["xpath=//a[2]", "xpath:position"],
-        ["xpath=//a[contains(.,'Добави обява')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "17b47797-6dd1-4c8a-98fa-c578ee0976a2",
-      "comment": "",
-      "command": "mouseOut",
-      "target": "linkText=Добави обява",
-      "targets": [
-        ["linkText=Добави обява", "linkText"],
-        ["css=.css-1eusu7s", "css:finder"],
-        ["xpath=(//a[@type='button'])[2]", "xpath:attributes"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/a[2]", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '/adding')]", "xpath:href"],
-        ["xpath=//a[2]", "xpath:position"],
-        ["xpath=//a[contains(.,'Добави обява')]", "xpath:innerText"]
-      ],
+      "command": "//pauses are used for visualization",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],
   "suites": [{
-    "id": "4ab18def-163f-47fd-a012-94d6746c8483",
-    "name": "LoginSuite",
+    "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
+    "name": "SearchSuite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["6fdeff4e-429e-4a0b-b300-2268d9603ffb"]
+    "tests": ["847b61a6-3188-4870-acb7-212fa496d182", "46fe3d5d-f98c-414c-83d9-3b5e598f00fb"]
+  }, {
+    "id": "18b28aec-51ad-4189-8634-32c64002945e",
+    "name": "FilterSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
