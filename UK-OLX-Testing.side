@@ -5,16 +5,130 @@
   "url": "https://www.olx.bg",
   "tests": [{
     "id": "6fdeff4e-429e-4a0b-b300-2268d9603ffb",
-    "name": "LoginWithInvalidData",
+    "name": "ValidLogIn",
     "commands": [{
-      "id": "46be7bf6-8f24-421a-af12-5ab3de840aaa",
+      "id": "db1fccdb-1ece-4548-bcd8-f9a08226dfd4",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7f64e7e-8314-4ea9-b35b-81a2cd8544a8",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=[data-testid=\"qa-user-dropdown\"]",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='client-root']/header/div/div/div[3]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/myaccount')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": "10000"
+    }]
+  }, {
+    "id": "e76762dd-184b-43b7-b33d-74d740a60b70",
+    "name": "HomeButton",
+    "commands": [{
+      "id": "db7769f2-35b2-4acd-8c6f-e990ed41e7ed",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
     }, {
-      "id": "c695464b-4eee-43e3-a692-7d8399d8c442",
+      "id": "2624af71-610c-4ea3-bf82-43f27364b0ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[href*=\"reason=hp%7Cpromoted\"]:first-of-type",
+      "targets": [
+        ["css=#\\31 46158058 .css-v6trlx", "css:finder"],
+        ["xpath=//div[@id='146158058']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/d/ad/prodavam-gaski-i-patki-CID339-ID9Tgo2.html?reason=hp%7Cpromoted')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8db74c2c-3825-46ff-8e19-a41a8c309261",
+      "comment": "",
+      "command": "click",
+      "target": "css=a[data-testid=\"olx-logo-link\"]",
+      "targets": [
+        ["css=.css-13xlyet", "css:finder"],
+        ["xpath=//div[@id='hydrate-root']/header/div/a/span/span[2]", "xpath:idRelative"],
+        ["xpath=//span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cdc5c146-9af3-40fd-8b42-b7ceebbfed1e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "url"
+    }, {
+      "id": "92b55a3c-e7f5-40ec-a4e3-ad3da3de4921",
+      "comment": "",
+      "command": "assert",
+      "target": "url",
+      "targets": [],
+      "value": "https://www.olx.bg/"
+    }]
+  }, {
+    "id": "32201624-1c34-469d-aa95-4d1cd75c23da",
+    "name": "LogOut",
+    "commands": [{
+      "id": "559a9797-ef45-43ab-8a05-da1c478c4821",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f652b41b-1148-4121-8108-40da494d1e06",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Изход",
+      "targets": [
+        ["linkText=Изход", "linkText"],
+        ["css=.css-wlas2m > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Изход')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/div[2]/ul[2]/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.olx.bg/account/logout')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Изход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1360d59-91ff-4d0e-9305-3193aa6535ac",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=[data-testid=\"qa-user-dropdown\"]",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "5f98e782-132c-4868-b4b3-9cebe017e10f",
+    "name": "LogInWithInvalidEmailFormat",
+    "commands": [{
+      "id": "94fc0fd3-ae14-47c9-a8c5-5950afe4c102",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ec085cf-77a4-4bec-a644-444f1323673d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1279x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6bc7f02b-bac9-40ba-a16e-2f5b15f0165c",
       "comment": "",
       "command": "click",
       "target": "linkText=Твоят профил",
@@ -29,7 +143,21 @@
       ],
       "value": ""
     }, {
-      "id": "d1ca7586-c9e8-491c-855d-ff7b472de6c5",
+      "id": "fcc36644-7710-4d62-93f0-feace11bb7ac",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f6c4fcf-5f51-4f2b-8f3d-ae6163e69af9",
       "comment": "",
       "command": "type",
       "target": "id=username",
@@ -41,9 +169,87 @@
         ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "imeil@gmail.com"
+      "value": "a@a"
+    }]
+  }, {
+    "id": "01bdb2b3-8bb7-4705-8e6b-9b463650246a",
+    "name": "LogInWithInvalidPasswordFormat",
+    "commands": []
+  }, {
+    "id": "a1def4ba-bdbc-4afc-9af4-dcbb4356369f",
+    "name": "LogInIfLoggedOut",
+    "commands": [{
+      "id": "c285b746-ef5b-4109-83db-884ee5c659da",
+      "comment": "",
+      "command": "store",
+      "target": "jocico1711@feralrex.com",
+      "targets": [],
+      "value": "email"
     }, {
-      "id": "332dcc53-de29-4075-8386-0d65c5894397",
+      "id": "8cd99706-9377-4198-a959-680e573b13d5",
+      "comment": "",
+      "command": "store",
+      "target": "parola123123123aA",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "6b95ecb3-141d-44b4-9250-93617651507c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a3ba445-2d8b-4ce1-8bf4-187ce050a2b4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll('[data-testid=\"qa-user-dropdown\"]').length > 0",
+      "targets": [],
+      "value": "isLoggedIn"
+    }, {
+      "id": "fbf2a267-aad1-44b5-bee3-9af092cbbb11",
+      "comment": "",
+      "command": "if",
+      "target": "${isLoggedIn} == false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78f74102-2fd1-467a-ab33-d3e1ce8d947f",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "478fca98-6f87-492f-9508-a54234b38f6b",
+      "comment": "",
+      "command": "click",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9c1ebd5-735c-45cb-8d19-9a34ca44eb0b",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "01a0580a-ae3f-498c-bf53-de61c5333333",
       "comment": "",
       "command": "click",
       "target": "id=password",
@@ -57,7 +263,7 @@
       ],
       "value": ""
     }, {
-      "id": "151ac88f-f8eb-476d-9cfa-e19339d485ac",
+      "id": "61eac095-f7d0-4f91-a006-b56e2bc15d9f",
       "comment": "",
       "command": "type",
       "target": "id=password",
@@ -69,29 +275,88 @@
         ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/div/div/input", "xpath:position"]
       ],
-      "value": "parola"
+      "value": "${password}"
     }, {
-      "id": "f1baf824-32c0-4998-81d2-24be503cf86e",
+      "id": "36ce6a88-d530-4bb8-bb01-21816ca1fbda",
       "comment": "",
       "command": "click",
-      "target": "id=Login",
+      "target": "css=#Login > .n-button-text-wrapper",
       "targets": [
-        ["id=Login", "id"],
-        ["css=#Login", "css:finder"],
-        ["xpath=//button[@id='Login']", "xpath:attributes"],
-        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/button[2]", "xpath:idRelative"],
-        ["xpath=//form/button[2]", "xpath:position"]
+        ["css=#Login > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//button[@id='Login']/span", "xpath:idRelative"],
+        ["xpath=//form/button[2]/span", "xpath:position"]
       ],
+      "value": ""
+    }, {
+      "id": "5bf533ac-8563-4371-ae4a-cd377e081e14",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1965a768-b485-4827-8fce-85bfc4798ac3",
+    "name": "LogOutIfLoggedIn",
+    "commands": [{
+      "id": "a26856c0-ec52-4abe-8750-decc4cc43979",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f09db75-2734-4adf-adcd-f523e4ea260f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll('[data-testid=\"qa-user-dropdown\"]').length > 0",
+      "targets": [],
+      "value": "isLoggedIn"
+    }, {
+      "id": "064372a1-6f0e-469d-b913-483a5cb9a81e",
+      "comment": "",
+      "command": "if",
+      "target": "${isLoggedIn} == true",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d25c8582-fc76-427f-9778-cf774a069d1d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Изход",
+      "targets": [
+        ["linkText=Изход", "linkText"],
+        ["css=.css-wlas2m > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Изход')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/div[2]/ul[2]/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.olx.bg/account/logout')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Изход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e144234a-1fcc-4d2f-a3bd-b6dfc01c6a5f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
       "value": ""
     }]
   }],
   "suites": [{
     "id": "4ab18def-163f-47fd-a012-94d6746c8483",
-    "name": "LoginSuite",
+    "name": "AuthenticationSuite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["6fdeff4e-429e-4a0b-b300-2268d9603ffb"]
+    "tests": ["6fdeff4e-429e-4a0b-b300-2268d9603ffb", "32201624-1c34-469d-aa95-4d1cd75c23da"]
+  }, {
+    "id": "54f60bb1-c665-440b-b29f-12fee0883d75",
+    "name": "Helpers",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a1def4ba-bdbc-4afc-9af4-dcbb4356369f", "1965a768-b485-4827-8fce-85bfc4798ac3"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
