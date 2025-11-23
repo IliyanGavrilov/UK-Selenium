@@ -23,17 +23,9 @@
     }, {
       "id": "b7f64e7e-8314-4ea9-b35b-81a2cd8544a8",
       "comment": "",
-      "command": "waitForElementVisible",
+      "command": "waitForElementPresent",
       "target": "css=[data-testid=\"qa-user-dropdown\"]",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='client-root']/header/div/div/div[3]/div/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '/myaccount')])[2]", "xpath:href"],
-        ["xpath=//div[3]/div/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": "10000"
     }]
   }, {
@@ -113,17 +105,31 @@
     "id": "5f98e782-132c-4868-b4b3-9cebe017e10f",
     "name": "LogInWithInvalidEmailFormat",
     "commands": [{
+      "id": "15c30fe2-a991-4ca1-b811-7366b1b3fe95",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e752e1c-1355-49cd-b881-55d352b0caae",
+      "comment": "",
+      "command": "store",
+      "target": "a@a",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "dc5781e4-cf26-4457-97eb-fd6a748c84c6",
+      "comment": "",
+      "command": "store",
+      "target": "Това не изглежда като имейл...",
+      "targets": [],
+      "value": "error"
+    }, {
       "id": "94fc0fd3-ae14-47c9-a8c5-5950afe4c102",
       "comment": "",
       "command": "open",
       "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "9ec085cf-77a4-4bec-a644-444f1323673d",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1279x824",
       "targets": [],
       "value": ""
     }, {
@@ -142,20 +148,6 @@
       ],
       "value": ""
     }, {
-      "id": "fcc36644-7710-4d62-93f0-feace11bb7ac",
-      "comment": "",
-      "command": "click",
-      "target": "id=username",
-      "targets": [
-        ["id=username", "id"],
-        ["name=username", "name"],
-        ["css=#username", "css:finder"],
-        ["xpath=//input[@id='username']", "xpath:attributes"],
-        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "0f6c4fcf-5f51-4f2b-8f3d-ae6163e69af9",
       "comment": "",
       "command": "type",
@@ -168,12 +160,22 @@
         ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
         ["xpath=//input", "xpath:position"]
       ],
-      "value": "a@a"
+      "value": "${email}"
+    }, {
+      "id": "3023b45e-5f21-4765-ac87-8bce319f5895",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.css-1179o66",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "64ee1e58-bd88-46ac-8ab4-3e3fa01e3d66",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-1179o66",
+      "targets": [],
+      "value": "${error}"
     }]
-  }, {
-    "id": "01bdb2b3-8bb7-4705-8e6b-9b463650246a",
-    "name": "LogInWithInvalidPasswordFormat",
-    "commands": []
   }, {
     "id": "a1def4ba-bdbc-4afc-9af4-dcbb4356369f",
     "name": "LogInIfLoggedOut",
@@ -220,20 +222,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "478fca98-6f87-492f-9508-a54234b38f6b",
-      "comment": "",
-      "command": "click",
-      "target": "id=username",
-      "targets": [
-        ["id=username", "id"],
-        ["name=username", "name"],
-        ["css=#username", "css:finder"],
-        ["xpath=//input[@id='username']", "xpath:attributes"],
-        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "c9c1ebd5-735c-45cb-8d19-9a34ca44eb0b",
       "comment": "",
       "command": "type",
@@ -247,20 +235,6 @@
         ["xpath=//input", "xpath:position"]
       ],
       "value": "${email}"
-    }, {
-      "id": "01a0580a-ae3f-498c-bf53-de61c5333333",
-      "comment": "",
-      "command": "click",
-      "target": "id=password",
-      "targets": [
-        ["id=password", "id"],
-        ["name=password", "name"],
-        ["css=#password", "css:finder"],
-        ["xpath=//input[@id='password']", "xpath:attributes"],
-        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
-      ],
-      "value": ""
     }, {
       "id": "61eac095-f7d0-4f91-a006-b56e2bc15d9f",
       "comment": "",
@@ -341,6 +315,1305 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "575b24f8-9b7b-4c4d-b1ec-c5b79f54235c",
+    "name": "LogInWithInvalidPasswordFormat",
+    "commands": [{
+      "id": "e5abd690-8fd0-485a-aece-da0987505da7",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ad331ce-4f66-421e-a987-7d98dd7a4034",
+      "comment": "",
+      "command": "store",
+      "target": "a",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "1dcdfe26-e502-4ea7-8470-97b6a7193d64",
+      "comment": "",
+      "command": "store",
+      "target": "Това ли е правилната парола? Много е къса",
+      "targets": [],
+      "value": "error"
+    }, {
+      "id": "36826aad-9c14-49d6-a155-83388e58866c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2d3895e-8495-4719-9b8f-3b452927f1f5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23246173-5ed1-4d56-8030-30d6eea6d7b7",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "802ba487-ae1b-4e7b-bc21-364b1d010231",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.css-1179o66",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cd316e1f-8978-4b42-b1a6-601a37ea3106",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-1179o66",
+      "targets": [],
+      "value": "${error}"
+    }]
+  }, {
+    "id": "d6c900ea-e0cf-48bf-8e20-1a2bd8528b8a",
+    "name": "LogInWithEmptyFields",
+    "commands": [{
+      "id": "0b3e1ed6-9d7a-4ebf-8d50-dff33bdb260a",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47118385-1f60-4d9e-a32a-6db4e6d030be",
+      "comment": "",
+      "command": "store",
+      "target": "Твоят имейл липсва",
+      "targets": [],
+      "value": "emailError"
+    }, {
+      "id": "5d8e5d1b-ab8c-4bea-ba80-1408cc54ade7",
+      "comment": "",
+      "command": "store",
+      "target": "Твоята парола липсва",
+      "targets": [],
+      "value": "passwordError"
+    }, {
+      "id": "9aaff32d-23ff-4723-b38e-27eb0e283d8c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78d5c010-e4fd-4945-8856-24a2afb5b472",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f03a670-c3c4-4902-bf64-973e962faaea",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"login-submit-button\"]",
+      "targets": [
+        ["css=#Login > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//button[@id='Login']/span", "xpath:idRelative"],
+        ["xpath=//form/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7c15127-5b51-4ca8-80d3-f94ab557bc21",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.css-1179o66",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "c73b1221-e0f3-4809-ad43-ae82a392e0fd",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[@class='css-1179o66'])[1]",
+      "targets": [],
+      "value": "${emailError}"
+    }, {
+      "id": "ea84ee10-3959-453a-aaf6-5d6c5a234f67",
+      "comment": "",
+      "command": "assertText",
+      "target": "xpath=(//p[@class='css-1179o66'])[2]",
+      "targets": [],
+      "value": "${passwordError}"
+    }]
+  }, {
+    "id": "e97959cc-0330-4dbb-a9d5-640e9767f0ff",
+    "name": "LogInWithUnregisteredEmail",
+    "commands": [{
+      "id": "a2ef68ca-f2fb-4287-8e36-bc6152b2e145",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "720d0256-299b-4c71-a9d9-2d9ca95c6388",
+      "comment": "",
+      "command": "store",
+      "target": "a@a.a",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "e22aa577-3c2f-4886-8992-eb0e2965100d",
+      "comment": "",
+      "command": "store",
+      "target": "parola123123123aA",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "93f5b204-9ba3-4b12-a560-84f3bf72b5dc",
+      "comment": "",
+      "command": "store",
+      "target": "Не открихме акаунт с този имейл. Опитай с друг имейл или създай акаунт.",
+      "targets": [],
+      "value": "error"
+    }, {
+      "id": "4f11444e-7d0e-45c6-bf63-fdcaef1c3493",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "166c7744-2ce9-445c-b612-7c513c97f829",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0907b98e-3d4f-4a57-a1a3-b7bf6add14e0",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "4b2a26b8-1050-4066-a927-9ee16ce93e65",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "56e34a60-6284-4b7a-acce-a9e864439865",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"login-submit-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9bd1a4a-8256-4927-8a91-12b1aaab7a73",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"error-banner\"]",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "a6618329-9655-4c09-84d5-9fe3ac6618a8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=[data-testid=\"error-banner\"]",
+      "targets": [],
+      "value": "${error}"
+    }]
+  }, {
+    "id": "00141c87-d11d-49ca-9a85-f5e2d122eacc",
+    "name": "LogInWithWrongPassword",
+    "commands": [{
+      "id": "e29dda08-baf5-4176-96f4-520594de48d1",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "565a32e4-379b-444a-91d4-c0250d2d68ce",
+      "comment": "",
+      "command": "store",
+      "target": "jocico1711@feralrex.com",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "144c3469-57b7-40af-848e-0227bfead580",
+      "comment": "",
+      "command": "store",
+      "target": "123123123a",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "9dc9eeda-2259-421d-8ceb-a188a94fdd86",
+      "comment": "",
+      "command": "store",
+      "target": "Тази парола е неправилна. Ако не помниш паролата си, можеш да я промениш.",
+      "targets": [],
+      "value": "error"
+    }, {
+      "id": "d230014e-d712-448e-82d9-cb0526995936",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "928b5be3-9649-402a-889a-a7493a675b40",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d11fcb8a-25e1-4333-b348-2e7de2539159",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "69569ac5-bb03-4c07-af56-6237f1dc0d0f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "374d6cbb-953a-436e-9aa9-21159ffc353f",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"login-submit-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8eb79a8-e713-4c78-9a08-9336bd5dd0c9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"error-banner\"]",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "c077c886-d142-4e9d-984b-22a60506543c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=[data-testid=\"error-banner\"]",
+      "targets": [],
+      "value": "${error}"
+    }]
+  }, {
+    "id": "fabfa6f1-6add-480d-8f49-5a6ec3de3376",
+    "name": "ValidRegister",
+    "commands": [{
+      "id": "312602aa-5c29-4dfd-9266-3bfe1b7da987",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bede4296-90b3-4ef7-8b14-3f3f4ea9f6e0",
+      "comment": "",
+      "command": "store",
+      "target": "testtestov@gmail.com",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "1bcaab68-0433-4cc3-946a-ad67e794b2b8",
+      "comment": "",
+      "command": "store",
+      "target": "parola123123123aA",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "72385550-44f8-4504-9d60-44d286922610",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff69f7d5-8299-4b4d-a160-a7ffd9de95cd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a334cf82-cdcc-424c-8b09-e894210d5d63",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-13jg3dv",
+      "targets": [
+        ["css=.css-13jg3dv", "css:finder"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div/div/header/button[2]", "xpath:idRelative"],
+        ["xpath=//header/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Регистрирай се')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8802c7a3-02a7-4726-aa08-a51ab39dab54",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"register-button\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "724bddf4-bf81-45c2-ae6e-5b05dd93be2d",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "81a604a1-adec-45e7-9f1b-eb999ec6d384",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "e8fe17d5-eb87-4517-bed0-d6aa49aedbb4",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"register-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c99a6180-0cc9-47d3-aadf-78e167d0e8d6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=iframe[title=\"reCAPTCHA\"]",
+      "targets": [],
+      "value": "5000"
+    }]
+  }, {
+    "id": "16d2c47c-9fa0-49e9-a842-805ada4e1bc4",
+    "name": "PasswordVisibility",
+    "commands": [{
+      "id": "8539240d-2d16-427e-92f4-3390bf000978",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a2862b9-3e2f-4850-8ac9-bc1b09cb1bad",
+      "comment": "",
+      "command": "store",
+      "target": "parola123123123aA",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "3f914fb4-0a5b-41fd-8bc1-0cad22d68fa3",
+      "comment": "",
+      "command": "store",
+      "target": "password",
+      "targets": [],
+      "value": "hiddenFieldType"
+    }, {
+      "id": "c1b9408b-59ce-4f74-96f1-609f6376089a",
+      "comment": "",
+      "command": "store",
+      "target": "text",
+      "targets": [],
+      "value": "notHiddenFieldType"
+    }, {
+      "id": "4023a45d-efea-4e17-bbad-3dc3ad906420",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92127983-f265-42a6-9d0c-8e50b9569f09",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "722ec6a3-8b24-4abb-8215-d302e1195ad5",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "61161671-0a26-4dd6-a08a-c82e1a16fb7d",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "id=password@type",
+      "targets": [],
+      "value": "typeBeforeClick"
+    }, {
+      "id": "432a5d88-250a-4d5f-ae71-f608bfef5fc1",
+      "comment": "",
+      "command": "assert",
+      "target": "typeBeforeClick",
+      "targets": [],
+      "value": "${hiddenFieldType}"
+    }, {
+      "id": "5a5f7bfa-110a-442a-9ecf-0c455ea24287",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"toggle-password\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d8fe1c6-6794-457d-859c-b12eb14fd392",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "id=password@type",
+      "targets": [],
+      "value": "typeAfterClick"
+    }, {
+      "id": "6fb59ba5-b519-42d0-9d58-1d1ac44ca11b",
+      "comment": "",
+      "command": "assert",
+      "target": "typeAfterClick",
+      "targets": [],
+      "value": "${notHiddenFieldType}"
+    }]
+  }, {
+    "id": "cc0a2b2f-18ec-43f3-a10a-c0cf143f915c",
+    "name": "RegisterWithInvalidEmailFormat",
+    "commands": [{
+      "id": "08a4c352-3b34-4fbe-bae9-47a9265ac3d7",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6d17f83-c8b9-4aa1-9342-bc52ab4bb1a3",
+      "comment": "",
+      "command": "store",
+      "target": "a@a",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "30715859-1d62-43df-960c-ca7c5cb5182e",
+      "comment": "",
+      "command": "store",
+      "target": "Това не изглежда като имейл...",
+      "targets": [],
+      "value": "error"
+    }, {
+      "id": "c8ff3602-4de4-4bbd-a3b3-346f8483a0af",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b644b3b-fc38-48b3-8690-566c74b4c46e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "803c0cf3-749d-496e-bc39-188122cce459",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-13jg3dv",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b38dec0-9317-4331-8774-2b3bffd35e94",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"register-button\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "cc10223f-5724-4619-a30b-3d1a5efa57ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "6e281c09-aa2f-48dd-b67e-9aac218bdacc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.css-1179o66",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "209214d8-6366-4a3a-a27a-2393d928b86b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-1179o66",
+      "targets": [],
+      "value": "${error}"
+    }]
+  }, {
+    "id": "d87d617c-82fa-4d07-897b-75c4f461c1a5",
+    "name": "RegisterWithRegisteredEmail",
+    "commands": [{
+      "id": "d09402f2-6f00-434f-8ad0-520b0e84daba",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa694bae-0484-4862-81fe-4cdeba52286e",
+      "comment": "",
+      "command": "store",
+      "target": "jocico1711@feralrex.com",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "7ffb5f0a-f6d7-4200-b12c-f44fda57d8f2",
+      "comment": "",
+      "command": "store",
+      "target": "parola123123123aA",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "b4a32eb3-0282-4619-839c-3262a2d59cb1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a96ad85b-0a57-45e2-a010-781f29e75bf0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6738146-466f-4420-b2de-ce479bdf6b3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-13jg3dv",
+      "targets": [
+        ["css=.css-13jg3dv", "css:finder"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div/div/header/button[2]", "xpath:idRelative"],
+        ["xpath=//header/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Регистрирай се')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07d3c375-4ac1-49ff-8fcb-e6d9deeed631",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"register-button\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "9b0e7e8d-6457-4bfe-9474-9f80d6c9982a",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "38d06cdd-ce72-42f4-bac1-eef50c4277e4",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "4f2a7fb1-2ee0-4fb6-9dee-8b379a37d208",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"register-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d3e74b2-08c8-4b82-bb08-b260766d5702",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"error-banner\"]",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "714e2b1d-34b8-4e73-85b2-86ef4ab8d520",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return /Не успяхме да създадем профил с този имейл\\. Моля, свържи се с нас и сподели този код на грешка: \\([a-f0-9-]+\\)\\. Възможно е вече да съществува профил с този имейл\\. Ако го разпознаваш, влез в него или промени паролата си\\./.test(document.querySelector('[data-testid=\"error-banner\"]').textContent)",
+      "targets": [],
+      "value": "matches"
+    }, {
+      "id": "0d4c41ef-f5fe-4865-b904-9c82f4ec6b59",
+      "comment": "",
+      "command": "assert",
+      "target": "matches",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "1181db9c-5163-4454-a543-cf1f3383b9ba",
+    "name": "RegisterWithInvalidPasswordFormat",
+    "commands": [{
+      "id": "4247cb6e-27c1-4a38-aafd-01400ee93627",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0bb151e5-6a75-4c0a-9e5c-6696a57b85f9",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c48cb41-a92f-4663-807f-777895f1f58d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1536aa4d-8c34-45cd-824e-5fbeaec29f7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-13jg3dv",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c362860b-24b9-4ceb-9649-519fb9b24919",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"register-button\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "4af2ce8b-8cd3-420b-b435-6a629223393e",
+      "comment": "",
+      "command": "store",
+      "target": "",
+      "targets": [],
+      "value": "invalidPassword"
+    }, {
+      "id": "7890b753-5582-4df3-b04f-5c4ee3d5dcca",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${invalidPassword}"
+    }, {
+      "id": "3865e7af-e1e5-458b-bc16-f68467551a48",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"length\"] svg[data-testid=\"false-icon\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d42216e1-e67f-47d4-9490-8e20dd6b4297",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"upper\"] svg[data-testid=\"false-icon\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fef3485-c04c-4864-997b-3e1428602585",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"lower\"] svg[data-testid=\"false-icon\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5521caba-268c-4561-89e4-e4cc8db8886d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"digit\"] svg[data-testid=\"false-icon\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5199df85-be35-4eea-8d80-a493b890c900",
+      "comment": "",
+      "command": "store",
+      "target": "Aa1234567",
+      "targets": [],
+      "value": "validPassword"
+    }, {
+      "id": "e342c79a-0631-4c9e-8dc0-c04dd68ce951",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${validPassword}"
+    }, {
+      "id": "2d8f09d9-af02-4073-9565-d7cbab426417",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"length\"] svg[data-testid=\"success-icon\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76571492-d3c4-47f6-9f8e-106e44e91f2b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"upper\"] svg[data-testid=\"success-icon\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9274871-8242-4707-a4eb-cff3e9d5098e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"lower\"] svg[data-testid=\"success-icon\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8749bd92-e534-4daa-ac2e-bddb69fc95a3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"digit\"] svg[data-testid=\"success-icon\"]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c49528a7-0af1-458a-b02c-49f18f57ae03",
+    "name": "RegisterWithWeakPassword",
+    "commands": [{
+      "id": "a916f046-5847-4b23-ac07-fcaea9c04cf0",
+      "comment": "",
+      "command": "store",
+      "target": "Тази парола е твърде слаба. Не използвай твоето име, популярни думи и фрази, повтарящи се букви („Alisa“, „parola123“, „blablabla“).",
+      "targets": [],
+      "value": "error"
+    }, {
+      "id": "3cdc643e-94d9-43a3-b6e3-d17b0d539950",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8abc655d-75f9-43d0-b763-b1bb3f3ada51",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b2347e0a-da6e-4fd6-aa1c-167785e83bcf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [
+        ["linkText=Твоят профил", "linkText"],
+        ["css=.css-12l1k7f", "css:finder"],
+        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
+        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "827418b6-82fe-46b9-bcd8-378e3150c5ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-13jg3dv",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9452a17c-458f-4dbf-bcc3-1083e6c44a75",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"register-button\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "0c776553-bb98-41c7-b18b-ac2fb7174ee6",
+      "comment": "",
+      "command": "store",
+      "target": "Aa1234567",
+      "targets": [],
+      "value": "validPassword"
+    }, {
+      "id": "fee9d9ea-42a1-4f26-83f4-125aea12e479",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${validPassword}"
+    }, {
+      "id": "7bcc6359-2c03-4f25-8791-77787a3f75cc",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.css-1179o66",
+      "targets": [
+        ["css=.css-1179o66", "css:finder"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Тази парола е твърде слаба. Не използвай твоето име, популярни думи и фрази, повтарящи се букви („Alisa“, „parola123“, „blablabla“).')]", "xpath:innerText"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "43e750f2-8646-4b48-9802-0e715ede3e90",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-1179o66",
+      "targets": [],
+      "value": "${error}"
+    }]
+  }, {
+    "id": "ec9a0f7e-1699-4321-90c2-804387664e19",
+    "name": "RegisterWithEmptyFields",
+    "commands": [{
+      "id": "b05874ec-35c3-4d8c-a3c6-1275594defaa",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e925927-5578-4c63-a64b-a5890e799db9",
+      "comment": "",
+      "command": "store",
+      "target": "Твоят имейл липсва",
+      "targets": [],
+      "value": "error"
+    }, {
+      "id": "0746d2f3-2683-4618-8901-95280e9d79a1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c05ee775-c2a8-48fd-b1d0-074cc9c00194",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e97cda00-d7c4-4f65-b7f4-2a62110f79f8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-13jg3dv",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8b46d1d-8922-47f1-b317-3882005ffb07",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"register-button\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "723d48fc-8771-4fb7-821f-b425572bd5b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"register-button\"]",
+      "targets": [
+        ["css=#Login > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//button[@id='Login']/span", "xpath:idRelative"],
+        ["xpath=//form/button[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4917c24e-228b-45f8-86c7-92febffe9063",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-1179o66",
+      "targets": [
+        ["css=.css-1179o66", "css:finder"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"],
+        ["xpath=//p[contains(.,'Твоят имейл липсва')]", "xpath:innerText"]
+      ],
+      "value": "${error}"
+    }]
+  }, {
+    "id": "7133d40d-a487-4168-b504-b99d07d5de44",
+    "name": "ResetPassword",
+    "commands": [{
+      "id": "1f4009bc-469a-424e-a732-a129470e9e38",
+      "comment": "",
+      "command": "store",
+      "target": "jocico1711@feralrex.com",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "7e4e5e15-cb79-484f-9411-e94b396eaf3a",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b12dbc07-3340-4825-a76e-856f6a8a772f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94bd3aba-7933-4dc9-a600-8093605d13f0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd79e3f0-0c85-48fa-9f6f-25d31f0e69e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-16e78fw > .n-button-text-wrapper",
+      "targets": [
+        ["css=.css-16e78fw > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/button/span", "xpath:idRelative"],
+        ["xpath=//form/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Забравена парола?')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3980ab3-06b5-4d9f-8b05-973b0d7c6354",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=Forgot Password",
+      "targets": [
+        ["id=Forgot Password", "id"],
+        ["css=#Forgot\\ Password", "css:finder"],
+        ["xpath=//button[@id='Forgot Password']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Промени')]", "xpath:innerText"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "c1ddd5e3-f562-4a92-8edf-462bb54c1964",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "c0e97d12-a0c3-4378-a2e6-b1abf8f7974e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.n-button-text-wrapper",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c15b41cf-8e21-4f82-829b-5954ac5d4d35",
+    "name": "LogInWithFacebook",
+    "commands": [{
+      "id": "4b5efeed-2c35-4edb-84a3-f2d8bab01ff9",
+      "comment": "",
+      "command": "store",
+      "target": "Facebook",
+      "targets": [],
+      "value": "websiteName"
+    }, {
+      "id": "239d4954-6ec7-4eb2-9ef8-c670fb0d2d83",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26fc9332-0aa7-4665-9445-4e3171d9c4fe",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a78edcf-1bda-48a2-8771-e37164de0455",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7e30992-d419-4e09-bc99-610b64585fc5",
+      "comment": "",
+      "command": "click",
+      "target": "id=Facebook",
+      "targets": [
+        ["id=Facebook", "id"],
+        ["css=#Facebook", "css:finder"],
+        ["xpath=//button[@id='Facebook']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Вход с Facebook')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "a504a5fb-b73a-4363-97b9-28dd06534e43",
+    "name": "LogInWithApple",
+    "commands": [{
+      "id": "a8c67c14-d778-46f7-ab29-0073575f8204",
+      "comment": "",
+      "command": "store",
+      "target": "Facebook",
+      "targets": [],
+      "value": "websiteName"
+    }, {
+      "id": "d5f0ad05-8f2d-445e-884b-be694c09eb1e",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c3d2da3-8e9d-4c92-b31d-6caf2c7cce98",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee5d9fd7-be2d-4528-afac-4dccdd9c4752",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e43e6627-4947-41b8-b28a-ba0e5bcde8b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=SignInWithApple",
+      "targets": [
+        ["id=SignInWithApple", "id"],
+        ["css=#SignInWithApple", "css:finder"],
+        ["xpath=//button[@id='SignInWithApple']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Вход с Apple')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d029187e-acc2-454c-bc38-dc14eadc320a",
+    "name": "LogInWithGoogle",
+    "commands": [{
+      "id": "ef2ba54b-4dd9-4fdb-97af-ca3d37b48e44",
+      "comment": "",
+      "command": "store",
+      "target": "Facebook",
+      "targets": [],
+      "value": "websiteName"
+    }, {
+      "id": "e5fd1122-a6af-454a-aa6f-b333a830b386",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a31f2ad-debf-43e3-a87b-7218cad6eb2b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a1a59f2-4c8b-429c-98f0-77873ba5e813",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa9c624a-d87f-4762-a321-2b91c6884f8e",
+      "comment": "",
+      "command": "click",
+      "target": "id=Google",
+      "targets": [
+        ["id=Google", "id"],
+        ["css=#Google", "css:finder"],
+        ["xpath=//button[@id='Google']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[2]/div/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Вход с Google')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "4ab18def-163f-47fd-a012-94d6746c8483",
@@ -348,7 +1621,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["6fdeff4e-429e-4a0b-b300-2268d9603ffb", "32201624-1c34-469d-aa95-4d1cd75c23da"]
+    "tests": ["6fdeff4e-429e-4a0b-b300-2268d9603ffb", "32201624-1c34-469d-aa95-4d1cd75c23da", "5f98e782-132c-4868-b4b3-9cebe017e10f", "575b24f8-9b7b-4c4d-b1ec-c5b79f54235c", "d6c900ea-e0cf-48bf-8e20-1a2bd8528b8a", "e97959cc-0330-4dbb-a9d5-640e9767f0ff", "00141c87-d11d-49ca-9a85-f5e2d122eacc", "16d2c47c-9fa0-49e9-a842-805ada4e1bc4", "fabfa6f1-6add-480d-8f49-5a6ec3de3376", "cc0a2b2f-18ec-43f3-a10a-c0cf143f915c", "d87d617c-82fa-4d07-897b-75c4f461c1a5", "ec9a0f7e-1699-4321-90c2-804387664e19", "1181db9c-5163-4454-a543-cf1f3383b9ba", "c49528a7-0af1-458a-b02c-49f18f57ae03", "7133d40d-a487-4168-b504-b99d07d5de44", "a504a5fb-b73a-4363-97b9-28dd06534e43", "c15b41cf-8e21-4f82-829b-5954ac5d4d35", "d029187e-acc2-454c-bc38-dc14eadc320a"]
   }, {
     "id": "54f60bb1-c665-440b-b29f-12fee0883d75",
     "name": "Helpers",
