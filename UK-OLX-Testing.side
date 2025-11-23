@@ -1310,6 +1310,52 @@
       "targets": [],
       "value": "true"
     }]
+  }, {
+    "id": "bbd65156-62e3-4f07-8177-983f0151ffc2",
+    "name": "FilterImageToggle",
+    "commands": [{
+      "id": "668e9a2c-d5cc-452d-b272-bcf3a6338058",
+      "comment": "",
+      "command": "open",
+      "target": "/uslugi/detegledachki-detski-tsentrove/detegledachki/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "472fcee7-9c5d-4337-b873-080220923ad9",
+      "comment": "",
+      "command": "click",
+      "target": "id=photos",
+      "targets": [
+        ["id=photos", "id"],
+        ["name=photos", "name"],
+        ["css=#photos", "css:finder"],
+        ["xpath=//input[@id='photos']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f69336d5-1177-4b0d-b8c3-9fcddce86f8b",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5de45413-93f8-4cfd-b80f-3b446d99b04b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const listings = document.querySelectorAll('[data-cy=\"l-card\"]'); const result=true;      listings.forEach((listing, i) => { if (listing && listing.textContent.includes('Промотирана обява')) {     return; }  \tconst img = listing.querySelector('img'); \tif (!img) { \t\t\tresult=false; \t\t\t}\t }); return result;",
+      "targets": [],
+      "value": "a"
+    }, {
+      "id": "78027e45-14e1-4e32-8231-bde8bb863b94",
+      "comment": "",
+      "command": "assert",
+      "target": "a",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -1324,7 +1370,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb"]
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb", "bbd65156-62e3-4f07-8177-983f0151ffc2"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
