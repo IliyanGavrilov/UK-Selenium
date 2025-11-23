@@ -129,23 +129,8 @@
       "id": "94fc0fd3-ae14-47c9-a8c5-5950afe4c102",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/myaccount/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "6bc7f02b-bac9-40ba-a16e-2f5b15f0165c",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "0f6c4fcf-5f51-4f2b-8f3d-ae6163e69af9",
@@ -217,8 +202,8 @@
     }, {
       "id": "78f74102-2fd1-467a-ab33-d3e1ce8d947f",
       "comment": "",
-      "command": "open",
-      "target": "/myaccount/",
+      "command": "click",
+      "target": "linkText=Твоят профил",
       "targets": [],
       "value": ""
     }, {
@@ -343,23 +328,8 @@
       "id": "36826aad-9c14-49d6-a155-83388e58866c",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/myaccount/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "a2d3895e-8495-4719-9b8f-3b452927f1f5",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "23246173-5ed1-4d56-8030-30d6eea6d7b7",
@@ -394,13 +364,6 @@
     "id": "d6c900ea-e0cf-48bf-8e20-1a2bd8528b8a",
     "name": "LogInWithEmptyFields",
     "commands": [{
-      "id": "0b3e1ed6-9d7a-4ebf-8d50-dff33bdb260a",
-      "comment": "",
-      "command": "run",
-      "target": "LogOutIfLoggedIn",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "47118385-1f60-4d9e-a32a-6db4e6d030be",
       "comment": "",
       "command": "store",
@@ -415,17 +378,17 @@
       "targets": [],
       "value": "passwordError"
     }, {
-      "id": "9aaff32d-23ff-4723-b38e-27eb0e283d8c",
+      "id": "0b3e1ed6-9d7a-4ebf-8d50-dff33bdb260a",
       "comment": "",
-      "command": "open",
-      "target": "/",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
       "targets": [],
       "value": ""
     }, {
-      "id": "78d5c010-e4fd-4945-8856-24a2afb5b472",
+      "id": "9aaff32d-23ff-4723-b38e-27eb0e283d8c",
       "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
+      "command": "open",
+      "target": "/myaccount/",
       "targets": [],
       "value": ""
     }, {
@@ -496,23 +459,8 @@
       "id": "4f11444e-7d0e-45c6-bf63-fdcaef1c3493",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/myaccount/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "166c7744-2ce9-445c-b612-7c513c97f829",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "0907b98e-3d4f-4a57-a1a3-b7bf6add14e0",
@@ -599,23 +547,8 @@
       "id": "d230014e-d712-448e-82d9-cb0526995936",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/myaccount/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "928b5be3-9649-402a-889a-a7493a675b40",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "d11fcb8a-25e1-4333-b348-2e7de2539159",
@@ -695,23 +628,8 @@
       "id": "72385550-44f8-4504-9d60-44d286922610",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/myaccount/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "ff69f7d5-8299-4b4d-a160-a7ffd9de95cd",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "a334cf82-cdcc-424c-8b09-e894210d5d63",
@@ -810,23 +728,8 @@
       "id": "4023a45d-efea-4e17-bbad-3dc3ad906420",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/myaccount/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "92127983-f265-42a6-9d0c-8e50b9569f09",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "722ec6a3-8b24-4abb-8215-d302e1195ad5",
@@ -906,23 +809,8 @@
       "id": "c8ff3602-4de4-4bbd-a3b3-346f8483a0af",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/myaccount/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "6b644b3b-fc38-48b3-8690-566c74b4c46e",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "803c0cf3-749d-496e-bc39-188122cce459",
@@ -995,23 +883,8 @@
       "id": "b4a32eb3-0282-4619-839c-3262a2d59cb1",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/myaccount/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "a96ad85b-0a57-45e2-a010-781f29e75bf0",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "e6738146-466f-4420-b2de-ce479bdf6b3b",
@@ -1103,23 +976,8 @@
       "id": "0bb151e5-6a75-4c0a-9e5c-6696a57b85f9",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/myaccount/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "2c48cb41-a92f-4663-807f-777895f1f58d",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "1536aa4d-8c34-45cd-824e-5fbeaec29f7d",
@@ -1255,23 +1113,8 @@
       "id": "8abc655d-75f9-43d0-b763-b1bb3f3ada51",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/myaccount/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "b2347e0a-da6e-4fd6-aa1c-167785e83bcf",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
-      "targets": [
-        ["linkText=Твоят профил", "linkText"],
-        ["css=.css-12l1k7f", "css:finder"],
-        ["xpath=//a[contains(text(),'Твоят профил')]", "xpath:link"],
-        ["xpath=//div[@id='hydrate-root']/header/div/div/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[@href='http://www.olx.bg/account/?ref[0][params][url]=http%3A%2F%2Fwww.olx.bg%2F&ref[0][action]=redirector&ref[0][method]=index']", "xpath:href"],
-        ["xpath=//div[3]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Твоят профил')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "827418b6-82fe-46b9-bcd8-378e3150c5ca",
@@ -1349,14 +1192,7 @@
       "id": "0746d2f3-2683-4618-8901-95280e9d79a1",
       "comment": "",
       "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c05ee775-c2a8-48fd-b1d0-074cc9c00194",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
+      "target": "/myaccount/",
       "targets": [],
       "value": ""
     }, {
@@ -1418,14 +1254,7 @@
       "id": "b12dbc07-3340-4825-a76e-856f6a8a772f",
       "comment": "",
       "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "94bd3aba-7933-4dc9-a600-8093605d13f0",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
+      "target": "/myaccount/",
       "targets": [],
       "value": ""
     }, {
@@ -1480,13 +1309,6 @@
     "id": "c15b41cf-8e21-4f82-829b-5954ac5d4d35",
     "name": "LogInWithFacebook",
     "commands": [{
-      "id": "4b5efeed-2c35-4edb-84a3-f2d8bab01ff9",
-      "comment": "",
-      "command": "store",
-      "target": "Facebook",
-      "targets": [],
-      "value": "websiteName"
-    }, {
       "id": "239d4954-6ec7-4eb2-9ef8-c670fb0d2d83",
       "comment": "",
       "command": "run",
@@ -1497,14 +1319,7 @@
       "id": "26fc9332-0aa7-4665-9445-4e3171d9c4fe",
       "comment": "",
       "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "1a78edcf-1bda-48a2-8771-e37164de0455",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
+      "target": "/myaccount/",
       "targets": [],
       "value": ""
     }, {
@@ -1526,13 +1341,6 @@
     "id": "a504a5fb-b73a-4363-97b9-28dd06534e43",
     "name": "LogInWithApple",
     "commands": [{
-      "id": "a8c67c14-d778-46f7-ab29-0073575f8204",
-      "comment": "",
-      "command": "store",
-      "target": "Facebook",
-      "targets": [],
-      "value": "websiteName"
-    }, {
       "id": "d5f0ad05-8f2d-445e-884b-be694c09eb1e",
       "comment": "",
       "command": "run",
@@ -1543,14 +1351,7 @@
       "id": "3c3d2da3-8e9d-4c92-b31d-6caf2c7cce98",
       "comment": "",
       "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "ee5d9fd7-be2d-4528-afac-4dccdd9c4752",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
+      "target": "/myaccount/",
       "targets": [],
       "value": ""
     }, {
@@ -1572,13 +1373,6 @@
     "id": "d029187e-acc2-454c-bc38-dc14eadc320a",
     "name": "LogInWithGoogle",
     "commands": [{
-      "id": "ef2ba54b-4dd9-4fdb-97af-ca3d37b48e44",
-      "comment": "",
-      "command": "store",
-      "target": "Facebook",
-      "targets": [],
-      "value": "websiteName"
-    }, {
       "id": "e5fd1122-a6af-454a-aa6f-b333a830b386",
       "comment": "",
       "command": "run",
@@ -1589,14 +1383,7 @@
       "id": "5a31f2ad-debf-43e3-a87b-7218cad6eb2b",
       "comment": "",
       "command": "open",
-      "target": "/",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8a1a59f2-4c8b-429c-98f0-77873ba5e813",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Твоят профил",
+      "target": "/myaccount/",
       "targets": [],
       "value": ""
     }, {
