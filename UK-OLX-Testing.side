@@ -358,6 +358,158 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "90ea39dc-e809-459c-a0f2-d4964f16dc24",
+    "name": "FilterFuncPriceRange",
+    "commands": [{
+      "id": "db15452c-f25c-4220-9895-0000c16c4a3f",
+      "comment": "",
+      "command": "store",
+      "target": "350",
+      "targets": [],
+      "value": "LowerBoundary"
+    }, {
+      "id": "828b1c04-2328-4e53-ba7b-ed9328155caf",
+      "comment": "",
+      "command": "store",
+      "target": "700",
+      "targets": [],
+      "value": "UpperBoundary"
+    }, {
+      "id": "c25e3e5d-85d2-4957-82bd-de7c50855a85",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ace2c6ef-0c89-42f5-8022-369011c457b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1gw3rcq:nth-child(1) > .css-16tr9nw",
+      "targets": [
+        ["css=.css-1gw3rcq:nth-child(1) > .css-16tr9nw", "css:finder"],
+        ["xpath=//img[contains(@src,'https://categories.olxcdn.com/assets/categories/olxbg/antiki-i-kolektsii-1609-1x.png')]", "xpath:img"],
+        ["xpath=//div[@id='searchmain-container']/div[2]/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b52757d-9efb-43ac-83a9-423545619a33",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-jsfayd",
+      "targets": [
+        ["css=.css-jsfayd", "css:finder"],
+        ["xpath=//div[@id='searchmain-container']/div[2]/div/div/div/div[4]/div/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6ae93f4-3640-44af-b0c8-2362d2d9cda9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1vegftz:nth-child(3) > span",
+      "targets": [
+        ["css=.css-1vegftz:nth-child(3) > span", "css:finder"],
+        ["xpath=//div[@id='searchmain-container']/div[2]/div/div/div/div[4]/div/div/a[3]/span", "xpath:idRelative"],
+        ["xpath=//a[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Изкуство')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3b052da-2fbc-4e5b-ac10-6de2eddb479f",
+      "comment": "",
+      "command": "click",
+      "target": "name=range-from-input",
+      "targets": [
+        ["name=range-from-input", "name"],
+        ["css=.css-eie7o:nth-child(1) .n-textinput-input", "css:finder"],
+        ["xpath=//input[@name='range-from-input']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "38cb72ff-8c1b-4944-b1b0-9da849b34ef8",
+      "comment": "",
+      "command": "pause",
+      "target": "600",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b03adcdc-f28f-4740-b86e-7f093e2d29df",
+      "comment": "",
+      "command": "type",
+      "target": "name=range-from-input",
+      "targets": [
+        ["name=range-from-input", "name"],
+        ["css=.css-eie7o:nth-child(1) .n-textinput-input", "css:finder"],
+        ["xpath=//input[@name='range-from-input']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${LowerBoundary}"
+    }, {
+      "id": "4860ac6e-d27c-4352-a8b4-3ec5a05a8a47",
+      "comment": "",
+      "command": "type",
+      "target": "name=range-to-input",
+      "targets": [
+        ["name=range-to-input", "name"],
+        ["css=.css-eie7o:nth-child(2) .n-textinput-input", "css:finder"],
+        ["xpath=//input[@name='range-to-input']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div[2]/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${UpperBoundary}"
+    }, {
+      "id": "a3cf140a-60e2-48ab-bec2-5a9fb7804b1b",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a64c568-938c-4755-a6b6-214ced5d65cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1uoh9o7",
+      "targets": [
+        ["css=.css-1uoh9o7", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d387e65-4401-4390-a650-9ccef83e3ca9",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49b9e3be-7489-46c6-a3c6-1eca41054c0b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var priceElements = document.querySelectorAll('[data-cy=\"l-card\"] [data-testid=\"ad-price\"]');   var prices = [];   for (var i = 0; i < priceElements.length; i++) {     prices.push(priceElements[i].textContent);   }   return prices;",
+      "targets": [],
+      "value": "AllPriceTexts"
+    }, {
+      "id": "18f577ac-4c13-4e11-99ae-e6eaeceeb0de",
+      "comment": "",
+      "command": "executeScript",
+      "target": " var priceTexts = ${AllPriceTexts};   var min =  ${LowerBoundary};   var max =  ${UpperBoundary};      for (var i = 0; i < priceTexts.length; i++) {     var numbers = priceTexts[i].match(/\\d+/);     if (numbers) {       var price = parseInt(numbers[0]);       if (price < min || price > max) {         return false;       }     }   }   return true;",
+      "targets": [],
+      "value": "AllPricesValid"
+    }, {
+      "id": "6714172a-80aa-4bef-a01b-d9a5f0ae4393",
+      "comment": "",
+      "command": "assert",
+      "target": "AllPricesValid",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -372,7 +524,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba"]
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
