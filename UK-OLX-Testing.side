@@ -34,18 +34,17 @@
       ],
       "value": "${message}"
     }, {
-      "id": "939b6911-b7ac-402b-b8eb-3887160ac627",
+      "id": "e843d7d2-d04b-444b-b80a-2cd17e97460a",
       "comment": "",
-      "command": "sendKeys",
-      "target": "id=search",
+      "command": "click",
+      "target": "css=.css-kfd0s0 > .n-button-text-wrapper",
       "targets": [
-        ["id=search", "id"],
-        ["css=#search", "css:finder"],
-        ["xpath=//input[@id='search']", "xpath:attributes"],
-        ["xpath=//div[@id='searchmain-container']/div/div[2]/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
+        ["css=.css-kfd0s0 > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//div[@id='searchmain-container']/div/div[2]/div/div/form/div/div[3]/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Търсене')]", "xpath:innerText"]
       ],
-      "value": "${KEY_ENTER}"
+      "value": ""
     }, {
       "id": "188efc35-02ca-46dc-b926-e830b94988e2",
       "comment": "",
@@ -59,26 +58,26 @@
       "command": "storeText",
       "target": "css=[data-testid='total-count']",
       "targets": [],
-      "value": "CountText"
+      "value": "countText"
     }, {
       "id": "81ee72b1-f42a-4f85-82cd-3c1dcba2abad",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${CountText}.match(/\\d+/)[0]",
+      "target": "return ${countText}.match(/\\d+/)[0]",
       "targets": [],
-      "value": "CountOfListings"
+      "value": "countOfListings"
     }, {
       "id": "8f54db57-d197-4206-9595-5c2502517dc6",
       "comment": "",
       "command": "executeScript",
-      "target": "return parseInt(${CountOfListings}) > 0",
+      "target": "return parseInt(${countOfListings}) > 0",
       "targets": [],
-      "value": "MoreThanZero"
+      "value": "moreThanZero"
     }, {
       "id": "0ac9ba2a-c083-41de-931a-cc0a298a4737",
       "comment": "",
       "command": "assert",
-      "target": "MoreThanZero",
+      "target": "moreThanZero",
       "targets": [],
       "value": "true"
     }]
@@ -138,32 +137,32 @@
       "command": "storeText",
       "target": "css=[data-testid='total-count']",
       "targets": [],
-      "value": "CountText"
+      "value": "countText"
     }, {
       "id": "7c662054-9f87-4287-af2c-eab650241d65",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${CountText}.match(/\\d+/)[0]",
+      "target": "return ${countText}.match(/\\d+/)[0]",
       "targets": [],
-      "value": "CountOfListings"
+      "value": "countOfListings"
     }, {
       "id": "fd372f79-1697-48aa-895d-bb65fb270424",
       "comment": "",
       "command": "executeScript",
-      "target": "return parseInt(${CountOfListings}) == 0",
+      "target": "return parseInt(${countOfListings}) == 0",
       "targets": [],
-      "value": "ExactlyZero"
+      "value": "exactlyZero"
     }, {
       "id": "26593fc8-b3d1-4c27-9f6c-31a442e54faf",
       "comment": "",
       "command": "assert",
-      "target": "ExactlyZero",
+      "target": "exactlyZero",
       "targets": [],
       "value": "true"
     }]
   }, {
     "id": "333e9ae1-9aa0-4960-b26c-2126162599ba",
-    "name": "FilterFuncNotFilteringBadResults",
+    "name": "FilterFaultyAds",
     "commands": [{
       "id": "08cfefc6-23cc-4a2a-833f-59886af275ee",
       "comment": "",
@@ -179,45 +178,9 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "f9515dab-b4a7-4c4a-b47c-bc0a3d440cea",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "id=category-dropdown",
-      "targets": [
-        ["id=category-dropdown", "id"],
-        ["css=#category-dropdown", "css:finder"],
-        ["xpath=//button[@id='category-dropdown']", "xpath:attributes"],
-        ["xpath=//div[@id='mainContent']/div/div[3]/form/div[3]/div/div/div/div/div/button", "xpath:idRelative"],
-        ["xpath=//div/div/div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Всички категории')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
       "id": "b42335e7-12a5-4178-b056-353a9e885630",
       "comment": "",
       "command": "click",
-      "target": "css=#category-dropdown > .css-sa44n0",
-      "targets": [
-        ["css=#category-dropdown > .css-sa44n0", "css:finder"],
-        ["xpath=(//button[@id='category-dropdown']/div)[2]", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/button/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c02a4939-c962-4cf5-9271-39715a995ae6",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=#category-dropdown > .css-sa44n0",
-      "targets": [
-        ["css=#category-dropdown > .css-sa44n0", "css:finder"],
-        ["xpath=(//button[@id='category-dropdown']/div)[2]", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/button/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "ec47b18d-f82e-40e6-a16c-1c2f7643b598",
-      "comment": "",
-      "command": "mouseOut",
       "target": "css=#category-dropdown > .css-sa44n0",
       "targets": [
         ["css=#category-dropdown > .css-sa44n0", "css:finder"],
@@ -241,30 +204,6 @@
       "id": "9bac9536-ccd0-4c82-ad86-cc0e151096b0",
       "comment": "",
       "command": "click",
-      "target": "css=.css-7xjci5:nth-child(5) .css-a7agxc",
-      "targets": [
-        ["css=.css-7xjci5:nth-child(5) .css-a7agxc", "css:finder"],
-        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
-        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "a6143bd6-d6e8-494c-b898-5a0a91d6924a",
-      "comment": "",
-      "command": "mouseOver",
-      "target": "css=.css-7xjci5:nth-child(5) .css-a7agxc",
-      "targets": [
-        ["css=.css-7xjci5:nth-child(5) .css-a7agxc", "css:finder"],
-        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
-        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
-        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "7d1bd05c-8d01-4be7-92f2-260a85ab8fbe",
-      "comment": "",
-      "command": "mouseOut",
       "target": "css=.css-7xjci5:nth-child(5) .css-a7agxc",
       "targets": [
         ["css=.css-7xjci5:nth-child(5) .css-a7agxc", "css:finder"],
@@ -344,7 +283,7 @@
       ],
       "value": ""
     }, {
-      "id": "72c4d00b-1d1e-4e22-8e41-c01d2df76603",
+      "id": "161d456a-599b-455e-9453-e251679d36bd",
       "comment": "",
       "command": "pause",
       "target": "2500",
@@ -357,6 +296,34 @@
       "target": "",
       "targets": [],
       "value": ""
+    }, {
+      "id": "0108846f-cea3-46c1-96b9-ac10e2bc7398",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.history.back();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72c4d00b-1d1e-4e22-8e41-c01d2df76603",
+      "comment": "",
+      "command": "pause",
+      "target": "2500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16c7a759-6618-4bc1-9129-40ac18723e55",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var titles = document.querySelectorAll('[data-testid=\"ad-card-title\"] h4');   for (var i = 0; i < titles.length; i++) {     if (titles[i].textContent.includes('Продавам домашно направени')) {       return true;     }   }   return false;",
+      "targets": [],
+      "value": "hasFaultyAd"
+    }, {
+      "id": "52f72762-4cad-4554-890e-47b06e61f085",
+      "comment": "",
+      "command": "assert",
+      "target": "hasFaultyAd",
+      "targets": [],
+      "value": "true"
     }]
   }, {
     "id": "90ea39dc-e809-459c-a0f2-d4964f16dc24",
@@ -367,14 +334,14 @@
       "command": "store",
       "target": "350",
       "targets": [],
-      "value": "LowerBoundary"
+      "value": "lowerBoundary"
     }, {
       "id": "828b1c04-2328-4e53-ba7b-ed9328155caf",
       "comment": "",
       "command": "store",
       "target": "700",
       "targets": [],
-      "value": "UpperBoundary"
+      "value": "upperBoundary"
     }, {
       "id": "c25e3e5d-85d2-4957-82bd-de7c50855a85",
       "comment": "",
@@ -434,7 +401,7 @@
       "id": "38cb72ff-8c1b-4944-b1b0-9da849b34ef8",
       "comment": "",
       "command": "pause",
-      "target": "600",
+      "target": "3000",
       "targets": [],
       "value": ""
     }, {
@@ -449,7 +416,7 @@
         ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
         ["xpath=//div[4]/div[2]/div/div/div/div/div/input", "xpath:position"]
       ],
-      "value": "${LowerBoundary}"
+      "value": "${lowerBoundary}"
     }, {
       "id": "4860ac6e-d27c-4352-a8b4-3ec5a05a8a47",
       "comment": "",
@@ -462,30 +429,45 @@
         ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div[2]/div[2]/div/div/div/div/input", "xpath:idRelative"],
         ["xpath=//div[2]/div/div/div/div/input", "xpath:position"]
       ],
-      "value": "${UpperBoundary}"
+      "value": "${upperBoundary}"
     }, {
       "id": "a3cf140a-60e2-48ab-bec2-5a9fb7804b1b",
       "comment": "",
       "command": "pause",
-      "target": "1000",
+      "target": "2000",
       "targets": [],
       "value": ""
     }, {
-      "id": "1a64c568-938c-4755-a6b6-214ced5d65cd",
+      "id": "826a3f9c-2266-4741-bbd0-2487b03568e6",
       "comment": "",
       "command": "click",
-      "target": "css=.css-1uoh9o7",
+      "target": "name=range-from-input",
       "targets": [
-        ["css=.css-1uoh9o7", "css:finder"],
-        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[2]/div/div", "xpath:idRelative"],
-        ["xpath=//div[3]/div[2]/div/div", "xpath:position"]
+        ["name=range-from-input", "name"],
+        ["css=.css-eie7o:nth-child(1) .n-textinput-input", "css:finder"],
+        ["xpath=//input[@name='range-from-input']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/div/div/div/div/input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "1d387e65-4401-4390-a650-9ccef83e3ca9",
+      "id": "20d95ebb-fa76-4fbb-ab35-b003ee307ad5",
+      "comment": "",
+      "command": "click",
+      "target": "name=range-to-input",
+      "targets": [
+        ["name=range-from-input", "name"],
+        ["css=.css-eie7o:nth-child(1) .n-textinput-input", "css:finder"],
+        ["xpath=//input[@name='range-from-input']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f5ab561-dc76-4851-ac59-0f6811294ebb",
       "comment": "",
       "command": "pause",
-      "target": "1000",
+      "target": "3000",
       "targets": [],
       "value": ""
     }, {
@@ -494,25 +476,25 @@
       "command": "executeScript",
       "target": "var priceElements = document.querySelectorAll('[data-cy=\"l-card\"] [data-testid=\"ad-price\"]');   var prices = [];   for (var i = 0; i < priceElements.length; i++) {     prices.push(priceElements[i].textContent);   }   return prices;",
       "targets": [],
-      "value": "AllPriceTexts"
+      "value": "allPriceTexts"
     }, {
       "id": "18f577ac-4c13-4e11-99ae-e6eaeceeb0de",
       "comment": "",
       "command": "executeScript",
-      "target": " var priceTexts = ${AllPriceTexts};   var min =  ${LowerBoundary};   var max =  ${UpperBoundary};      for (var i = 0; i < priceTexts.length; i++) {     var numbers = priceTexts[i].match(/\\d+/);     if (numbers) {       var price = parseInt(numbers[0]);       if (price < min || price > max) {         return false;       }     }   }   return true;",
+      "target": " var priceTexts = ${allPriceTexts};   var min =  ${lowerBoundary};   var max =  ${upperBoundary};      for (var i = 0; i < priceTexts.length; i++) {     var numbers = priceTexts[i].match(/\\d+/);     if (numbers) {       var price = parseInt(numbers[0]);       if (price < min || price > max) {         return false;       }     }   }   return true;",
       "targets": [],
-      "value": "AllPricesValid"
+      "value": "allPricesValid"
     }, {
       "id": "6714172a-80aa-4bef-a01b-d9a5f0ae4393",
       "comment": "",
       "command": "assert",
-      "target": "AllPricesValid",
+      "target": "allPricesValid",
       "targets": [],
       "value": "true"
     }]
   }, {
     "id": "91712059-ff8b-4f44-bc7d-119262945883",
-    "name": "FilterConditionWorksAsIntended",
+    "name": "FilterCondition",
     "commands": [{
       "id": "73245480-11a2-4ef6-8a9b-5ceccdfdc10b",
       "comment": "",
@@ -567,26 +549,26 @@
       "command": "executeScript",
       "target": "return document.querySelectorAll('span[title=\"ново\"]').length;",
       "targets": [],
-      "value": "CounterNew"
+      "value": "counterNew"
     }, {
       "id": "ebfb7a9b-1e3b-4856-b87a-f59585fe4d53",
       "comment": "",
       "command": "executeScript",
       "target": "return document.querySelectorAll('[data-cy=\"l-card\"]:not(:has(div.attribution))').length;",
       "targets": [],
-      "value": "AllAdsThisPage"
+      "value": "allAdsThisPage"
     }, {
       "id": "a8a1f8cd-1abf-40c1-bd4b-069db75069d2",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${CounterNew} == ${AllAdsThisPage};",
+      "target": "return ${counterNew} == ${allAdsThisPage};",
       "targets": [],
-      "value": "AreEqual"
+      "value": "areEqual"
     }, {
       "id": "758288af-06f4-40af-971b-a6ab3f6a7ad3",
       "comment": "",
       "command": "assert",
-      "target": "AreEqual",
+      "target": "areEqual",
       "targets": [],
       "value": "true"
     }, {
@@ -648,26 +630,338 @@
       "command": "executeScript",
       "target": "return document.querySelectorAll('span[title=\"използвано\"]').length;",
       "targets": [],
-      "value": "CounterNew1"
+      "value": "counterNew1"
     }, {
       "id": "a039f968-3677-4de0-813b-ea143c2fc592",
       "comment": "",
       "command": "executeScript",
       "target": "return document.querySelectorAll('[data-cy=\"l-card\"]:not(:has(div.attribution))').length;",
       "targets": [],
-      "value": "AllAdsThisPage1"
+      "value": "allAdsThisPage1"
     }, {
       "id": "b6dc7998-4118-4080-9176-a1289da906a4",
       "comment": "",
       "command": "executeScript",
-      "target": "return ${CounterNew1} == ${AllAdsThisPage1};",
+      "target": "return ${counterNew1} == ${allAdsThisPage1};",
       "targets": [],
-      "value": "AreEqual1"
+      "value": "areEqual1"
     }, {
       "id": "df2da425-5fdc-4cae-83b4-d4a293b0f915",
       "comment": "",
       "command": "assert",
-      "target": "AreEqual1",
+      "target": "areEqual1",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "00c976cf-2470-4a5d-8f10-b4a7d0d163ba",
+    "name": "FilterRegion",
+    "commands": [{
+      "id": "ddde6d45-77f0-4f7b-801d-6d48f0831217",
+      "comment": "",
+      "command": "store",
+      "target": "Аспарухово, Област Варна",
+      "targets": [],
+      "value": "searchMessage"
+    }, {
+      "id": "7e496561-3cb2-4b32-8f37-a4d632a86106",
+      "comment": "",
+      "command": "store",
+      "target": "с. Аспарухово",
+      "targets": [],
+      "value": "asparuhovo"
+    }, {
+      "id": "dbf36207-a111-4f32-984e-efbdc27021a5",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.olx.bg/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f27ec649-b41c-49fe-a291-03910e56be51",
+      "comment": "",
+      "command": "type",
+      "target": "id=location-input",
+      "targets": [
+        ["id=location-input", "id"],
+        ["name=location-Field", "name"],
+        ["css=#location-input", "css:finder"],
+        ["xpath=//input[@id='location-input']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${searchMessage}"
+    }, {
+      "id": "a8fd8b5f-a878-460f-8d32-8cadfc884a22",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-s6veo7:nth-child(1)",
+      "targets": [
+        ["css=.css-s6veo7:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div/div[2]/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9e19cb5-2c4c-4942-a07c-92f0c6bc0815",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": " css=[data-testid=\"location-date\"]",
+      "targets": [],
+      "value": "20000"
+    }, {
+      "id": "4700f9c9-72c4-466a-80f7-f83c1163b389",
+      "comment": "",
+      "command": "executeScript",
+      "target": "  var elements = document.querySelectorAll('[data-testid=\"location-date\"]');   var cities = [];   for (var i = 0; i < elements.length; i++) {     cities.push(elements[i].textContent.split(' - ')[0].trim());   }   return cities;",
+      "targets": [],
+      "value": "allLocations"
+    }, {
+      "id": "598dacef-75ca-4d13-88be-c72ae6b6e8df",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var elements = document.querySelectorAll('[data-testid=\"location-date\"]');   for (var i = 0; i < elements.length; i++) {     var location = elements[i].textContent.split(' - ')[0].trim();     if (location !== ${asparuhovo}) {       return false;     }   }   return true;",
+      "targets": [],
+      "value": "allAsparuhovo"
+    }, {
+      "id": "097fa11a-1125-4f58-9949-da993c7e9c97",
+      "comment": "",
+      "command": "assert",
+      "target": "allAsparuhovo",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "4869b58d-7001-4d63-a3ff-8314ba00b891",
+    "name": "FilterCurrency",
+    "commands": [{
+      "id": "d7a1bc75-209e-433c-9075-0e74df4ca190",
+      "comment": "",
+      "command": "store",
+      "target": "лв",
+      "targets": [],
+      "value": "lev"
+    }, {
+      "id": "a9d2c6c3-36e0-48bf-a44d-0e924d6b5d3b",
+      "comment": "",
+      "command": "store",
+      "target": "€",
+      "targets": [],
+      "value": "euro"
+    }, {
+      "id": "f6b6351a-baed-4e7b-8f21-2d2527a1d3ec",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.olx.bg/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41dbb576-2648-4eb3-9d5d-d04138cf9156",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a7e3f12-cdd6-4e19-815d-0908b95a8f60",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ng73vc",
+      "targets": [
+        ["css=.css-ng73vc", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[4]/div/div/div[4]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'лв.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78a18625-41c9-4308-838e-6d028654bc63",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e88b610-4908-4e14-8956-7026248b4e4a",
+      "comment": "",
+      "command": "executeScript",
+      "target": " var priceElements = document.querySelectorAll('[data-testid=\"ad-price\"]');   var priceTexts = [];   for (var i = 0; i < priceElements.length; i++) {     var text = priceElements[i].textContent;     var textOnly = text.replace(/[\\d.,\\s]|По договаряне|Безплатно/g, '');     priceTexts.push(textOnly);   }   for (var i = 0; i < priceTexts.length; i++) {     if (priceTexts[i] != ${lev}) {       return false;     }   }   return true;",
+      "targets": [],
+      "value": "isItOnlyLev"
+    }, {
+      "id": "77d15dc9-8f9c-43bb-82dd-8eefe6bfc889",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-rthj6j",
+      "targets": [
+        ["css=.css-rthj6j", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[4]/div/div/div[4]/span[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'€')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43af665e-b234-4257-a4ce-b708ce2d157e",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d70417f-f630-43b9-b4d0-ebd55655ecb4",
+      "comment": "",
+      "command": "executeScript",
+      "target": " var priceElements = document.querySelectorAll('[data-testid=\"ad-price\"]');   var priceTexts = [];   for (var i = 0; i < priceElements.length; i++) {     var text = priceElements[i].textContent;     var textOnly = text.replace(/[\\d.,\\s]|По договаряне|Безплатно/g, '');     priceTexts.push(textOnly);   }   for (var i = 0; i < priceTexts.length; i++) {     if (priceTexts[i] != ${euro}) {       return false;     }   }   return true;",
+      "targets": [],
+      "value": "isItOnlyEuro"
+    }, {
+      "id": "fc86ad80-3d63-4e17-a75c-7bd6db6b7438",
+      "comment": "",
+      "command": "assert",
+      "target": "isItOnlyLev",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "c22da18f-40cc-4b89-bc3b-f707d17ebfb6",
+      "comment": "",
+      "command": "assert",
+      "target": "isItOnlyEuro",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "cc943669-44c6-4d1e-826d-5b714c4f7898",
+    "name": "FilterVizualisationChange",
+    "commands": [{
+      "id": "7f239831-1f73-4b22-97cf-cd7b1eabaa8b",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.olx.bg/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9c6d258-f4cc-45e2-a966-448e35a100cc",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f3fb829-2e2b-445c-a571-6a3e4ecc9eab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1uyatl",
+      "targets": [
+        ["css=.css-1uyatl", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5648c52-f12e-4522-b4a9-6e46582c2288",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6aab11d8-f9c0-4bed-a364-f43e684a3458",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.css-lzto6b",
+      "targets": [],
+      "value": "grid"
+    }, {
+      "id": "0c24a360-2726-4aa6-a447-dcc4c9992c73",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c1a5cf86-7354-4f2c-b847-cdf6297b4b04",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1uyatl",
+      "targets": [
+        ["css=.css-1uyatl", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "86787af6-5d4f-443f-b0f4-dfcc5ec6c69c",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "447a7a65-d06c-445e-94ad-3a210e2092b3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.css-j0t2x2",
+      "targets": [],
+      "value": "list"
+    }, {
+      "id": "c2762afa-ff56-48b1-a53f-f30a474a263c",
+      "comment": "",
+      "command": "//pauses are needed so pages can vizualise.",
+      "target": "css classes were pulled from f12 inspection",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1",
+    "name": "FilterSortByNew",
+    "commands": [{
+      "id": "1fcfd4b8-39d2-4284-8ab5-9bc9d080494a",
+      "comment": "",
+      "command": "open",
+      "target": "/rabota",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57262215-4ecb-4a7d-a65e-27ba01d8529a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-17rwwbl",
+      "targets": [
+        ["css=.css-17rwwbl", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[4]/div/div/div/div/div/button/div/span", "xpath:idRelative"],
+        ["xpath=//button/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Препоръчано')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46e555f5-5b95-4a3d-829c-aadd084cffe5",
+      "comment": "",
+      "command": "click",
+      "target": "id=sorting-option-1",
+      "targets": [
+        ["id=sorting-option-1", "id"],
+        ["css=#sorting-option-1", "css:finder"],
+        ["xpath=//button[@id='sorting-option-1']", "xpath:attributes"],
+        ["xpath=//div[@id='sorting-listbox']/button[2]", "xpath:idRelative"],
+        ["xpath=//div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Най-нови')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3da596ef-253a-4e97-866f-23687491079e",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7bdc9fd3-6fe4-4652-ab09-1915fa1fd4d4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const timeElements = document.querySelectorAll('.css-1h96hyx'); const now = new Date(); const currTime = now.getHours() * 60 + now.getMinutes();  function parseTime(text) {         const timeMatch = text.match(/(\\d{1,2}):(\\d{2})/);         if (timeMatch) {             return parseInt(timeMatch[1]) * 60 + parseInt(timeMatch[2]);         }          return 0; }  let previousTime = currTime; let allValid = true; for (let i = 0; i < timeElements.length; i++) {     const element = timeElements[i];     const timeText = element.textContent.trim(); \tconst listing = element.closest('[data-cy=\"l-card\"]');     if (listing && listing.textContent.includes('Промотирана обява')) {         continue;     } \t \t \t     const elementTime = parseTime(timeText);             if (elementTime > previousTime) {         allValid = false;         break;     }          previousTime = elementTime; }  return allValid;",
+      "targets": [],
+      "value": "valid"
+    }, {
+      "id": "ad20299c-cdaf-47b6-8e7b-7da34849bf62",
+      "comment": "",
+      "command": "assert",
+      "target": "valid",
       "targets": [],
       "value": "true"
     }]
@@ -685,7 +979,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883"]
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
