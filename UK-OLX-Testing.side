@@ -1082,6 +1082,234 @@
       "targets": [],
       "value": "true"
     }]
+  }, {
+    "id": "292a96d4-7560-4f86-a7a0-c66b6b67d9bb",
+    "name": "FilterSellerTypeByz",
+    "commands": [{
+      "id": "35d84f33-2570-4627-9d26-32348807ceff",
+      "comment": "",
+      "command": "store",
+      "target": "Бизнес",
+      "targets": [],
+      "value": "keyword"
+    }, {
+      "id": "10356ded-7008-4382-893e-ee495246ab07",
+      "comment": "",
+      "command": "open",
+      "target": "/antiki-i-kolektsii/izkustvo/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b907a0b0-85ff-4358-af52-26f51fda1709",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(2) > .css-3cz5o2",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(2) > .css-3cz5o2", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[2]/div/div/div/div/div/header/button[2]/span", "xpath:idRelative"],
+        ["xpath=//button[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Бизнес')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "385e1346-a30b-48e3-84b9-6d362d3f3b00",
+      "comment": "",
+      "command": "pause",
+      "target": "4000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94a50127-2eea-4f8c-8867-e63130c57c97",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector('[data-cy=\"ad-card-title\"] a').click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acd704dd-f939-41e6-adac-976611c82fd3",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d50bf207-40f1-433b-a44c-4697e8bc9a0f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (document.querySelector('p.css-13x8d99').textContent == ${keyword});",
+      "targets": [],
+      "value": "firstListing"
+    }, {
+      "id": "c45974c6-0672-4d24-819a-7a1521705292",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.history.back();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2bb68c57-ffc3-450a-9a59-52534f61eadd",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5dfc348a-bb67-4aa1-8e13-8e8bd8dbd289",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelectorAll('[data-cy=\"ad-card-title\"] a')[1].click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "246751f8-53c2-4492-aebe-0f788254bf0b",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5bdc7cb-872f-451f-805f-f3c2e6e5b88b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (document.querySelector('p.css-13x8d99').textContent == ${keyword});",
+      "targets": [],
+      "value": "secondListing"
+    }, {
+      "id": "b5ef00a7-b955-46cb-a79f-e56b3d132a88",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8598b866-1f64-412d-acde-39fb1ed1bac3",
+      "comment": "",
+      "command": "assert",
+      "target": "firstListing",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "31ffe03e-5948-4492-bc84-814b4466f33d",
+      "comment": "",
+      "command": "assert",
+      "target": "secondListing",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "7114f106-1dbd-426d-b4d7-5985a55f7630",
+    "name": "FilterSellerTypePer",
+    "commands": [{
+      "id": "0289e7d1-da71-4993-a530-e92fed795d5a",
+      "comment": "",
+      "command": "store",
+      "target": "Частна",
+      "targets": [],
+      "value": "keyword"
+    }, {
+      "id": "5c959625-8904-4379-b893-56655767ed35",
+      "comment": "",
+      "command": "open",
+      "target": "/antiki-i-kolektsii/izkustvo/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7391825-7588-4225-bec2-5ef94044d97b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(3) > .css-3cz5o2",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(3) > .css-3cz5o2", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[2]/div/div/div/div/div/header/button[3]/span", "xpath:idRelative"],
+        ["xpath=//button[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Частни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b734432-6392-49b7-bf69-15f81c36af3a",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dd15f126-dacb-4127-99c1-77caf04f7511",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector('[data-cy=\"ad-card-title\"] a').click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aaf889d5-018d-4bb5-b901-0c213bdbf002",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "510963ea-ce75-4cbe-85a9-c58adf4d203f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (document.querySelector('p.css-13x8d99').textContent == ${keyword});",
+      "targets": [],
+      "value": "firstListing"
+    }, {
+      "id": "8ec3b620-ae0b-4ed8-8108-81ee444b32c9",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.history.back();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5cae3440-8f45-4217-ae25-ba4135b18a94",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5a34f6c-c40a-486e-a1f1-8b1c5dd208eb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelectorAll('[data-cy=\"ad-card-title\"] a')[1].click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ecbe7277-dac8-4283-a697-7bc8dcd815ec",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4926dddf-5f51-46e4-b836-9fc8769f75f6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (document.querySelector('p.css-13x8d99').textContent == ${keyword});",
+      "targets": [],
+      "value": "secondListing"
+    }, {
+      "id": "9d23ae65-f6f8-4448-a535-b2f18cb58060",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f42e6dbb-42e3-4c3b-b3a5-c4f3214d7d08",
+      "comment": "",
+      "command": "assert",
+      "target": "firstListing",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "c6b7f789-c0ab-4655-99e0-db9fa48bd79d",
+      "comment": "",
+      "command": "assert",
+      "target": "secondListing",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -1096,7 +1324,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe"]
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
