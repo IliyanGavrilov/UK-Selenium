@@ -510,6 +510,167 @@
       "targets": [],
       "value": "true"
     }]
+  }, {
+    "id": "91712059-ff8b-4f44-bc7d-119262945883",
+    "name": "FilterConditionWorksAsIntended",
+    "commands": [{
+      "id": "73245480-11a2-4ef6-8a9b-5ceccdfdc10b",
+      "comment": "",
+      "command": "open",
+      "target": "elektronika/televizori/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58b9aa92-42d1-4428-b7a8-8d6c3f969619",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-7xjci5:nth-child(5) .css-sa44n0",
+      "targets": [
+        ["css=.css-7xjci5:nth-child(5) .css-sa44n0", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e65c06c-8496-44e6-b158-c26ba595d925",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2) input",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2) input", "css:finder"],
+        ["xpath=(//input[@value='on'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div[2]/div/label[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//label[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a394f17b-a103-41b1-a2c2-5ad9d8a53497",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1uoh9o7",
+      "targets": [
+        ["css=.css-1uoh9o7", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//form/div[3]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f902756-f4d6-4dbb-bc8e-d22aa91ba1b8",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=span[title=\"ново\"]",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "09c7aae0-9cca-4acb-8222-edc8f7c6476f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll('span[title=\"ново\"]').length;",
+      "targets": [],
+      "value": "CounterNew"
+    }, {
+      "id": "ebfb7a9b-1e3b-4856-b87a-f59585fe4d53",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll('[data-cy=\"l-card\"]:not(:has(div.attribution))').length;",
+      "targets": [],
+      "value": "AllAdsThisPage"
+    }, {
+      "id": "a8a1f8cd-1abf-40c1-bd4b-069db75069d2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${CounterNew} == ${AllAdsThisPage};",
+      "targets": [],
+      "value": "AreEqual"
+    }, {
+      "id": "758288af-06f4-40af-971b-a6ab3f6a7ad3",
+      "comment": "",
+      "command": "assert",
+      "target": "AreEqual",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "80a5d1f4-5e92-44db-b4c9-9c869323cabd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-a7agxc > .css-ydag0f",
+      "targets": [
+        ["css=.css-a7agxc > .css-ydag0f", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button/div", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc48f371-8d81-45bb-9089-879545784913",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2) input",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2) input", "css:finder"],
+        ["xpath=(//input[@value='on'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div[2]/div/label[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//label[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e1bdecd-09a5-4046-8f9a-0db52f8e8f64",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3) input",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2) input", "css:finder"],
+        ["xpath=(//input[@value='on'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div[2]/div/label[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//label[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae5ab831-e225-4611-ba22-a47d9c5ced8d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1uoh9o7",
+      "targets": [
+        ["css=.css-1uoh9o7", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[2]/div/div", "xpath:idRelative"],
+        ["xpath=//form/div[3]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "311def48-609c-41d6-b4bd-c5968a0bd9c3",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=span[title=\"използвано\"]",
+      "targets": [],
+      "value": "10000"
+    }, {
+      "id": "7c0fe0c2-f38c-45ba-910e-91e7129731dd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll('span[title=\"използвано\"]').length;",
+      "targets": [],
+      "value": "CounterNew1"
+    }, {
+      "id": "a039f968-3677-4de0-813b-ea143c2fc592",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll('[data-cy=\"l-card\"]:not(:has(div.attribution))').length;",
+      "targets": [],
+      "value": "AllAdsThisPage1"
+    }, {
+      "id": "b6dc7998-4118-4080-9176-a1289da906a4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${CounterNew1} == ${AllAdsThisPage1};",
+      "targets": [],
+      "value": "AreEqual1"
+    }, {
+      "id": "df2da425-5fdc-4cae-83b4-d4a293b0f915",
+      "comment": "",
+      "command": "assert",
+      "target": "AreEqual1",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -524,7 +685,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24"]
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
