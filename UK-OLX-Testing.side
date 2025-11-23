@@ -1298,6 +1298,13 @@
       ],
       "value": "${email}"
     }, {
+      "id": "f8a0cf57-2f9f-4661-82f8-77efea2dc340",
+      "comment": "",
+      "command": "click",
+      "target": "css=.n-button-text-wrapper",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "c0e97d12-a0c3-4378-a2e6-b1abf8f7974e",
       "comment": "",
       "command": "assertElementPresent",
@@ -1425,11 +1432,11 @@
   }],
   "suites": [{
     "id": "4ab18def-163f-47fd-a012-94d6746c8483",
-    "name": "AuthenticationSuite",
+    "name": "RegisterSuite",
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["6fdeff4e-429e-4a0b-b300-2268d9603ffb", "32201624-1c34-469d-aa95-4d1cd75c23da", "5f98e782-132c-4868-b4b3-9cebe017e10f", "575b24f8-9b7b-4c4d-b1ec-c5b79f54235c", "d6c900ea-e0cf-48bf-8e20-1a2bd8528b8a", "e97959cc-0330-4dbb-a9d5-640e9767f0ff", "00141c87-d11d-49ca-9a85-f5e2d122eacc", "16d2c47c-9fa0-49e9-a842-805ada4e1bc4", "fabfa6f1-6add-480d-8f49-5a6ec3de3376", "cc0a2b2f-18ec-43f3-a10a-c0cf143f915c", "d87d617c-82fa-4d07-897b-75c4f461c1a5", "ec9a0f7e-1699-4321-90c2-804387664e19", "1181db9c-5163-4454-a543-cf1f3383b9ba", "c49528a7-0af1-458a-b02c-49f18f57ae03", "7133d40d-a487-4168-b504-b99d07d5de44", "a504a5fb-b73a-4363-97b9-28dd06534e43", "c15b41cf-8e21-4f82-829b-5954ac5d4d35", "d029187e-acc2-454c-bc38-dc14eadc320a"]
+    "tests": ["fabfa6f1-6add-480d-8f49-5a6ec3de3376", "cc0a2b2f-18ec-43f3-a10a-c0cf143f915c", "d87d617c-82fa-4d07-897b-75c4f461c1a5", "ec9a0f7e-1699-4321-90c2-804387664e19", "1181db9c-5163-4454-a543-cf1f3383b9ba", "c49528a7-0af1-458a-b02c-49f18f57ae03"]
   }, {
     "id": "54f60bb1-c665-440b-b29f-12fee0883d75",
     "name": "Helpers",
@@ -1437,6 +1444,20 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["a1def4ba-bdbc-4afc-9af4-dcbb4356369f", "1965a768-b485-4827-8fce-85bfc4798ac3"]
+  }, {
+    "id": "7db258f0-88a6-47af-94f5-d44afa1ca8c3",
+    "name": "SocialLoginSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c15b41cf-8e21-4f82-829b-5954ac5d4d35", "a504a5fb-b73a-4363-97b9-28dd06534e43", "d029187e-acc2-454c-bc38-dc14eadc320a"]
+  }, {
+    "id": "f0c58b89-7d0f-466e-8dff-dc5dd78ca566",
+    "name": "LogInSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6fdeff4e-429e-4a0b-b300-2268d9603ffb", "32201624-1c34-469d-aa95-4d1cd75c23da", "5f98e782-132c-4868-b4b3-9cebe017e10f", "575b24f8-9b7b-4c4d-b1ec-c5b79f54235c", "d6c900ea-e0cf-48bf-8e20-1a2bd8528b8a", "e97959cc-0330-4dbb-a9d5-640e9767f0ff", "00141c87-d11d-49ca-9a85-f5e2d122eacc", "16d2c47c-9fa0-49e9-a842-805ada4e1bc4", "7133d40d-a487-4168-b504-b99d07d5de44"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
