@@ -965,6 +965,123 @@
       "targets": [],
       "value": "true"
     }]
+  }, {
+    "id": "3e69259e-904e-418d-86f2-6af18eb95795",
+    "name": "FilterSortByPriceASC",
+    "commands": [{
+      "id": "ab87362c-d432-4c81-9e95-9aa80e90f38c",
+      "comment": "",
+      "command": "open",
+      "target": "/antiki-i-kolektsii/izkustvo/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df5e0bfa-5a31-4885-9825-7f47ccf6c2bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-17rwwbl",
+      "targets": [
+        ["css=.css-17rwwbl", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[4]/div/div/div/div/div/button/div/span", "xpath:idRelative"],
+        ["xpath=//button/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Препоръчано')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d86186b-50a6-415c-ba90-0cc51edd24ce",
+      "comment": "",
+      "command": "click",
+      "target": "id=sorting-option-2",
+      "targets": [
+        ["id=sorting-option-2", "id"],
+        ["css=#sorting-option-2", "css:finder"],
+        ["xpath=//button[@id='sorting-option-2']", "xpath:attributes"],
+        ["xpath=//div[@id='sorting-listbox']/button[3]", "xpath:idRelative"],
+        ["xpath=//div/button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Най-евтини')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eca27fa9-18ed-461f-9342-6b3bf0f8e937",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b64ccfae-d9fb-4ec3-b98d-30f664d69340",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const priceElements = document.querySelectorAll('.css-blr5zl');   let previousPrice = null; let allValid = true; const result = [];  for (let i = 0; i < priceElements.length; i++) {  \t \tconst element = priceElements[i];     const priceText = element.textContent.trim(); \t \t \tconst cleanText = priceText.replace(/[^\\d,.]/g, '');     const price = parseFloat(cleanText); \t \tconst listing = element.closest('[data-cy=\"l-card\"]');     if (listing && listing.textContent.includes('Промотирана обява')) {         continue;     } \t        if (previousPrice !== null) {         if (price < previousPrice) {             allValid = false;         }     }      result.push(price);      previousPrice = price; }  return allValid;",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "f8fe07cf-5c02-423d-aae2-9daf39bacb78",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "676b914f-9488-4d1f-9c30-cb33230c1afe",
+    "name": "FilterSortByPriceDESC",
+    "commands": [{
+      "id": "e2089a88-496d-4ada-9c54-f0f98c2b20ce",
+      "comment": "",
+      "command": "open",
+      "target": "/antiki-i-kolektsii/izkustvo/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df413263-d299-4d85-997c-a820e0725743",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1rf165i",
+      "targets": [
+        ["css=.css-1rf165i", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[4]/div/div/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Най-евтини')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d27327c-2906-44a9-ba00-231c6b5fcb75",
+      "comment": "",
+      "command": "click",
+      "target": "id=sorting-option-3",
+      "targets": [
+        ["id=sorting-option-3", "id"],
+        ["css=#sorting-option-3", "css:finder"],
+        ["xpath=//button[@id='sorting-option-3']", "xpath:attributes"],
+        ["xpath=//div[@id='sorting-listbox']/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Най-скъпи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "366fc4fa-d6fa-4271-9e31-19c7e6066358",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00c7e836-721e-4f19-a35e-1920460e1a62",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const priceElements = document.querySelectorAll('.css-blr5zl');   let previousPrice = null; let allValid = true; const result = [];  for (let i = 0; i < priceElements.length; i++) {  \t \tconst element = priceElements[i];     const priceText = element.textContent.trim(); \t \t \tconst cleanText = priceText.replace(/[^\\d,.]/g, '');     const price = parseFloat(cleanText); \t \tconst listing = element.closest('[data-cy=\"l-card\"]');     if (listing && listing.textContent.includes('Промотирана обява')) {         continue;     } \t        if (previousPrice !== null) {         if (price > previousPrice) {             allValid = false;         }     }      result.push(price);      previousPrice = price; }  return allValid;",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "129ae43a-ff25-48a3-b572-8ded7b31c7d9",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -979,7 +1096,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1"]
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
