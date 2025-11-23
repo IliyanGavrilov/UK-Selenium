@@ -1323,6 +1323,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "761985f8-2b74-4756-a6ae-d5aeb5b465fe",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=Facebook",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "b7e30992-d419-4e09-bc99-610b64585fc5",
       "comment": "",
       "command": "click",
@@ -1355,6 +1362,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "16821b63-7da7-49b0-848f-8f916831b34f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=SignInWithApple",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "e43e6627-4947-41b8-b28a-ba0e5bcde8b2",
       "comment": "",
       "command": "click",
@@ -1384,6 +1398,13 @@
       "comment": "",
       "command": "open",
       "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03057fe4-ca0e-4457-9697-2b4ffb09044b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=Google",
       "targets": [],
       "value": ""
     }, {
