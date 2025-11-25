@@ -1376,6 +1376,571 @@
       "targets": [],
       "value": "true"
     }]
+  }, {
+    "id": "b4ae0060-2d27-4d27-8940-dcc198ccb030",
+    "name": "FilterOrderBuyer",
+    "commands": [{
+      "id": "42296b1a-0f67-4b5d-9655-fff5d06edec2",
+      "comment": "",
+      "command": "store",
+      "target": "купувача",
+      "targets": [],
+      "value": "keyword"
+    }, {
+      "id": "97d53360-2137-47d7-990f-63d3dc110b3f",
+      "comment": "",
+      "command": "open",
+      "target": "elektronika/televizori/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb0563d9-0ffb-4469-a3db-f2e9bff7549a",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8aa8f982-1f3c-463a-a3f2-e918e485a756",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b2eff7e-0a12-4884-81d0-464ffe429594",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'купувача')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "017bf814-4aa8-4b62-8780-87b1511df8d2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "76866f3c-924d-40e8-92fa-1ab77b065a7b",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3007a68c-00db-4287-a05c-18541eb224dd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector('[data-cy=\"ad-card-title\"] a').click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98d4fb31-a59f-4d99-a6e9-645d14b7cee0",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10728d54-9b35-42cd-b488-cc138cce1ee3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Доставка'));   return deliveryElement.textContent.includes(${keyword});",
+      "targets": [],
+      "value": "firstListing"
+    }, {
+      "id": "dcb1d81e-d2f3-408b-b600-0662e3163d97",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.history.back();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c9261e4-0519-4436-bb75-f5a419c4d0f1",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b33159cc-3e1e-496b-932e-069bf736bcca",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelectorAll('[data-cy=\"ad-card-title\"] a')[1].click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa80a217-8149-4609-be6a-32e83c88e66c",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "89c1fae8-fc5d-4d5c-bc42-a6c2807e2136",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Доставка'));   return deliveryElement.textContent.includes(${keyword});",
+      "targets": [],
+      "value": "secondListing"
+    }, {
+      "id": "abf60a16-8af4-4266-a733-f32e401838c9",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c3ce7a6f-6a01-4edd-860f-610b4ebd602a",
+      "comment": "",
+      "command": "assert",
+      "target": "firstListing",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "7e42c6bf-179c-4337-9b60-f311fd86912b",
+      "comment": "",
+      "command": "assert",
+      "target": "secondListing",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "0e76eafa-2d25-4599-9d34-ff6d8a0e3aa0",
+    "name": "FilterOrderSeller",
+    "commands": [{
+      "id": "8d5f9456-0207-453a-a151-5aebb4bc6417",
+      "comment": "",
+      "command": "store",
+      "target": "продавача",
+      "targets": [],
+      "value": "keyword"
+    }, {
+      "id": "3393273a-cd16-439d-8ed5-e52591d115fd",
+      "comment": "",
+      "command": "open",
+      "target": "elektronika/televizori/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e055988-a50f-4103-9233-731981283a76",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d8b988c-cf6b-497b-991b-2f4ad7054868",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4465eecf-5e10-4930-99e9-30790d4dff28",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'продавача')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ed99dbd-b40f-4734-9b19-4bfeeb399bbe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6db882f1-51ad-4bc8-bfa0-67d43b5d2e0f",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51c4779a-4ee5-4802-89b7-3cb22b5e3dcc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector('[data-cy=\"ad-card-title\"] a').click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6786411b-add1-4639-8c7e-8b58cff57401",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96fa5c42-4dd1-43d2-bace-7415eaf1df64",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Доставка'));   return deliveryElement.textContent.includes(${keyword});",
+      "targets": [],
+      "value": "firstListing"
+    }, {
+      "id": "eec2003d-5e15-473a-a655-31878b38992d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.history.back();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "460333b9-af35-43c6-88d0-a53018cbb24d",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "118261da-adaf-498c-8d96-229b31fe9049",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelectorAll('[data-cy=\"ad-card-title\"] a')[1].click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ef49409-0423-478f-b2a8-28e8281c1535",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0dfe13f-2f35-45f9-859d-2df5248ab55b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Доставка'));   return deliveryElement.textContent.includes(${keyword});",
+      "targets": [],
+      "value": "secondListing"
+    }, {
+      "id": "0dbb0af8-c6ad-4dd1-85a4-c789a70a1fc2",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6084f24f-d8d4-476a-bfc0-a19b8163bb9d",
+      "comment": "",
+      "command": "assert",
+      "target": "firstListing",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "b14901cf-117a-4ed7-bfd2-22fc1685bc0c",
+      "comment": "",
+      "command": "assert",
+      "target": "secondListing",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "c8135772-ac26-455d-8213-3653670a2016",
+    "name": "FilterOrderHandTransaction",
+    "commands": [{
+      "id": "d1335185-2a1c-466e-ac54-568154a6b59d",
+      "comment": "",
+      "command": "store",
+      "target": "лично предаване",
+      "targets": [],
+      "value": "keyword"
+    }, {
+      "id": "a443a8f9-aad9-4ce9-bb10-4182009728fa",
+      "comment": "",
+      "command": "open",
+      "target": "elektronika/televizori/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbf3c809-0c72-4f18-bfe6-33aecd24b40f",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3589df99-900a-4d57-93c8-10143954d120",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c11329d4-2866-4ec9-9065-d87aeae46c02",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(4)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div[2]/div/label[4]", "xpath:idRelative"],
+        ["xpath=//label[4]", "xpath:position"],
+        ["xpath=//label[contains(.,'лично предаване')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "90222f66-675c-4b66-8ad9-069d16689156",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecdc31f0-a523-44e0-9096-f15cac9a93f7",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b63cdf3-d186-4aa2-a842-317730f7ea8b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector('[data-cy=\"ad-card-title\"] a').click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff7bd582-6813-4270-907d-0f4e54694d9a",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62cd6f81-dc06-4cc7-93b0-0e30c4252caa",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Доставка'));   return deliveryElement.textContent.includes(${keyword});",
+      "targets": [],
+      "value": "firstListing"
+    }, {
+      "id": "46c17607-0fe7-487a-b664-988ff8457d96",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.history.back();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6542ca6-a347-4b08-bc42-17b420d46b07",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43262959-a940-458c-9bf4-f375260373dc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelectorAll('[data-cy=\"ad-card-title\"] a')[1].click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7d59ed5-0e07-4334-b50a-5234a7c4ea42",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e465a5a-d163-412c-8dfb-59898156d082",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Доставка'));   return deliveryElement.textContent.includes(${keyword});",
+      "targets": [],
+      "value": "secondListing"
+    }, {
+      "id": "66b777e4-1aac-4bab-8073-c0598e51b2d0",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8f080cd8-38bf-499c-bb7c-cd692989e7ba",
+      "comment": "",
+      "command": "assert",
+      "target": "firstListing",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "69f377e2-7e81-4ca2-9a02-8b8b24086c8b",
+      "comment": "",
+      "command": "assert",
+      "target": "secondListing",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "16016b6d-689c-41c5-b922-f6f48ce9d163",
+    "name": "FilterSubcategories",
+    "commands": [{
+      "id": "c0ef9f81-921c-486f-9d32-c23bb9e2b442",
+      "comment": "",
+      "command": "store",
+      "target": "elektronika/televizori/",
+      "targets": [],
+      "value": "url1"
+    }, {
+      "id": "bda06ac4-55f5-4ceb-84f9-0018ca52330c",
+      "comment": "",
+      "command": "open",
+      "target": "${url1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c06b733c-1975-4367-aec3-7ce22bca141f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#category-dropdown > .css-sa44n0",
+      "targets": [
+        ["css=#category-dropdown > .css-sa44n0", "css:finder"],
+        ["xpath=(//button[@id='category-dropdown']/div)[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af765934-47b2-4b9f-9b85-27d642a83a8d",
+      "comment": "",
+      "command": "click",
+      "target": "id=1069",
+      "targets": [
+        ["id=1069", "id"],
+        ["css=#\\31 069", "css:finder"],
+        ["xpath=//button[@id='1069']", "xpath:attributes"],
+        ["xpath=//div[@id='category-dropdown-list']/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d12dc52-b9dd-420b-8efa-8888f9a41da3",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d30630b0-cda7-45e1-9ee7-db34e905c1c2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "url2"
+    }, {
+      "id": "332d34ea-e6d4-4174-a296-727cbd128fd1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${url1} !== ${url2}; ",
+      "targets": [],
+      "value": "change"
+    }, {
+      "id": "8c6f4a9d-6cee-49bf-98d7-c4114b76a975",
+      "comment": "",
+      "command": "assert",
+      "target": "change",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "d96669e2-a7ff-4d77-abe2-c62b781bcb6a",
+    "name": "FilterSubcategoriesAltButton",
+    "commands": [{
+      "id": "10031e4c-1997-4907-adb1-633a07cc589c",
+      "comment": "",
+      "command": "store",
+      "target": "elektronika/televizori/",
+      "targets": [],
+      "value": "url1"
+    }, {
+      "id": "d21d2652-0f3b-4584-904e-3df8880129cb",
+      "comment": "",
+      "command": "open",
+      "target": "${url1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74fd61eb-57dd-40ad-8162-1cbb834a4707",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Телевизори4190",
+      "targets": [
+        ["linkText=Телевизори4190", "linkText"],
+        ["css=.css-14syomj:nth-child(1) > .css-1q7zkos", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[5]/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/elektronika/televizori/televizori/')]", "xpath:href"],
+        ["xpath=//ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Телевизори4190')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7adbdb4a-d0a1-4823-8836-e7b9c1113591",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0dfab4c7-9564-4cb1-adfb-c090d31414f2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "url2"
+    }, {
+      "id": "58170b69-9e8e-4420-9bf2-57aa7609dda8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${url1} !== ${url2}; ",
+      "targets": [],
+      "value": "change"
+    }, {
+      "id": "2578cf2e-7c74-47e9-89d7-b2325a913f87",
+      "comment": "",
+      "command": "assert",
+      "target": "change",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -1390,7 +1955,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb", "bbd65156-62e3-4f07-8177-983f0151ffc2"]
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb", "bbd65156-62e3-4f07-8177-983f0151ffc2", "b4ae0060-2d27-4d27-8940-dcc198ccb030", "c8135772-ac26-455d-8213-3653670a2016", "0e76eafa-2d25-4599-9d34-ff6d8a0e3aa0", "16016b6d-689c-41c5-b922-f6f48ce9d163", "d96669e2-a7ff-4d77-abe2-c62b781bcb6a"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
