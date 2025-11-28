@@ -162,7 +162,7 @@
     }]
   }, {
     "id": "333e9ae1-9aa0-4960-b26c-2126162599ba",
-    "name": "FilterFaultyAds",
+    "name": "FilterFaultyListing",
     "commands": [{
       "id": "08cfefc6-23cc-4a2a-833f-59886af275ee",
       "comment": "",
@@ -1941,6 +1941,1809 @@
       "targets": [],
       "value": "true"
     }]
+  }, {
+    "id": "c97262ec-ac81-4907-a8fb-d1d3f4360a8a",
+    "name": "FilterAntiquesAndCollectionsType",
+    "commands": [{
+      "id": "77712693-f166-408b-8df3-bcaa7b1be4a1",
+      "comment": "",
+      "command": "store",
+      "target": "Антикварна книжарница",
+      "targets": [],
+      "value": "keyword"
+    }, {
+      "id": "6fa10c43-c319-4393-8292-d2bfdef90729",
+      "comment": "",
+      "command": "open",
+      "target": "/antiki-i-kolektsii/antiki/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb74e29b-b1f9-4034-b1d0-6baa23fdd8ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(5) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(5) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5fd2631-56a4-4a16-b726-cd97323e7975",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Антикварна книжарница')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af6e51ce-157d-4330-9fb4-e4acb01c62aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-245hy1 > .css-1oyc6ky",
+      "targets": [
+        ["css=.css-245hy1 > .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Антикварна книжарница')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78d9a9b6-be0a-4e6b-81d6-e2ab8a84edb4",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2bf0392e-3197-4cd7-8a78-e87120e0df39",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector('[data-cy=\"ad-card-title\"] a').click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ce0b6d1-4faa-46cd-9204-d66dfd138b3c",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a9afb841-7f76-48d3-9de2-e6cd5d6ba0f1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Тип')); return deliveryElement.textContent.includes(${keyword});",
+      "targets": [],
+      "value": "firstListing"
+    }, {
+      "id": "0cebbb93-e1be-47fc-a7e1-8b3fe64736a4",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.history.back();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59024615-54db-401a-846a-4915e89e65e6",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "058d8054-174c-449f-a888-a416b69685a0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelectorAll('[data-cy=\"ad-card-title\"] a')[1].click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69232160-3968-4d8e-8fed-8bbcab693341",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "50b6572e-47ca-4944-b754-20f95183dfcd",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Тип')); return deliveryElement.textContent.includes(${keyword});",
+      "targets": [],
+      "value": "secondListing"
+    }, {
+      "id": "61e12717-70e0-4628-93de-636d9e9de4ef",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4297369-fcf2-4f66-8930-b8ae122b8277",
+      "comment": "",
+      "command": "assert",
+      "target": "firstListing",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "49877338-238f-4d61-be7b-d9acf4666974",
+      "comment": "",
+      "command": "assert",
+      "target": "secondListing",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "c666e7bc-496f-4f6e-80f9-460179fa7ba3",
+    "name": "FilterRealEstateSalesApartment",
+    "commands": [{
+      "id": "19a92f96-07c1-4ac0-979f-fcdedc69b5d2",
+      "comment": "",
+      "command": "store",
+      "target": "4 - стаен",
+      "targets": [],
+      "value": "apType"
+    }, {
+      "id": "4afdabf2-a636-4698-9670-83285b03cfef",
+      "comment": "",
+      "command": "store",
+      "target": "Панел",
+      "targets": [],
+      "value": "buildingMaterial"
+    }, {
+      "id": "704b4a11-1924-4cff-9050-2686a96bba47",
+      "comment": "",
+      "command": "store",
+      "target": "1-ви",
+      "targets": [],
+      "value": "floor"
+    }, {
+      "id": "ae4781d1-4d67-4f07-b787-e763f3cc3e00",
+      "comment": "",
+      "command": "store",
+      "target": "ТЕЦ",
+      "targets": [],
+      "value": "heating"
+    }, {
+      "id": "f3176ce3-a15d-4fcf-8e81-81a234089397",
+      "comment": "",
+      "command": "store",
+      "target": "Обзаведен",
+      "targets": [],
+      "value": "furniture"
+    }, {
+      "id": "5bf95325-31a5-4fca-bf9d-1ecf2c58f311",
+      "comment": "",
+      "command": "store",
+      "target": "Завършена",
+      "targets": [],
+      "value": "buildingCond"
+    }, {
+      "id": "f1e656f7-82c9-4046-9e4f-d69e642683f3",
+      "comment": "",
+      "command": "store",
+      "target": "Без преход",
+      "targets": [],
+      "value": "enteranceSpace"
+    }, {
+      "id": "5f211fed-1ea4-4c51-b2d5-455b8aa23f9c",
+      "comment": "",
+      "command": "store",
+      "target": "паркинг",
+      "targets": [],
+      "value": "specialAddons"
+    }, {
+      "id": "ffc2eb58-d5b2-4561-85bd-786bcdce279e",
+      "comment": "",
+      "command": "open",
+      "target": "/nedvizhimi-imoti/prodazhbi/apartamenti",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79be2448-3db4-4e7d-a919-26b6aa557236",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(3) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(3) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[3]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "15a84212-4b9d-4e28-bf49-030bc56f3fa7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(5)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[3]/div/div[2]/div[2]/div/label[5]", "xpath:idRelative"],
+        ["xpath=//label[5]", "xpath:position"],
+        ["xpath=//label[contains(.,'4 - стаен')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "398eb1a9-7bc7-4d5a-9966-4e029ba4eacd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(3) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(3) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[3]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55d31c8d-8a57-446b-b091-dac613827dc4",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34d48880-02a9-4a64-98f7-b984a2bc27c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c99ca5b-440c-4ab8-9756-f5ba47d83271",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'Панел')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d95f0057-cd12-4998-b433-ca90566d42b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f216959-7a3a-4372-a6d9-099e0a8032f6",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b28824a-01d0-40eb-bcfd-8613cf3fb840",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(5) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(5) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da1c77af-0a2f-4090-96a9-588b0b879c97",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'Без преход')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f494aa5-a362-4b44-bc1e-cfbfcceb8a92",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(5) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(5) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "226c67b0-29fe-4712-90c8-210f006810a5",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68c66827-aad2-498d-ba56-ce1197008292",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(7) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(7) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d64f156-9616-45b0-b28e-6edd55d5fc08",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Обзаведен')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a06a034-b2ff-4645-9548-913e1bf9c4db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(7) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(7) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ae0c523-bb4c-45e7-bcd0-70470df70629",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a9d7270-e49b-4e3f-bc69-685dcdf11cab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(8) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(8) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[14]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abc5098f-6c3b-457c-89da-0a5a49f18103",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'Завършена')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef32073c-aafa-455d-be40-12fb88aa8a8e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(8) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(8) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[14]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cec8436-586d-41ad-8dff-1beeb24b323d",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85482383-e427-4a26-9587-91ef4dc46ac7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(9) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(9) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[15]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[9]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "525f56e3-6ff4-49ff-89a0-d635365cb856",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[9]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'ТЕЦ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "833a85fb-2ef7-4397-b013-1d94ea243db8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(9) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(9) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[15]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[9]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37d89d48-3249-4308-a717-9eec62263bca",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1abbab97-d42b-4a74-8cdb-0a8a87d96d81",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(10) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(10) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[16]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[10]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "631340e4-653a-457e-b730-2ab5a7e03445",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(4)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[10]/div/div[2]/div[2]/div/label[4]", "xpath:idRelative"],
+        ["xpath=//label[4]", "xpath:position"],
+        ["xpath=//label[contains(.,'паркинг')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d31ee98a-bf89-4108-98e9-f16177fe5b77",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(10) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(10) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[16]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[10]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[10]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4512c72-052d-4d67-a153-23e5fcd8ade3",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8757966-d5de-402d-922f-4f49c8548165",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(11) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(11) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[17]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[11]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[11]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5579754a-b34d-40a1-9d6f-84917f207d26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[11]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'1-ви')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c82b94a8-b45b-4527-8795-1b75fb792416",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(11) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(11) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[17]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[11]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[11]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb184554-d6ae-4c32-a86e-1e63bdda64e2",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "018d4cc9-c30b-41c5-817c-b869dcf47bc3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector('[data-cy=\"ad-card-title\"] a').click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef1d60f6-56e4-4855-a3e0-abf90c5fd968",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4594a869-abec-46ac-a9c0-4c86b97be41a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Тип апартамент')); return deliveryElement.textContent.includes(${apType});",
+      "targets": [],
+      "value": "apTypeTest"
+    }, {
+      "id": "f45940a7-1331-4eef-97d5-7498e3734cdc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Строителство')); return deliveryElement.textContent.includes(${buildingMaterial});",
+      "targets": [],
+      "value": "buildingMaterialTest"
+    }, {
+      "id": "09958a04-eae5-4969-a91a-a7693e5021cc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Етаж')); return deliveryElement.textContent.includes(${floor});",
+      "targets": [],
+      "value": "floorTest"
+    }, {
+      "id": "104261b5-1f1b-4a5b-bb3d-fc803fb6fa03",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Отопление')); return deliveryElement.textContent.includes(${heating});",
+      "targets": [],
+      "value": "heatingTest"
+    }, {
+      "id": "1fa7b637-6138-436e-b339-4e5196f4c8c0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Обзавеждане')); return deliveryElement.textContent.includes(${furniture});",
+      "targets": [],
+      "value": "furnitureTest"
+    }, {
+      "id": "11ae1f67-5203-4b44-a3ea-966d981deef9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Състояние на сградата')); return deliveryElement.textContent.includes(${buildingCond});",
+      "targets": [],
+      "value": "buildingCondTest"
+    }, {
+      "id": "04820406-3eb1-4c48-9ad9-70c6d6809a11",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Преход')); return deliveryElement.textContent.includes(${enteranceSpace});",
+      "targets": [],
+      "value": "enteranceSpaceTest"
+    }, {
+      "id": "7232f005-3a07-4c01-903d-2580fc699d05",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Особености')); return deliveryElement.textContent.includes(${specialAddons});",
+      "targets": [],
+      "value": "specialAddonsTest"
+    }, {
+      "id": "f92d413e-9a8d-4494-a667-90f577cdb437",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96e499f5-8330-4fd4-acb5-25e1ff0c0da5",
+      "comment": "",
+      "command": "assert",
+      "target": "apTypeTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "186dbfc2-466d-4f97-8f70-d637336b8827",
+      "comment": "",
+      "command": "assert",
+      "target": "buildingMaterialTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "3b45502a-350b-47b3-bd3b-df0a7a7190ed",
+      "comment": "",
+      "command": "assert",
+      "target": "floorTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "13091d46-c92d-48cb-8ca3-4c3e67538e16",
+      "comment": "",
+      "command": "assert",
+      "target": "heatingTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "681143f8-2076-4ca5-8c23-8ffad2210694",
+      "comment": "",
+      "command": "assert",
+      "target": "furnitureTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "8f1bcf97-97d5-42fe-aecc-5688a29782f0",
+      "comment": "",
+      "command": "assert",
+      "target": "buildingCondTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "ee4362f0-2381-429a-9d25-bd00a52aed8d",
+      "comment": "",
+      "command": "assert",
+      "target": "enteranceSpaceTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "46fe89aa-72bf-4ae0-af9a-ae00a30daa4b",
+      "comment": "",
+      "command": "assert",
+      "target": "specialAddonsTest",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "9feafe09-0818-4b00-88e1-8b27fdc42c83",
+    "name": "FilterAutomobilesAndJeeps",
+    "commands": [{
+      "id": "7886151b-e72d-4461-bc67-a04bc2e7f19e",
+      "comment": "",
+      "command": "store",
+      "target": "Комби",
+      "targets": [],
+      "value": "coupe"
+    }, {
+      "id": "81e1e42b-7eff-439e-a511-8de1d862a142",
+      "comment": "",
+      "command": "store",
+      "target": "Евро 4",
+      "targets": [],
+      "value": "eurostandard"
+    }, {
+      "id": "27032917-26d6-4a84-bb1c-cfdbc8721d46",
+      "comment": "",
+      "command": "store",
+      "target": "A6",
+      "targets": [],
+      "value": "model"
+    }, {
+      "id": "29f573bb-bc49-491c-ac53-5a5c304b3fd6",
+      "comment": "",
+      "command": "store",
+      "target": "Дизел",
+      "targets": [],
+      "value": "engine"
+    }, {
+      "id": "ff8e5794-6a63-4d06-abf6-06f7fb9f181f",
+      "comment": "",
+      "command": "store",
+      "target": "Автоматична",
+      "targets": [],
+      "value": "gearbox"
+    }, {
+      "id": "a9535d91-c878-4f71-98c6-dcacd984abb4",
+      "comment": "",
+      "command": "store",
+      "target": "200",
+      "targets": [],
+      "value": "power "
+    }, {
+      "id": "96972117-c9f5-430a-bbec-d2fbcd307bd2",
+      "comment": "",
+      "command": "store",
+      "target": "с пробег",
+      "targets": [],
+      "value": "vehicleType"
+    }, {
+      "id": "cd387fdf-7c6b-49e4-9b5b-e66dfff983bf",
+      "comment": "",
+      "command": "store",
+      "target": "в брой",
+      "targets": [],
+      "value": "termsOfSale"
+    }, {
+      "id": "b28beca0-1da1-4742-a1d1-9b7e9d74699b",
+      "comment": "",
+      "command": "store",
+      "target": "4/5",
+      "targets": [],
+      "value": "doors"
+    }, {
+      "id": "e777eba1-5d61-4c61-a4ca-16c98ff2fbc2",
+      "comment": "",
+      "command": "store",
+      "target": "2-5",
+      "targets": [],
+      "value": "seats"
+    }, {
+      "id": "a829ba0d-11a8-4277-9e75-3310593d7385",
+      "comment": "",
+      "command": "store",
+      "target": "друго",
+      "targets": [],
+      "value": "color"
+    }, {
+      "id": "239a4308-3af0-421a-b696-daf93c88d7e4",
+      "comment": "",
+      "command": "store",
+      "target": "професионално ремонтирани следи от употреба",
+      "targets": [],
+      "value": "colorWork"
+    }, {
+      "id": "fa4d24c9-1f76-4a75-b1cc-a513fc13ac89",
+      "comment": "",
+      "command": "store",
+      "target": "В движение, технически изправен",
+      "targets": [],
+      "value": "technicalWork"
+    }, {
+      "id": "9dc5391f-0e5c-4924-80d8-7eaa4f7fd906",
+      "comment": "",
+      "command": "store",
+      "target": "Електрически пакет",
+      "targets": [],
+      "value": "comfort"
+    }, {
+      "id": "edcc8c82-a812-44c6-8eea-51fc63b65311",
+      "comment": "",
+      "command": "store",
+      "target": "CD",
+      "targets": [],
+      "value": "media"
+    }, {
+      "id": "ba2263bb-502d-42b5-8078-a3e6cb755858",
+      "comment": "",
+      "command": "store",
+      "target": "ABS",
+      "targets": [],
+      "value": "other"
+    }, {
+      "id": "3e812f44-18f7-42df-9f0d-e0d4b92defea",
+      "comment": "",
+      "command": "open",
+      "target": "/avtomobili-karavani-lodki/avtomobili-dzhipove/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c52b934-ceae-4e19-93c6-f1179ceed5c4",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4ea304c-5239-4a1b-899f-f7663a5fe597",
+      "comment": "",
+      "command": "click",
+      "target": "css=#category-dropdown > .css-sa44n0",
+      "targets": [
+        ["css=#category-dropdown > .css-sa44n0", "css:finder"],
+        ["xpath=(//button[@id='category-dropdown']/div)[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25e45938-86a5-4c2f-9301-58e193bbf2ca",
+      "comment": "",
+      "command": "click",
+      "target": "id=1122",
+      "targets": [
+        ["id=1122", "id"],
+        ["css=#\\31 122", "css:finder"],
+        ["xpath=//button[@id='1122']", "xpath:attributes"],
+        ["xpath=//div[@id='category-dropdown-list']/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbc491ff-279d-4e0a-b1c0-ccbfa0c369b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1sc7r27:nth-child(2) .css-ydag0f",
+      "targets": [
+        ["css=.css-1sc7r27:nth-child(2) .css-ydag0f", "css:finder"],
+        ["xpath=(//button[@id='category-dropdown']/div)[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d4666f0-8f23-49c6-9bb1-af8682bf4ba7",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d8d998e2-1c63-4c74-87f2-ea20e40d3d86",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(3) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(3) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[3]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ee9606a-84ac-4cb6-bd0a-b60e5d8f7584",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(4)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[3]/div/div[2]/div[2]/div/label[4]", "xpath:idRelative"],
+        ["xpath=//label[4]", "xpath:position"],
+        ["xpath=//label[contains(.,'Комби')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94f1e5c3-72c5-4ad3-9938-3014aa91b9e6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(3) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(3) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[3]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "849f38f6-5ed6-4e4e-94ee-2dd48e15945a",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c92650d-0335-441d-97ad-73371ffa86b2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c5db09c-7542-4b73-81eb-af26cbee39f8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(5)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div[2]/div/label[5]", "xpath:idRelative"],
+        ["xpath=//label[5]", "xpath:position"],
+        ["xpath=//label[contains(.,'Евро 4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c41e7b75-0a54-4106-9faa-1fa621c5cb5e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c138e0f7-8786-4956-bc18-732248f3b880",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d8d391c-7df0-4d6f-8a6c-bf0c9f0b8178",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(5) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(5) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "061cffc9-a792-4453-aa84-5ba2ccb59f43",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(12)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(12)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div[2]/div/label[12]", "xpath:idRelative"],
+        ["xpath=//label[12]", "xpath:position"],
+        ["xpath=//label[contains(.,'A6')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7806ef28-e040-41ae-afc3-f009dedfb409",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(5) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(5) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d63a1dc-8623-4f45-a4f4-fc0e576ad023",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c226def-1b92-4adc-ab27-53e4d760b8aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1gku3di:nth-child(10) .css-eie7o:nth-child(1) .css-iogwuf:nth-child(1)",
+      "targets": [
+        ["css=.css-1gku3di:nth-child(10) .css-eie7o:nth-child(1) .css-iogwuf:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8ccf74f-6279-4aeb-aaa7-f06ac661424e",
+      "comment": "",
+      "command": "click",
+      "target": "id=from-value-10",
+      "targets": [
+        ["id=from-value-10", "id"],
+        ["css=#from-value-10", "css:finder"],
+        ["xpath=//button[@id='from-value-10']", "xpath:attributes"],
+        ["xpath=//div[@id='from-value-container']/button[11]", "xpath:idRelative"],
+        ["xpath=//button[11]", "xpath:position"],
+        ["xpath=//button[contains(.,'150')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6c31cae-cee1-4282-84c0-6e5c2c0c8257",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1gku3di:nth-child(10) .css-eie7o:nth-child(1) .n-textinput-input",
+      "targets": [
+        ["css=.css-1gku3di:nth-child(10) .css-eie7o:nth-child(1) .n-textinput-input", "css:finder"],
+        ["xpath=(//input[@name='range-from-input'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[10]/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[10]/div[2]/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0a95a5b-882a-45ea-8e83-3f8a74ad59f5",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7a358b1-7265-4c82-b290-6bef417179ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(8) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(8) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[14]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e0296e6-7069-4f09-8fda-37b285a92da5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'Завършена')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1468c8a1-007e-42ff-8488-9d7f16f7a366",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(8) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(8) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[14]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15b3f1c3-500f-4fa6-9f32-35a0e1a52003",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e925d347-1c39-484b-b488-c2f9f00ed880",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(9) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(9) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[15]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[9]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0a9f55e-8cdf-438b-a97c-dcf0b908fc45",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[9]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'Автоматична')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c087e4a0-0c31-4a82-8c39-612c84cdf7cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(9) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(9) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[15]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[9]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[9]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77723250-2f8a-4990-9914-2e440127b981",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "755e2f83-3975-47c2-b10c-89349f21d9fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1gku3di:nth-child(10) .css-eie7o:nth-child(2) .css-iogwuf:nth-child(1)",
+      "targets": [
+        ["css=.css-1gku3di:nth-child(10) .css-eie7o:nth-child(2) .css-iogwuf:nth-child(1)", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "80e96906-9791-49a2-91d8-44f5a5451567",
+      "comment": "",
+      "command": "click",
+      "target": "id=to-value-16",
+      "targets": [
+        ["id=to-value-16", "id"],
+        ["css=#to-value-16", "css:finder"],
+        ["xpath=//button[@id='to-value-16']", "xpath:attributes"],
+        ["xpath=//div[@id='to-value-container']/button[17]", "xpath:idRelative"],
+        ["xpath=//button[17]", "xpath:position"],
+        ["xpath=//button[contains(.,'250')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b05e5425-3f69-465e-93e6-9ddf7af40e16",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1gku3di:nth-child(10) .css-eie7o:nth-child(2) .n-textinput-layout",
+      "targets": [
+        ["css=.css-1gku3di:nth-child(10) .css-eie7o:nth-child(2) .n-textinput-layout", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[10]/div[2]/div[2]/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[10]/div[2]/div[2]/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "244623fa-f6eb-4341-bdc4-342a8b583ebe",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78eb61b9-ce4f-4bbc-b71a-0288c3461881",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(11) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(11) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[17]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[11]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[11]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04ff4f8f-f3b3-4e02-9510-fa9f4d928022",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[11]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'с пробег')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fa66ef7-3a37-4982-b04d-6616fbef010a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(11) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(11) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[17]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[11]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[11]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e10f04a3-33d1-4cb4-a5de-3be188e3476e",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9930d53d-088f-46af-a439-cd59dc2baa5e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(12) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(12) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[23]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[12]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[12]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02886a63-5ab0-43c8-bd40-c11300dba8bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[12]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'в брой')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a6ee65c-22da-4485-a053-08dc08e525a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(12) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(12) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[23]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[12]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[12]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f22a7986-067f-41d3-8ecc-d2445d8393ea",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7dc3ca45-5c58-4f71-a69a-748b296c1571",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(14) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(14) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[25]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[14]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[14]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3047f8d7-6398-4dae-972c-fecf53927c5a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[14]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'4/5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfef64eb-5006-4629-b31c-1e092dc75ec2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(14) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(14) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[25]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[14]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[14]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f587a27b-a654-47da-a9be-4ebe1f6764ef",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "86f21d44-f854-4af0-8fbc-9550621cc4dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(15) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(15) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[26]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[15]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[15]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10dfcb4f-fb38-4029-9890-4d43825a0edd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[15]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'2-5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18b6223c-689f-4c64-be6a-370752803a2c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(15) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(15) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[26]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[15]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[15]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9370fbfb-a88f-47d7-8ef9-67b1ebae44da",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94dde41d-4485-469a-b19b-0b3b7fe9621e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(16) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(16) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[27]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[16]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[16]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98b6ca40-1a4a-40f3-96eb-f2b2f1c29a96",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(9)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(9)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[16]/div/div[2]/div[2]/div/label[9]", "xpath:idRelative"],
+        ["xpath=//label[9]", "xpath:position"],
+        ["xpath=//label[contains(.,'друго')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "266f68b0-a389-4bd0-bbe5-3fb5b2833117",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(16) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(16) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[27]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[16]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[16]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87f8b21b-7310-4181-b269-aa490aa0f7a2",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fe91c33-e137-4356-a2f2-64a12da72e5b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(17) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(17) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[28]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[17]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[17]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa980d7a-16f9-4356-a887-041ad31ae7af",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[17]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'професионално ремонтирани следи от употреба')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7b13627-5556-4904-9924-a3e14915ea65",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(17) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(17) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[28]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[17]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[17]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5530984e-9d74-4a50-a416-f514a809bce1",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8336e493-b83c-4987-a6e4-6719a2a5c1f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(18) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(18) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[29]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[18]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[18]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d73e6c7-262c-4c79-bd2e-08d8c3836751",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[18]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'В движение, технически изправен')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "08bd37a5-33ba-4671-97b6-ae16921e2fab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(18) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(18) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[29]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[18]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[18]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a3f1b40-67e4-4601-a864-68aa68fd6f93",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32f71744-fa0d-4065-ac93-b2dd2460a054",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(19) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(19) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[30]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[19]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[19]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "100b5496-b714-4c48-aee6-7b4e3b178681",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[19]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Електрически пакет')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5f1579c-ab84-4cab-9526-56a1ea5b9a0e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(19) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(19) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[30]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[19]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[19]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2a5aa2d-197f-459c-a50b-182e2d1a502f",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "739bdcc9-7c3f-48e8-a85e-e5134b2a719f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(20) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(20) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[38]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[20]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[20]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'CD')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fedbb4a-09ee-4b4d-922c-9146bc077559",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[20]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'CD')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd7b037c-73cc-4259-ae28-342c62d565db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(20) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(20) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[35]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[20]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[20]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'CD')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40c4ce1a-4107-4cfa-b10f-42aeb154d9b2",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00eacb29-cc17-40f1-aa17-635a37410e06",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector('[data-cy=\"ad-card-title\"] a').click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52437b0e-df6a-496c-bc23-ad2bd56d27f0",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4a8b8d2-76e6-4752-a5ed-d2917ef5641c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Купе')); return deliveryElement.textContent.includes(${coupe});",
+      "targets": [],
+      "value": "CoupeTest"
+    }, {
+      "id": "f00d27d8-3ce4-48e1-b184-982cf1b83bcb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Евростандарт')); return deliveryElement.textContent.includes(${eurostandard});",
+      "targets": [],
+      "value": "eurostandardTest"
+    }, {
+      "id": "ea2d37dd-7dea-4b86-a1fd-18eec39395ac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Модел')); return deliveryElement.textContent.includes(${model});",
+      "targets": [],
+      "value": "modelTest"
+    }, {
+      "id": "77f05121-1acc-44d6-aedc-5385e7cb7724",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Двигател')); return deliveryElement.textContent.includes(${engine});",
+      "targets": [],
+      "value": "engineTest"
+    }, {
+      "id": "dce8961c-4ed0-44df-a89a-f25a6c017e08",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Скоростна кутия')); return deliveryElement.textContent.includes(${gearbox});",
+      "targets": [],
+      "value": "gearboxTest"
+    }, {
+      "id": "b22aea3a-faaa-4763-a35a-bf0b6e3d3433",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Мощност')); return deliveryElement.textContent.includes(${power});",
+      "targets": [],
+      "value": "powerTest"
+    }, {
+      "id": "5d9f4a01-c67b-4025-a815-3bf11a2aba7d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Тип превозно средство')); return deliveryElement.textContent.includes(${vehicleType});",
+      "targets": [],
+      "value": "vehicleTypeTest"
+    }, {
+      "id": "c6a4dbae-1eea-4f65-bb6d-ba458c9ee6c9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Условия за продажба')); return deliveryElement.textContent.includes(${termsOfSale});",
+      "targets": [],
+      "value": "termsOfSaleTest"
+    }, {
+      "id": "3c73de5e-6d0e-4a32-b2cf-a2eea13b5f3e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Брой врати')); return deliveryElement.textContent.includes(${doors});",
+      "targets": [],
+      "value": "doorsTest"
+    }, {
+      "id": "478ca7b4-0b58-4279-8371-c6a3bd90b418",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Брой места')); return deliveryElement.textContent.includes(${seats});",
+      "targets": [],
+      "value": "seatsTest"
+    }, {
+      "id": "3545ff90-8c15-46c2-b9a9-3d369ced4692",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Цвят')); return deliveryElement.textContent.includes(${color});",
+      "targets": [],
+      "value": "colorTest"
+    }, {
+      "id": "779546dc-91e9-4079-9d2a-9802bebb511e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Боядисване')); return deliveryElement.textContent.includes(${colorWork});",
+      "targets": [],
+      "value": "colorWorkTest"
+    }, {
+      "id": "7fc6a96c-ff6e-4060-8398-79236ee4548b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Техническо състояние')); return deliveryElement.textContent.includes(${technicalWork});",
+      "targets": [],
+      "value": "technicalWorkTest"
+    }, {
+      "id": "645ebd02-aa6b-4fd1-a17b-01c6cd01caa2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Комфорт')); return deliveryElement.textContent.includes(${comfort});",
+      "targets": [],
+      "value": "comfortTest"
+    }, {
+      "id": "c2faa1a2-4d23-478d-8da7-a01e1807bfdf",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Мултимедия')); return deliveryElement.textContent.includes(${media});",
+      "targets": [],
+      "value": "mediaTest"
+    }, {
+      "id": "1ec9862f-2261-490a-b5e6-ff0bba50356c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Други')); return deliveryElement.textContent.includes(${other});",
+      "targets": [],
+      "value": "otherTest"
+    }, {
+      "id": "cec2572d-8ed6-4b3b-9d7a-b2f4de755601",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f5686a1-43c6-46ae-9263-01e126a368a5",
+      "comment": "",
+      "command": "assert",
+      "target": "CoupeTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "38f2ac03-a83d-4a34-bf0b-265cf9d0ae49",
+      "comment": "",
+      "command": "assert",
+      "target": "eurostandardTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "e1797989-3fa6-4d28-bab5-3ae6df450687",
+      "comment": "",
+      "command": "assert",
+      "target": "modelTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "24c34ac7-29a5-4a58-93c9-981984e6c317",
+      "comment": "",
+      "command": "assert",
+      "target": "engineTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "d0e519e4-a43c-4774-a595-5440bd24ba12",
+      "comment": "",
+      "command": "assert",
+      "target": "gearboxTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "08432dfa-99f8-412e-bbd3-8e54cea51181",
+      "comment": "",
+      "command": "assert",
+      "target": "powerTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "57cf05cc-4603-4aa0-9a2b-14d36445a42d",
+      "comment": "",
+      "command": "assert",
+      "target": "vehicleTypeTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "4f63972b-983c-4950-8d21-77325889978d",
+      "comment": "",
+      "command": "assert",
+      "target": "termsOfSaleTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "de6a126f-b055-4f39-9a14-3b1c967dabf0",
+      "comment": "",
+      "command": "assert",
+      "target": "doorsTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "72dd8019-bec2-4692-8b92-760731eaf755",
+      "comment": "",
+      "command": "assert",
+      "target": "seatsTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "b43d0e93-9d8d-422a-9002-f5a8040e925c",
+      "comment": "",
+      "command": "assert",
+      "target": "colorTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "50e39151-096c-4de8-b9f2-494c2822ce1c",
+      "comment": "",
+      "command": "assert",
+      "target": "colorWorkTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "40d94903-548d-4e0e-9fb3-427cc86b7e78",
+      "comment": "",
+      "command": "assert",
+      "target": "technicalWorkTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "15832a15-c488-4062-a23f-0db0cc690de9",
+      "comment": "",
+      "command": "assert",
+      "target": "comfortTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "2ff06cfb-e970-4a28-82f2-712467380544",
+      "comment": "",
+      "command": "assert",
+      "target": "mediaTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "d566c341-d601-485d-8053-50388157ba89",
+      "comment": "",
+      "command": "assert",
+      "target": "otherTest",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -1955,7 +3758,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb", "bbd65156-62e3-4f07-8177-983f0151ffc2", "b4ae0060-2d27-4d27-8940-dcc198ccb030", "c8135772-ac26-455d-8213-3653670a2016", "0e76eafa-2d25-4599-9d34-ff6d8a0e3aa0", "16016b6d-689c-41c5-b922-f6f48ce9d163", "d96669e2-a7ff-4d77-abe2-c62b781bcb6a"]
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb", "bbd65156-62e3-4f07-8177-983f0151ffc2", "b4ae0060-2d27-4d27-8940-dcc198ccb030", "c8135772-ac26-455d-8213-3653670a2016", "0e76eafa-2d25-4599-9d34-ff6d8a0e3aa0", "16016b6d-689c-41c5-b922-f6f48ce9d163", "d96669e2-a7ff-4d77-abe2-c62b781bcb6a", "c97262ec-ac81-4907-a8fb-d1d3f4360a8a", "9feafe09-0818-4b00-88e1-8b27fdc42c83", "c666e7bc-496f-4f6e-80f9-460179fa7ba3"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
