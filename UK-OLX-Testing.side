@@ -4926,6 +4926,213 @@
       "targets": [],
       "value": "true"
     }]
+  }, {
+    "id": "709c2cea-e2a0-4723-8250-55c68e54d4c3",
+    "name": "FilterAccountListings",
+    "commands": [{
+      "id": "09954575-fcef-48d4-846c-953559eb0012",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/user/5ArW/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9301e37c-5d64-4670-8312-b3cbe361b16e",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6dff0f2a-ec1a-4ea5-aa4b-0c9ffd256309",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrl"
+    }, {
+      "id": "3c48b650-a379-443d-92bf-e9adc0983dea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-t0lbh8:nth-child(2) path",
+      "targets": [
+        ["css=.css-t0lbh8:nth-child(2) path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7acbbcef-fd8f-4b1d-9311-2fd26f976e91",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0c76b5cc-0d2c-49e8-8db1-383ac42afd2f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-t0lbh8:nth-child(2) .css-t0lbh8:nth-child(1) .css-ezqjds",
+      "targets": [
+        ["css=.css-t0lbh8:nth-child(2) .css-t0lbh8:nth-child(1) .css-ezqjds", "css:finder"],
+        ["xpath=//div[@id='items']/div/div/div/div[3]/ul/li[2]/ul/li/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//li[2]/ul/li/div/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "453ad820-5384-401c-90c9-6892f746a69c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlToys140"
+    }, {
+      "id": "38d1cc73-d828-49f1-89a6-f691cdd5906f",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b471c823-6498-41f1-bd4f-2d5fd825bafd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-126x4ro:nth-child(2) > .css-t0lbh8:nth-child(5) .css-mufufg",
+      "targets": [
+        ["css=.css-126x4ro:nth-child(2) > .css-t0lbh8:nth-child(5) .css-mufufg", "css:finder"],
+        ["xpath=//div[@id='items']/div/div/div/div[3]/ul/li[2]/ul/li[5]/div/div/a", "xpath:idRelative"],
+        ["xpath=//li[5]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5676370-b194-4d90-a46f-c90e2f7252d5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlAccessories195"
+    }, {
+      "id": "fa71e1ae-afff-4bac-8047-6b5a242534cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-t0lbh8:nth-child(2) .css-pg4dg8",
+      "targets": [
+        ["css=.css-t0lbh8:nth-child(2) .css-pg4dg8", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a95ac388-3433-4f38-ba7f-d54cf560be20",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fbda8748-eebd-437e-8fa0-6db5d4634d84",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-126x4ro:nth-child(1) > .css-t0lbh8:nth-child(3) .css-1n5cjiy",
+      "targets": [
+        ["css=.css-126x4ro:nth-child(1) > .css-t0lbh8:nth-child(3) .css-1n5cjiy", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7705b5a4-7143-4f08-9795-56712dcbf913",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "826c1293-9c26-44ba-a7a6-1deaa1ab8848",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-126x4ro:nth-child(2) > .css-t0lbh8:nth-child(5) .css-1uei47v > .css-mufufg",
+      "targets": [
+        ["css=.css-126x4ro:nth-child(2) > .css-t0lbh8:nth-child(5) .css-1uei47v > .css-mufufg", "css:finder"],
+        ["xpath=//div[@id='items']/div/div/div/div[3]/ul/li[3]/ul/li[5]/div/div/a", "xpath:idRelative"],
+        ["xpath=//li[3]/ul/li[5]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "649b4cd1-9ad1-4c23-a1d4-e0bfa6647c5b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlLights641"
+    }, {
+      "id": "4c83d9fd-73dd-4faa-8bb8-42921eb5cc3d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-pg4dg8",
+      "targets": [
+        ["css=.css-pg4dg8", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "455ea13a-4919-4389-be13-a13970292925",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f19ff2b9-ed7b-47c6-991a-ee69e99ce164",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-t0lbh8:nth-child(4) .css-1n5cjiy",
+      "targets": [
+        ["css=.css-t0lbh8:nth-child(4) .css-1n5cjiy", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "02b7bafb-ade2-45d8-bcb5-d6ee1188b81a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-126x4ro:nth-child(2) .css-ezqjds",
+      "targets": [
+        ["css=.css-126x4ro:nth-child(2) .css-ezqjds", "css:finder"],
+        ["xpath=//div[@id='items']/div/div/div/div[3]/ul/li[4]/ul/li/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//li[4]/ul/li/div/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25ec2468-4b7b-43d1-b073-2566061a3b63",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlAnimals341"
+    }, {
+      "id": "6695c1d2-9beb-4321-97db-04a82af911e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-pg4dg8",
+      "targets": [
+        ["css=.css-pg4dg8", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ec3e403-dc23-4baa-a767-469afb784430",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "005d2b32-4df5-49f1-b6da-169ade65d3e7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${pageUrlToys140}.includes('categoryId=140') &&  ${pageUrlAccessories195}.includes('categoryId=195') &&  ${pageUrlLights641}.includes('categoryId=641') &&  ${pageUrlAnimals341}.includes('categoryId=341');",
+      "targets": [],
+      "value": "res"
+    }, {
+      "id": "d9aaf0ed-c8dd-4233-afd8-48124489f613",
+      "comment": "",
+      "command": "assert",
+      "target": "res",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -4940,7 +5147,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb", "bbd65156-62e3-4f07-8177-983f0151ffc2", "b4ae0060-2d27-4d27-8940-dcc198ccb030", "c8135772-ac26-455d-8213-3653670a2016", "0e76eafa-2d25-4599-9d34-ff6d8a0e3aa0", "16016b6d-689c-41c5-b922-f6f48ce9d163", "d96669e2-a7ff-4d77-abe2-c62b781bcb6a", "c97262ec-ac81-4907-a8fb-d1d3f4360a8a", "9feafe09-0818-4b00-88e1-8b27fdc42c83", "c666e7bc-496f-4f6e-80f9-460179fa7ba3", "8b817d4f-66b9-4e33-8ac0-6afc6f33e309", "e637433b-6247-40ee-b011-079e72f87b7a", "c9547e83-1059-4b6a-b501-58c5fe6c2507", "47a25c1b-7c85-4436-b1c9-6b2226377298"]
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb", "bbd65156-62e3-4f07-8177-983f0151ffc2", "b4ae0060-2d27-4d27-8940-dcc198ccb030", "c8135772-ac26-455d-8213-3653670a2016", "0e76eafa-2d25-4599-9d34-ff6d8a0e3aa0", "16016b6d-689c-41c5-b922-f6f48ce9d163", "d96669e2-a7ff-4d77-abe2-c62b781bcb6a", "c97262ec-ac81-4907-a8fb-d1d3f4360a8a", "9feafe09-0818-4b00-88e1-8b27fdc42c83", "c666e7bc-496f-4f6e-80f9-460179fa7ba3", "8b817d4f-66b9-4e33-8ac0-6afc6f33e309", "e637433b-6247-40ee-b011-079e72f87b7a", "c9547e83-1059-4b6a-b501-58c5fe6c2507", "47a25c1b-7c85-4436-b1c9-6b2226377298", "709c2cea-e2a0-4723-8250-55c68e54d4c3"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
