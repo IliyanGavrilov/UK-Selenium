@@ -3744,6 +3744,1188 @@
       "targets": [],
       "value": "true"
     }]
+  }, {
+    "id": "8b817d4f-66b9-4e33-8ac0-6afc6f33e309",
+    "name": "FilterAutopartsAccessoriesTires",
+    "commands": [{
+      "id": "df53ecdb-4cdc-4d4b-9a62-7a28d48b33cc",
+      "comment": "",
+      "command": "store",
+      "target": "Използвано ",
+      "targets": [],
+      "value": "condition"
+    }, {
+      "id": "3d4d60e2-f964-4c3b-b70c-1a908cc7ea26",
+      "comment": "",
+      "command": "store",
+      "target": "Зимни",
+      "targets": [],
+      "value": "seasonal"
+    }, {
+      "id": "85785899-ffea-42fb-add5-9370d087dd5d",
+      "comment": "",
+      "command": "store",
+      "target": "BMW",
+      "targets": [],
+      "value": "appropriateFor"
+    }, {
+      "id": "833941aa-e4c2-40df-b564-220a07faa8d4",
+      "comment": "",
+      "command": "store",
+      "target": "Гуми",
+      "targets": [],
+      "value": "type"
+    }, {
+      "id": "e766458d-7161-4222-9d2c-3bed1ed8482c",
+      "comment": "",
+      "command": "store",
+      "target": "Автомобили",
+      "targets": [],
+      "value": "typeMPS"
+    }, {
+      "id": "64b327c9-70f3-4790-921e-050ccce23b94",
+      "comment": "",
+      "command": "open",
+      "target": "/avtochasti-aksesoari-gumi-dzhanti/gumi-dzhanti/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "450b112f-be03-4938-b7a0-26543911f2a4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(2) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(2) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[2]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bc62af4-acf8-4652-bd53-691985e1e524",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[2]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'Използвано')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "edbb9dcd-a919-4d26-82f7-813087482e5d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(2) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(2) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[2]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec9fbf8b-0e43-43eb-8ca5-a0ddbb3318b9",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "372d1a6e-23e2-4c35-893d-9d9bfe4c413e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "40f1a78d-337c-4a64-b3ef-273db32bb0f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'Зимни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa7afd47-1fa9-4666-8e71-47f7db4977fd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Зимни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9672377e-d6cd-4cb3-b39d-c0e77523786c",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "984ab3b1-7a11-4000-b48f-7222d31a1803",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(5) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(5) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e4d05ee-85af-4504-89c0-a505c4cc1a4d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(7)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div[2]/div/label[7]", "xpath:idRelative"],
+        ["xpath=//label[7]", "xpath:position"],
+        ["xpath=//label[contains(.,'BMW')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "14184088-a6bf-477d-8e63-78c07aa66ef7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(5) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(5) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'BMW')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ad9fc43-6eec-4a0f-b049-c662e5189506",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52ec5909-ec25-4111-9867-64631b8e5fe8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(6) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(6) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[6]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17fe293f-d42c-40b3-83b2-21142f2710cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[6]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Гуми')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b8b2391-2796-4a76-9af2-7347fbfcda03",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(6) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(6) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[12]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[6]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "29371ef1-c7ba-4144-93e4-e648c36cf8ea",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6c772b3-ba07-49ea-97cb-cbebda4de41e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(7) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(7) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c6074da-83bd-4685-9a33-f436cd3d74ba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Автомобили')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c653f4ec-a039-4722-a80e-043fca17ca0c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(7) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(7) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc4ece43-729d-4835-b94d-2fcdeee12786",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5ed42e1-ba30-402b-ba62-a69b8334baa6",
+      "comment": "",
+      "command": "executeScript",
+      "target": " const listings = document.querySelectorAll('[data-cy=\"l-card\"]');     let allValid = true;          for (let listing of listings) {         if (listing.textContent.includes('Промотирана обява')) {             continue;         } \t\t         const paramsList = listing.querySelector('[data-testid=\"parameters-list\"]'); \t\tif (!paramsList) { continue;} \t\tconst paramRows = paramsList.querySelectorAll('[data-testid^=\"param-row-\"]'); \t\t         const elements = listing.querySelectorAll('.css-1ixkkbm');         let foundState = false, foundSeasonality = false, foundSuitableFor = false, foundType = false, foundMpsType = false;                 for (let row of paramRows) {             const paramName = row.querySelector('[data-testid^=\"param-name-\"]');             const paramValue = row.querySelector('.css-1ixkkbm');              \t\t\t   if (!paramName || !paramValue) continue; \t\t\t    \t\t\tconst name = paramName.textContent.trim();             const value = paramValue.textContent.trim(); \t\t\t             if (name === 'Състояние' && value.includes('${condition}')) {                 foundState = true;             } else if (name === 'Сезонност' && value.includes('${seasonal}')) {                 foundSeasonality = true;             } else if (name === 'Подходящ за' && value.includes('${appropriateFor}')) {                 foundSuitableFor = true;             } else if (name === 'Тип' && value.includes('${type}')) {                 foundType = true;             } else if (name === 'Вид МПС' && value.includes('${typeMPS}')) {                 foundMpsType = true;             }         }                  if (!foundState || !foundSeasonality || !foundSuitableFor || !foundType || !foundMpsType) {             allValid = false;             break;         }     }          return allValid;",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "4beaae44-ce08-4d86-8e73-e29bde718fee",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "e637433b-6247-40ee-b011-079e72f87b7a",
+    "name": "FilterClothes",
+    "commands": [{
+      "id": "3955ecd3-edbe-485a-a550-1a44b8899a20",
+      "comment": "",
+      "command": "store",
+      "target": "adidas",
+      "targets": [],
+      "value": "brand"
+    }, {
+      "id": "2f060ae9-263b-4c56-9d50-8c3684007b37",
+      "comment": "",
+      "command": "store",
+      "target": "Бял",
+      "targets": [],
+      "value": "color"
+    }, {
+      "id": "986886e9-c2be-476d-be1b-b76405cb12d0",
+      "comment": "",
+      "command": "store",
+      "target": "Полиестер",
+      "targets": [],
+      "value": "material"
+    }, {
+      "id": "d6a1d606-81f2-4343-9d54-851839180ce9",
+      "comment": "",
+      "command": "open",
+      "target": "/moda/drehi/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "896051f1-5d5a-467f-8931-aa6d9d1e450d",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a988be08-b85b-49b0-af11-6455f3eb153e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ddb3bcb6-e27e-4703-836a-22213ef45298",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(4)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div[2]/div/label[4]", "xpath:idRelative"],
+        ["xpath=//label[4]", "xpath:position"],
+        ["xpath=//label[contains(.,'adidas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47b923e1-cbb9-4149-9073-f8451285aa7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b1ef2f9-201d-495e-accd-4287c71b2a29",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b09596f-8527-4edc-bec4-a7a3dc63bdc3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(7) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(7) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6e5cc68-9e1b-4bec-838b-2e42546d98ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(3)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div[2]/div/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'Бял')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a66f290b-248b-4718-8f68-a8c0ae461e2f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(7) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(7) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8133ce9-d723-4de5-bc7c-e4544e3164b8",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c030354-7926-428f-9bc3-c67d0b22b22f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(8) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(8) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b40a797-edb8-4013-909c-60d69721e31a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(22)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(22)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div[2]/div/label[22]", "xpath:idRelative"],
+        ["xpath=//label[22]", "xpath:position"],
+        ["xpath=//label[contains(.,'Полиестер')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4923fee4-4965-45c5-b3af-ac6a101f052f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(8) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(8) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "081eae72-f2be-4355-ad1b-c4aa70a1cd1c",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a47bd71-834d-4708-955b-f64263652fe6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const listings = document.querySelectorAll('[data-cy=\"l-card\"]'); let allValid = true;  for (let listing of listings) {     if (listing.textContent.includes('Промотирана обява')) {         continue;     }          const paramValues = listing.querySelectorAll('[data-testid=\"param-value\"]');          let foundAdidas = false, foundWhite = false, foundPolyester = false;          for (let param of paramValues) {         const value = param.textContent.trim();                  if (value === ${brand}) {             foundAdidas = true;         } else if (value === ${color}) {             foundWhite = true;         } else if (value === ${material}) {             foundPolyester = true;         }     }          if (!foundAdidas || !foundWhite || !foundPolyester) {         allValid = false;         break;     } }  return allValid;",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "d487dfb2-d7ee-4f0c-b1b8-eb6b7c293b55",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "c9547e83-1059-4b6a-b501-58c5fe6c2507",
+    "name": "FilterExcursionsVacations",
+    "commands": [{
+      "id": "cc60a23e-3467-4377-a472-9cc0e91b4cd1",
+      "comment": "",
+      "command": "store",
+      "target": "9+",
+      "targets": [],
+      "value": "capacity"
+    }, {
+      "id": "55074ed4-3179-471c-925d-fb6b59b4c977",
+      "comment": "",
+      "command": "store",
+      "target": "В близост до забележителности",
+      "targets": [],
+      "value": "activities"
+    }, {
+      "id": "25293b6d-1e32-418d-8975-ff297d07c6ff",
+      "comment": "",
+      "command": "store",
+      "target": "Включена закуска",
+      "targets": [],
+      "value": "food"
+    }, {
+      "id": "15b06a7f-f3a4-4f42-816e-f950714d334d",
+      "comment": "",
+      "command": "store",
+      "target": "Безплатен Wi-Fi",
+      "targets": [],
+      "value": "bonus"
+    }, {
+      "id": "c10aa803-15ad-4f7a-ac34-164e682f0961",
+      "comment": "",
+      "command": "store",
+      "target": "Собствена баня",
+      "targets": [],
+      "value": "bonusInRoom"
+    }, {
+      "id": "ec4f4733-1bc3-4437-ae40-d014f833b184",
+      "comment": "",
+      "command": "open",
+      "target": "/ekskurzii-pochivki/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f2474c2-a948-4696-a087-f1914626b869",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dfddca4-0798-4bde-b65e-8942785db9a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d70d71e5-095a-4239-a5a6-4c31d804843f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(10)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(10)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[3]/form/div[3]/div/div/div[4]/div/div[2]/div[2]/div/label[10]", "xpath:idRelative"],
+        ["xpath=//label[10]", "xpath:position"],
+        ["xpath=//label[contains(.,'9+')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "85d678aa-9577-442c-accf-456ac2426b45",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb64e6e6-e646-4428-94a1-a488de44171b",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "576a4ebf-7c97-4704-a0aa-38dc6ec2863b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(5) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(5) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c545f7a-04cd-4803-8bc0-a8716a898aa8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(4)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div[2]/div/label[4]", "xpath:idRelative"],
+        ["xpath=//label[4]", "xpath:position"],
+        ["xpath=//label[contains(.,'В близост до забележителности')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea2e6fb4-778c-4103-873c-0c086e1e3028",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(5) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(5) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[5]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e62f3ac-3e75-4581-8b78-2150baab0807",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc1ed937-4263-4ada-97c5-2dbb5466b313",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(6) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(6) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[3]/form/div[3]/div/div/div[6]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0bf0eaf-4e6d-4e75-b979-69cee15f98ae",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[3]/form/div[3]/div/div/div[6]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Включена закуска')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b99c6d3b-5846-4678-9de0-ba7700036db9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(6) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(6) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[3]/form/div[3]/div/div/div[6]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fe48dbe-830b-4064-95d3-c72388be643c",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3deb4394-f1ec-4a06-bbf6-ec26e23dce30",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(7) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(7) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e11e048-177b-449e-9047-a417ea48a8f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(5)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[3]/form/div[3]/div/div/div[7]/div/div[2]/div[2]/div/label[5]", "xpath:idRelative"],
+        ["xpath=//label[5]", "xpath:position"],
+        ["xpath=//label[contains(.,'Безплатен Wi-Fi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d424b124-25f3-4b70-9506-e59a329a94e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(7) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(7) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aaa73ce8-8c85-4cd7-b29f-a8fd91eccfa6",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2fc14381-4e46-473d-8f9d-a17f83117c65",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(8) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(8) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca03f7f0-e936-45b3-949f-75003255b46b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[3]/form/div[3]/div/div/div[8]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Собствена баня')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4104c1b5-2dc8-4c79-b3cb-237d92d9d726",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(8) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(8) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[8]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[8]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "351562ae-de71-45d4-8b2e-e83b3f042019",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd49351d-6c43-47b0-bda3-4b3cb9a14dcc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector('[data-cy=\"ad-card-title\"] a').click()",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16112679-c54c-45f1-b5e0-d0d30aa41a5d",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6da44a1b-b3a6-49a4-a980-18ef5cb6254a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Капацитет на мястото')); return deliveryElement.textContent.includes(${capacity});",
+      "targets": [],
+      "value": "capacityTest"
+    }, {
+      "id": "2a72654b-54bf-4ec2-ab71-cbfdf6843d6d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Активности и развлечения')); return deliveryElement.textContent.includes(${activities});",
+      "targets": [],
+      "value": "activitiesTest"
+    }, {
+      "id": "2d1f9571-ed8b-4ff9-a659-46a624e871f4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Изхранване')); return deliveryElement.textContent.includes(${food});",
+      "targets": [],
+      "value": "foodTest"
+    }, {
+      "id": "587ed1a6-0232-45ac-8ddb-5c2bcfab6b3f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Удобства')); return deliveryElement.textContent.includes(${bonus});",
+      "targets": [],
+      "value": "bonusTest"
+    }, {
+      "id": "e7dd6ec9-4456-41da-952e-d7b300dde16b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var deliveryElement = Array.from(document.querySelectorAll('p.css-13x8d99')).find(el => el.textContent.includes('Удобства в стаята')); return deliveryElement.textContent.includes(${bonusInRoom});",
+      "targets": [],
+      "value": "bonusInRoomTest"
+    }, {
+      "id": "42660e0f-76d8-4bc9-b0f4-746f6c220d78",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59a6ddff-a439-4435-b5cb-bcc87cfc15f5",
+      "comment": "",
+      "command": "assert",
+      "target": "capacityTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "f5da8f93-9744-48a4-a0c2-9d2a77afcea0",
+      "comment": "",
+      "command": "assert",
+      "target": "activitiesTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "d1e0dc7f-70bd-4235-aa4b-369696762e2d",
+      "comment": "",
+      "command": "assert",
+      "target": "foodTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "28a612e0-a889-4879-bef1-5edb670cf5c1",
+      "comment": "",
+      "command": "assert",
+      "target": "bonusTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "48ae41d9-5e8b-4c9a-8513-ba47ab5b33fb",
+      "comment": "",
+      "command": "assert",
+      "target": "bonusInRoomTest",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "47a25c1b-7c85-4436-b1c9-6b2226377298",
+    "name": "FilterWorkAdminOfficeActivities",
+    "commands": [{
+      "id": "265b9508-13bb-4d45-b803-aa6ca4cdc46c",
+      "comment": "",
+      "command": "store",
+      "target": "Пълно работно време",
+      "targets": [],
+      "value": "employment"
+    }, {
+      "id": "4727c00a-e840-4485-9dea-1a0bbd1e4544",
+      "comment": "",
+      "command": "store",
+      "target": "Постоянна",
+      "targets": [],
+      "value": "type"
+    }, {
+      "id": "0f652a91-0fbc-4354-80cf-c1e5e2688217",
+      "comment": "",
+      "command": "store",
+      "target": "Подходящо за хора с увреждания",
+      "targets": [],
+      "value": "suitableForDisabled"
+    }, {
+      "id": "a64893ee-887e-488a-8d5e-a63e53e7fe9e",
+      "comment": "",
+      "command": "store",
+      "target": "Дистанционна работа",
+      "targets": [],
+      "value": "remoteWork"
+    }, {
+      "id": "b67d1091-a88b-4fd5-92eb-cc3fa6f16f9e",
+      "comment": "",
+      "command": "store",
+      "target": "Дистанционно интервю",
+      "targets": [],
+      "value": "remoteInterview"
+    }, {
+      "id": "cc5e78a4-0536-40d5-9fca-9a9fb588eb40",
+      "comment": "",
+      "command": "open",
+      "target": "/rabota/administrative-office-activities/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e1dca58-fca3-466e-a68d-a1f184a435a8",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3fb8a2e0-6fac-4b66-b5aa-0bed90f3132e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(2) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(2) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[2]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad2d5adf-c4a6-45ac-9199-60c7414762ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[2]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Подходящо за хора с увреждания')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a912e51f-bd88-4cf1-a5c4-c04948731bc3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(2) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(2) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[2]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Виж всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2601bc1c-2e43-4f37-b964-c9112eb0b052",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ca5c0b8-8160-435c-b059-d7b602a107f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(3) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(3) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[3]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffaad397-429e-4cf9-973a-0dbd215e64c7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[3]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Пълно работно време')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff648023-8ea6-44c5-bdfb-5a5b64ea9da5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-245hy1 > .css-1oyc6ky",
+      "targets": [
+        ["css=.css-245hy1 > .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[3]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Пълно работно време')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "66f4e9dd-f575-4613-b228-0ccbcf91392b",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54540054-8d21-422f-aea4-fb41cf30134a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4fccfd8-4449-4be8-b1cd-d1793f40722b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Постоянна')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "217df7c2-aacd-4be1-875e-cf26e0400ada",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(4) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(4) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Постоянна')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "38bbf9e6-2e5c-470a-8b21-17df3e078c88",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fef5bf9e-9d38-4db7-add3-ea7dea53432d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(6) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(6) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[6]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9c87441-e426-4213-8f50-40ee704c8258",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[6]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Дистанционна работа')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2200a137-ffd9-46ad-b3b0-060759bbc9a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(6) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(6) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[6]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Дистанционна работа')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "446441dc-10a8-4349-a092-6e242c4f3274",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e048a5ce-3436-412b-a3c9-62162ce019f2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(7) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(7) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92f6c0a2-3020-420a-83ac-5201f7d6c5fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-14zdpvc:nth-child(2)",
+      "targets": [
+        ["css=.css-14zdpvc:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div[2]/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Дистанционно интервю')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56c36100-803b-4096-b45a-f47612173c74",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-gvv1vy:nth-child(7) .css-1oyc6ky",
+      "targets": [
+        ["css=.css-gvv1vy:nth-child(7) .css-1oyc6ky", "css:finder"],
+        ["xpath=(//button[@type='button'])[13]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[7]/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Дистанционно интервю')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee0b927a-4eb8-4382-89cd-aab3b360851b",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "acba3911-1b78-41fe-a48e-e2ade79fbdac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.querySelector('[data-cy=\"l-card\"] a').click();",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd43b326-9a9a-444f-a7de-4bfb68dd166b",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e364cc38-f3c4-46e0-acf6-299f73f12d29",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from(document.querySelectorAll('div.css-flaqf2 .css-1w03wz8')).some(el =>      el.textContent.includes(${employment}));",
+      "targets": [],
+      "value": "employmentTest"
+    }, {
+      "id": "d06afa6c-de14-4aa2-961c-c167cad62aff",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from(document.querySelectorAll('div.css-flaqf2 .css-1w03wz8')).some(el =>      el.textContent.includes(${type}));",
+      "targets": [],
+      "value": "typeTest"
+    }, {
+      "id": "2e7d9f1e-6887-4188-8bfb-b3676b9b2376",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from(document.querySelectorAll('div.css-flaqf2 .css-evb2p0')).some(el =>      el.textContent.includes(${suitableForDisabled}));",
+      "targets": [],
+      "value": "suitableForDisabledTest"
+    }, {
+      "id": "b7c0a9c3-164e-45e5-8290-ae30dc717a65",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from(document.querySelectorAll('div.css-flaqf2 .css-evb2p0')).some(el =>      el.textContent.includes(${remoteWork}));",
+      "targets": [],
+      "value": "remoteWorkTest"
+    }, {
+      "id": "179c6750-c9b2-44b1-811f-bf28e32ab86f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return Array.from(document.querySelectorAll('div.css-flaqf2 .css-evb2p0')).some(el =>      el.textContent.includes(${remoteInterview}));",
+      "targets": [],
+      "value": "remoteInterviewTest"
+    }, {
+      "id": "67e095ae-2ce5-4fd8-b634-65b48701a358",
+      "comment": "",
+      "command": "assert",
+      "target": "employmentTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "6b9852d9-1fb9-41a0-b6ec-8b84b9a652fa",
+      "comment": "",
+      "command": "assert",
+      "target": "typeTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "304ea956-0a9c-47b6-b4e7-276665636295",
+      "comment": "",
+      "command": "assert",
+      "target": "suitableForDisabledTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "4cec30fe-b42f-4e88-bd87-2e7a7335f2ec",
+      "comment": "",
+      "command": "assert",
+      "target": "remoteWorkTest",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "8fd6158b-6afd-4958-8e48-0ebad3dad7ce",
+      "comment": "",
+      "command": "assert",
+      "target": "remoteInterviewTest",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -3758,7 +4940,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb", "bbd65156-62e3-4f07-8177-983f0151ffc2", "b4ae0060-2d27-4d27-8940-dcc198ccb030", "c8135772-ac26-455d-8213-3653670a2016", "0e76eafa-2d25-4599-9d34-ff6d8a0e3aa0", "16016b6d-689c-41c5-b922-f6f48ce9d163", "d96669e2-a7ff-4d77-abe2-c62b781bcb6a", "c97262ec-ac81-4907-a8fb-d1d3f4360a8a", "9feafe09-0818-4b00-88e1-8b27fdc42c83", "c666e7bc-496f-4f6e-80f9-460179fa7ba3"]
+    "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb", "bbd65156-62e3-4f07-8177-983f0151ffc2", "b4ae0060-2d27-4d27-8940-dcc198ccb030", "c8135772-ac26-455d-8213-3653670a2016", "0e76eafa-2d25-4599-9d34-ff6d8a0e3aa0", "16016b6d-689c-41c5-b922-f6f48ce9d163", "d96669e2-a7ff-4d77-abe2-c62b781bcb6a", "c97262ec-ac81-4907-a8fb-d1d3f4360a8a", "9feafe09-0818-4b00-88e1-8b27fdc42c83", "c666e7bc-496f-4f6e-80f9-460179fa7ba3", "8b817d4f-66b9-4e33-8ac0-6afc6f33e309", "e637433b-6247-40ee-b011-079e72f87b7a", "c9547e83-1059-4b6a-b501-58c5fe6c2507", "47a25c1b-7c85-4436-b1c9-6b2226377298"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
