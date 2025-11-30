@@ -5133,6 +5133,536 @@
       "targets": [],
       "value": "true"
     }]
+  }, {
+    "id": "00729df1-2776-4145-8179-0477d4406869",
+    "name": "LogInIfLoggedOut",
+    "commands": [{
+      "id": "71fe14ad-e0a5-4669-b602-880e728b8cc6",
+      "comment": "",
+      "command": "store",
+      "target": "jocico1711@feralrex.com",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "132e5b1e-ddd0-4bea-a202-5c2e668ca8e9",
+      "comment": "",
+      "command": "store",
+      "target": "parola123123123aA",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "3920cf4a-aa0a-437c-adb8-60ddab47c7ed",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "049f096f-f9ea-4a05-84c3-fdb299b68b8e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll(\"[data-testid=\\\"qa-user-dropdown\\\"]\").length > 0",
+      "targets": [],
+      "value": "isLoggedIn"
+    }, {
+      "id": "0a298c82-885f-402c-8685-58df669cd043",
+      "comment": "",
+      "command": "if",
+      "target": "${isLoggedIn} == false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26914cbe-7ff8-48b0-bdaa-435cf2336a33",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Твоят профил",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7decc98-4b86-4b7d-ad87-d5b28d05eea9",
+      "comment": "",
+      "command": "type",
+      "target": "id=username",
+      "targets": [],
+      "value": "${email}"
+    }, {
+      "id": "e9079816-c11f-4e91-966d-1301a809d160",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "${password}"
+    }, {
+      "id": "101f6474-d44b-4e24-9503-111e3670bb12",
+      "comment": "",
+      "command": "click",
+      "target": "css=#Login > .n-button-text-wrapper",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90ffa857-a4b8-4dd9-b6ee-bf57b0c14c7a",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "173195be-6780-4dbf-9d52-05b7e9742a78",
+    "name": "MyAccountChatPaymentsApplicationSettings",
+    "commands": [{
+      "id": "213c330d-6cb5-466d-bc0b-edac8986dfb2",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "767627e6-6816-425d-979c-50634c893246",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bac46d42-6344-4708-aae2-65006444f3b6",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e4fe99e-c563-49d4-9bad-414191d0159b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-8hfe9g:nth-child(2) .css-15dqzk8",
+      "targets": [
+        ["css=.css-8hfe9g:nth-child(2) .css-15dqzk8", "css:finder"],
+        ["xpath=(//a[contains(text(),'Чат')])[2]", "xpath:link"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.olx.bg/myaccount/answers')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02ecc6e0-aa3e-4d55-b8fa-fc203ed989e2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlChat"
+    }, {
+      "id": "a57e951a-33d7-49a3-8ded-4fcae6d02d03",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d568610-2961-45fd-8aa7-1176f4fc851c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-8hfe9g:nth-child(3) .css-15dqzk8",
+      "targets": [
+        ["css=.css-8hfe9g:nth-child(3) .css-15dqzk8", "css:finder"],
+        ["xpath=(//a[contains(text(),'Плащания')])[2]", "xpath:link"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[3]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/myaccount/history/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9836efa9-15e0-4515-ba09-67c594fad902",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlPaymentsHistory"
+    }, {
+      "id": "d7cf2937-8d03-49e2-a664-96d660410cec",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ccfbb1f-adaf-4930-939a-9b5989cf4ae7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1c1xubp > .n-button-text-wrapper",
+      "targets": [
+        ["css=.css-1c1xubp > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Е-фактури')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f99b2e85-d931-4265-9ace-6fc3a5b91555",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlPaymentsInvoices"
+    }, {
+      "id": "6c021fa2-a8f6-4a3a-b3fd-480ab0dbb69e",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9d07b5bb-2bd0-4922-8319-30d7c8ad3192",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-r6s2ou > .n-button-text-wrapper",
+      "targets": [
+        ["css=.css-r6s2ou > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/div/a[3]/button/span", "xpath:idRelative"],
+        ["xpath=//a[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Баланс')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3154eed1-3e18-49bb-9de4-a5ec2c8e922c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlPaymentsBalance"
+    }, {
+      "id": "4cf4be89-e356-4c16-947a-4cc3f56e91a7",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51a707e4-ebc6-4573-a4b2-69914efab6f1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Кандидатура",
+      "targets": [
+        ["linkText=Кандидатура", "linkText"],
+        ["css=.candidate-profile-tab-tracking > .fleft", "css:finder"],
+        ["xpath=//div[@id='usertabs']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.olx.bg/myaccount/tarsiarabota/')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/ul/li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "890e4247-7138-4ac0-ad4b-f193c2bd72f5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlRecomendedApplications"
+    }, {
+      "id": "f87ca8b9-819c-4d16-bf5c-a960a9702b23",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d3c589e3-581b-405c-b469-f11416f86f84",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(2)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='candidate-profile-fm-content']/main/div/div/div/div/header/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Кандидатура')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd1d3f59-9bbc-4f8b-9d63-85622865d683",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlPersonal"
+    }, {
+      "id": "b0601692-948c-4497-bfef-0570686d10c2",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "267cfb8b-827d-4e22-8c78-c9fb2d964e9d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(3)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='candidate-profile-fm-content']/main/div/div/div/div/header/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Твоята нова работа')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "12aafe2f-ee16-4bee-b15f-5772736783b9",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlPrefJob"
+    }, {
+      "id": "7a55ee28-350b-42ff-a537-d347b28b9e2c",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32e34a5a-e15f-4e98-b3a2-0dee734f54aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(4)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='candidate-profile-fm-content']/main/div/div/div/div/header/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Моите кандидатури')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9160ee61-6e84-4a60-bbbb-aefe391ed3a2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlMyApplications"
+    }, {
+      "id": "db0f94b6-9928-4aba-b7ba-65e5a523c45f",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f8b9605-9cc4-40c0-bdac-1ed87a86466c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-8hfe9g:nth-child(5) .css-15dqzk8",
+      "targets": [
+        ["css=.css-8hfe9g:nth-child(5) .css-15dqzk8", "css:finder"],
+        ["xpath=(//a[contains(text(),'Настройки')])[2]", "xpath:link"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[5]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.olx.bg/myaccount/settings')])[2]", "xpath:href"],
+        ["xpath=//div[5]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4dd87c3-9667-4f3c-a2d8-1cb564aa5561",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlSettings"
+    }, {
+      "id": "cb7706cc-ddb6-4b10-b14a-6fd193ae323c",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7be2a5f-6e32-4d39-9331-1659845ec9c3",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${pageUrlChat}.includes('myaccount/answers') &&  ${pageUrlPaymentsHistory}.includes('myaccount/history') &&  ${pageUrlPaymentsInvoices}.includes('payments/invoices-list') &&  ${pageUrlPaymentsBalance}.includes('myaccount/points') &&   ${pageUrlRecomendedApplications}.includes('myaccount/tarsiarabota') &&  ${pageUrlPersonal}.includes('myaccount/tarsiarabota/profil') &&   ${pageUrlPrefJob}.includes('myaccount/tarsiarabota/predpochitania') &&  ${pageUrlMyApplications}.includes('myaccount/tarsiarabota/kandidatstvania') &&    ${pageUrlSettings}.includes('myaccount/user-settings');",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "284f189b-7974-4a8b-a515-7dea1b4dba8d",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "35e77ca1-48bf-42cd-8720-d9d5401fd012",
+    "name": "MyAccountListingStatuses",
+    "commands": [{
+      "id": "59b8e274-9472-4cd6-9a99-af204de30719",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0b36815-72e7-4279-a12b-f48dd3139865",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea4e005a-1a33-4cd7-b57a-43d4feda280c",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04c4d176-0af0-4b7c-8959-899c66809d10",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(2)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/div/div/div/div/div/div/header/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Изчакващи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5995afd3-d855-4453-8bb5-81820b05906a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlWaiting"
+    }, {
+      "id": "80ddde6f-3911-49c2-9ff5-c7759d48706d",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5b1d97e-527a-4699-9ec1-9b39ea986c09",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(3)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/div/div/div/div/div/div/header/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Изчакващи плащане')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd1c5831-c717-41ca-aafc-e53c1c6b2a5f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlUnpaid"
+    }, {
+      "id": "3ffd6b55-abdd-4ecb-8cfa-f2cda7f7af92",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c7779b9-14e6-4dd7-920b-4002a106999c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(4)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/div/div/div/div/div/div/header/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"],
+        ["xpath=//button[contains(.,'Неактивни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d6bf8ca-86da-4a3b-9a4c-eda61f224ec0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlFinished"
+    }, {
+      "id": "3ef86d9f-338e-4767-986b-a80758eedce2",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ca517e9-7db9-4545-b7c3-a06bd9c064ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(5)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/div/div/div/div/div/div/header/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"],
+        ["xpath=//button[contains(.,'Модерирани')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8649028a-8840-4a31-bb0d-aff710b429dc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "pageUrlModerated"
+    }, {
+      "id": "c22d1df7-3c95-4f65-a0bf-ca11864a76c4",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26067760-562a-417b-8eab-347fffd0290c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${pageUrlWaiting}.includes('myaccount/waiting') &&  ${pageUrlUnpaid}.includes('myaccount/unpaid') &&  ${pageUrlFinished}.includes('myaccount/finished') &&    ${pageUrlModerated}.includes('myaccount/moderated');",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "b1104edc-1319-4ec6-9f7a-8dd4497c4ddb",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "c812e087-915e-41b9-b687-9b6a1305a911",
+    "name": "MyAccountAddListing",
+    "commands": [{
+      "id": "5e2b0c66-4dff-4501-8378-54bd82e240d4",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31789a14-6227-454c-8b49-7baef72fb648",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6c24075-296b-4be4-9ea2-2b98ada55b4c",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ac94546-8bcb-4764-a4bc-f897dc3d2ce8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-786443 > .n-button-text-wrapper",
+      "targets": [
+        ["css=.css-786443 > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/div/div[3]/div/a/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -5148,6 +5678,20 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["333e9ae1-9aa0-4960-b26c-2126162599ba", "90ea39dc-e809-459c-a0f2-d4964f16dc24", "91712059-ff8b-4f44-bc7d-119262945883", "00c976cf-2470-4a5d-8f10-b4a7d0d163ba", "cc943669-44c6-4d1e-826d-5b714c4f7898", "4869b58d-7001-4d63-a3ff-8314ba00b891", "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1", "3e69259e-904e-418d-86f2-6af18eb95795", "676b914f-9488-4d1f-9c30-cb33230c1afe", "7114f106-1dbd-426d-b4d7-5985a55f7630", "292a96d4-7560-4f86-a7a0-c66b6b67d9bb", "bbd65156-62e3-4f07-8177-983f0151ffc2", "b4ae0060-2d27-4d27-8940-dcc198ccb030", "c8135772-ac26-455d-8213-3653670a2016", "0e76eafa-2d25-4599-9d34-ff6d8a0e3aa0", "16016b6d-689c-41c5-b922-f6f48ce9d163", "d96669e2-a7ff-4d77-abe2-c62b781bcb6a", "c97262ec-ac81-4907-a8fb-d1d3f4360a8a", "9feafe09-0818-4b00-88e1-8b27fdc42c83", "c666e7bc-496f-4f6e-80f9-460179fa7ba3", "8b817d4f-66b9-4e33-8ac0-6afc6f33e309", "e637433b-6247-40ee-b011-079e72f87b7a", "c9547e83-1059-4b6a-b501-58c5fe6c2507", "47a25c1b-7c85-4436-b1c9-6b2226377298", "709c2cea-e2a0-4723-8250-55c68e54d4c3"]
+  }, {
+    "id": "a5a32ffc-c5f4-47e8-92b1-8dcf17511816",
+    "name": "Helpers",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["00729df1-2776-4145-8179-0477d4406869"]
+  }, {
+    "id": "2464d67a-bed4-4870-be59-31b8647382e9",
+    "name": "MyAccount",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["173195be-6780-4dbf-9d52-05b7e9742a78", "35e77ca1-48bf-42cd-8720-d9d5401fd012", "c812e087-915e-41b9-b687-9b6a1305a911"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
