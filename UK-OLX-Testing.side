@@ -5663,6 +5663,350 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "16f2b7c3-5808-419c-aa53-3c640da7a111",
+    "name": "SettingsCheckIfDropdownsDropDown",
+    "commands": [{
+      "id": "5721e607-7c0d-4f12-b980-1b7027cda415",
+      "comment": "",
+      "command": "//run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c0f8d64-77f6-445e-853a-c8e93f7adf60",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/user-settings/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2bb64a95-2562-45d7-a1d6-a6a50abbb8d8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(1) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "6514dc9f-9f76-44df-8b1f-cf49aaa2fb88",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e4ba3fe-efb7-48f2-a9f6-bd0bdccb50fd",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div[data-testid=\"c-autosuggest-location-search\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a67c7cfe-6282-4b68-8209-2175772cd9df",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(1) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4a6bc513-ce8a-4c58-858c-f37bf297e958",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(3) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(3) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffc910ef-b2f4-4e03-ac41-bfcc22b7ff8f",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdcf6ff3-44e9-45b3-bcf0-c0568a7a0e35",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=p.css-160cax5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "30812b22-cb18-4fc7-a1ef-3e1f6ec67856",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(3) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "90b57719-f567-455f-94f0-22add8a2d0ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(5) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(3) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2315a7cc-a293-43ac-9fb2-3a2efb31668f",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65f264bb-2e1c-41f5-a99c-a1092a604dc9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=input[data-testid=\"change-email-field\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aaaf55b3-4710-43e4-8250-699ac3cb579b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(5) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(3) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "edacda98-6ea0-4c7d-be80-ba511bbc11a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(7) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b507ef4-8cf9-46d8-82f8-e369cb245616",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55c8eac1-6986-4436-aa8d-8eac372dd4e2",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=input[data-testid=\"advicesEmail\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e6ced50-a4aa-4f37-84d0-cbe9d0a924d2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(7) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c10989ac-3cbd-4c6c-986c-7d8dd98b7896",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(9) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "1795f4ef-b62d-4f5c-94b4-b0919a22bff7",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8293a67f-58e5-4b67-9dad-0c0d13b9141e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=div[data-cy=\"logo-input\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9200d204-9f30-424f-a3a8-336097ec96e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(9) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c0bb005-3ffd-4c13-a68c-f54b14202a99",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(11) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "a83b6608-d807-4489-aaa9-10071a042c7e",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92429ce8-f8f2-4c7f-bde3-1cf9bc02d3c8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button.css-1ks88m9 a[href*=\"section=invoice\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9528908d-9f47-45c9-96e9-0102a187a322",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(11) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b602140-05dd-4796-b989-178965eae4e7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(13) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f9e953b-f16d-4bcb-9ee3-29c41e4bc0a8",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44a017f6-b1e2-4163-bbbb-a3a778e0f63e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=a[href$=\"#upload-cv\"]",
+      "targets": [
+        ["css=section > div > .css-1ks88m9", "css:finder"],
+        ["xpath=(//button[@type='button'])[15]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div[7]/div/section/div/button", "xpath:idRelative"],
+        ["xpath=//div[7]/div/section/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Отиди на „Кандидатура“')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56f01476-01ae-4761-9e6e-d3a0dc3b5bbd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(13) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "56e89b6c-01a6-4812-a883-0f1db469a9fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(15) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ae0ecbb-c805-40d9-b981-884a9ff3243f",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "937b986c-724c-4fba-9b4b-277cc16305ae",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button[data-testid=\"request-data-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a650baf8-cf15-46d9-8766-3f2fe7beb13d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(15) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d30a95e-31a2-492f-8c18-f3e89a8f6d03",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(17) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "147fe4d7-e77c-4a1c-8cda-cea2e1249c3b",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b10d8ca-d84d-42bf-8b07-56701902bf1d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=a.css-1hklruo[href=\"https://account.olx.bg/sessions\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7111174b-4b64-4621-8a56-08365bb2efd0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(17) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0a646d3-b27c-4982-8db6-9e59e79b8df6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(19) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "04b1aaf6-9050-4bcc-adcc-9bc6748094d6",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d813d3d-5504-4a85-b7ab-2c818c5c477a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=section[data-testid=\"mfa-authentication-section\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dfd73f74-f570-4ef3-8543-89c9ab5d3317",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(19) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -5692,6 +6036,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["173195be-6780-4dbf-9d52-05b7e9742a78", "35e77ca1-48bf-42cd-8720-d9d5401fd012", "c812e087-915e-41b9-b687-9b6a1305a911"]
+  }, {
+    "id": "aa9c29e5-4852-47ca-8efa-96cd13be8208",
+    "name": "MyAccountSettings",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["16f2b7c3-5808-419c-aa53-3c640da7a111"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
