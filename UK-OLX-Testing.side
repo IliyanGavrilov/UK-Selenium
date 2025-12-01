@@ -5669,7 +5669,7 @@
     "commands": [{
       "id": "5721e607-7c0d-4f12-b980-1b7027cda415",
       "comment": "",
-      "command": "//run",
+      "command": "run",
       "target": "LogInIfLoggedOut",
       "targets": [],
       "value": ""
@@ -6007,6 +6007,544 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "e301134c-1c72-4c3e-9aa1-633b1437d324",
+    "name": "SetingsMyCV",
+    "commands": [{
+      "id": "d5888e3f-d54f-41d3-908f-a1c5e33a2bc0",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64b01a0f-bd91-4206-9853-d95486a5d0ab",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/user-settings/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1fa161c7-8da7-4525-b95f-c7f73d81510e",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93c3340a-d49f-4f57-8215-9d33d56c2c56",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(13) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "77b6319c-ee93-4cb5-ac8a-d2826f9b730c",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf13dc14-7601-43da-9747-06f89ad028e7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Отиди на „Кандидатура“",
+      "targets": [
+        ["linkText=Отиди на „Кандидатура“", "linkText"],
+        ["css=div > .css-1ks88m9 .css-v1ndtc", "css:finder"],
+        ["xpath=//a[contains(text(),'Отиди на „Кандидатура“')]", "xpath:link"],
+        ["xpath=//div[@id='mainContent']/section/div/div[7]/div/section/div/button/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/myaccount/tarsiarabota/profil/#upload-cv')]", "xpath:href"],
+        ["xpath=//div/button/span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Отиди на „Кандидатура“')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c61801c9-da26-418f-9fee-302f5ee460d5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "refPageUrl"
+    }, {
+      "id": "29fe81b4-29c8-4bea-90d2-b6dfab08667d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${refPageUrl}.includes('/myaccount/tarsiarabota/profil/#upload-cv');",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "fc88d064-f3ad-4105-b403-5a18cc578b96",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "dd80d1ef-e558-405f-b2b6-78697f322555",
+    "name": "SettingsRedactAcc",
+    "commands": [{
+      "id": "5fac533b-2a18-4b6e-8725-379348c3937c",
+      "comment": "",
+      "command": "store",
+      "target": "Париж",
+      "targets": [],
+      "value": "cityOrPostalCode"
+    }, {
+      "id": "554b5d74-ce03-4f54-a6c3-e2d52bf2b8f3",
+      "comment": "",
+      "command": "store",
+      "target": "Макарон Багетов",
+      "targets": [],
+      "value": "name"
+    }, {
+      "id": "0ee372c6-6436-4199-abf1-f09983ee417f",
+      "comment": "",
+      "command": "store",
+      "target": "0888 123 456",
+      "targets": [],
+      "value": "phone"
+    }, {
+      "id": "7b093382-9cda-44cf-8361-a1418a2f6a5e",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "510f0424-2e3d-452c-9063-45957afa9a37",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/user-settings/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82b6c341-2ec7-4c67-ba76-63e8b80a4216",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0a0eda5b-3625-4eee-b326-ecf8f3ca0ded",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(1) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "d21d2dc6-50ee-4ab6-bbb8-3034a1922a96",
+      "comment": "",
+      "command": "type",
+      "target": "id=autosuggest-location-input",
+      "targets": [
+        ["id=autosuggest-location-input", "id"],
+        ["name=city_id", "name"],
+        ["css=#autosuggest-location-input", "css:finder"],
+        ["xpath=//input[@id='autosuggest-location-input']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div/div/div/div/form/div/div/div/div/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${cityOrPostalCode}"
+    }, {
+      "id": "be0ce641-e453-49d7-a154-383a3b869395",
+      "comment": "",
+      "command": "type",
+      "target": "id=text",
+      "targets": [
+        ["id=text", "id"],
+        ["css=#text", "css:finder"],
+        ["xpath=//input[@id='text']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div/div/div/div/form/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": " ${name}"
+    }, {
+      "id": "447dd399-c1a8-4925-ac52-7e9f834fa06c",
+      "comment": "",
+      "command": "type",
+      "target": "id=tel",
+      "targets": [
+        ["id=tel", "id"],
+        ["css=#tel", "css:finder"],
+        ["xpath=//input[@id='tel']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div/div/div/div/form/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": " ${phone}"
+    }, {
+      "id": "24bbc506-8af7-4fc9-aaf4-04794b3055fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-44ew31 .css-h4h8s2",
+      "targets": [
+        ["css=.css-44ew31 .css-h4h8s2", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div/div/div/div/form/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Запази')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "21cc8701-a53e-4f0c-b113-b61acd1c1fc6",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=div[data-testid=\"dialog\"].css-mf7uyd",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "1baba57e-e7fc-4d49-8a2d-9078e6278e58",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@data-testid='dialog']//p[contains(text(), 'Запазихме промените ти')]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cf91b4da-5bfc-450c-aa7f-ba7a2f4a2fcd",
+    "name": "SettingsPassword",
+    "commands": [{
+      "id": "6b5c3c34-bd0e-4fda-bb11-179e6ed89132",
+      "comment": "",
+      "command": "store",
+      "target": "parola123123123aA",
+      "targets": [],
+      "value": "password"
+    }, {
+      "id": "34ebc9a9-9a33-44de-a106-fd6cf1cadf70",
+      "comment": "",
+      "command": "store",
+      "target": "parola123123123aA1",
+      "targets": [],
+      "value": "passwordNEW"
+    }, {
+      "id": "c3d3ed42-c5e8-4b96-a02c-5fdf819c0fb3",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05fab776-911d-4403-a744-8f271271509a",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/user-settings/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a1f8754-7137-48ae-9276-58b795626189",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9623690-cd0b-4b15-a401-52d7170d7fb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(3) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "555531ac-ab7f-48e0-a472-9c4083373ac3",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f4a40d4-d15b-4faa-a10e-0c2d57e06324",
+      "comment": "",
+      "command": "type",
+      "target": "id=current-password",
+      "targets": [
+        ["id=current-password", "id"],
+        ["name=password", "name"],
+        ["css=#current-password", "css:finder"],
+        ["xpath=//input[@id='current-password']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div[2]/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "efc18dd9-8cdb-4d44-8959-f2025f14f4c6",
+      "comment": "",
+      "command": "type",
+      "target": "id=new-password",
+      "targets": [
+        ["id=new-password", "id"],
+        ["name=proposedPassword", "name"],
+        ["css=#new-password", "css:finder"],
+        ["xpath=//input[@id='new-password']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div[2]/div/form/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${passwordNEW}"
+    }, {
+      "id": "a2492fac-d459-44bf-88fe-da377b4f14ca",
+      "comment": "",
+      "command": "click",
+      "target": "css=.n-accordionitem-content__inner > .css-w95vyd > .css-1mzzuk6:nth-child(4) > .css-h4h8s2",
+      "targets": [
+        ["css=.n-accordionitem-content__inner > .css-w95vyd > .css-1mzzuk6:nth-child(4) > .css-h4h8s2", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div[2]/div/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Смени паролата')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d80d46ab-3fe6-4911-97d2-56f37d699193",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5b9fea8-b2b0-4d25-85c6-0f674c5a03fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(3) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ca4c13e-53d9-42ad-8c57-c929886bf383",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d8f28d3-8a11-4fc0-a56c-d895cec33721",
+      "comment": "",
+      "command": "type",
+      "target": "id=current-password",
+      "targets": [
+        ["id=current-password", "id"],
+        ["name=password", "name"],
+        ["css=#current-password", "css:finder"],
+        ["xpath=//input[@id='current-password']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div[2]/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${passwordNEW}"
+    }, {
+      "id": "c185966c-fb48-4f39-9de6-8385a87fc509",
+      "comment": "",
+      "command": "type",
+      "target": "id=new-password",
+      "targets": [
+        ["id=new-password", "id"],
+        ["name=proposedPassword", "name"],
+        ["css=#new-password", "css:finder"],
+        ["xpath=//input[@id='new-password']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div[2]/div/form/div[2]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${password}"
+    }, {
+      "id": "ce8ae487-63ed-4099-9933-7b4edf45733b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.n-accordionitem-content__inner > .css-w95vyd > .css-1mzzuk6:nth-child(4) > .css-h4h8s2",
+      "targets": [
+        ["css=.n-accordionitem-content__inner > .css-w95vyd > .css-1mzzuk6:nth-child(4) > .css-h4h8s2", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div[2]/div/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Смени паролата')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6e49aab-df2d-4cb5-9100-c9bf130b1a52",
+      "comment": "",
+      "command": "//Need to find a reason to assert",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "01a920e2-2b8f-42e0-8bfd-e4b9824d3146",
+    "name": "SettingsEmail",
+    "commands": [{
+      "id": "07af2b7b-2b81-4c72-baa4-957cdf9d0397",
+      "comment": "",
+      "command": "store",
+      "target": "Промяна на имейл в OLX.bg",
+      "targets": [],
+      "value": "expectedMsg"
+    }, {
+      "id": "47194098-e6b4-4067-b382-38358ef2750e",
+      "comment": "",
+      "command": "store",
+      "target": "IloveOLX@abv.bg",
+      "targets": [],
+      "value": "emailTest"
+    }, {
+      "id": "fe1fc4f1-c6fd-40de-9f37-e01aac0cdbf9",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c5c57385-e4b3-4913-83d3-18d2e744e397",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/user-settings/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e12e4f7-9f7b-404b-9de9-27133fe0a390",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af7740db-bc23-4802-a783-92acf3d57d87",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(5) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "54536b94-0c53-4082-b89e-7f156aea346d",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ece758f8-e47b-4ac2-a8ed-f4db113f28ed",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=current-password", "id"],
+        ["name=password", "name"],
+        ["css=#current-password", "css:finder"],
+        ["xpath=//input[@id='current-password']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div[2]/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${emailTest}"
+    }, {
+      "id": "21cf450f-fa7a-4f9c-9ca0-ec7cb4c6b55d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1mzzuk6:nth-child(2) > .css-h4h8s2",
+      "targets": [
+        ["css=.css-1mzzuk6:nth-child(2) > .css-h4h8s2", "css:finder"],
+        ["xpath=(//button[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/section/div/div[3]/div/form/div[2]/button", "xpath:idRelative"],
+        ["xpath=//form/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "050a532d-28a4-4ddb-b812-c7da95a62d88",
+      "comment": "",
+      "command": "assertText",
+      "target": " css=h3.css-1i4gktg",
+      "targets": [],
+      "value": "${expectedMsg}"
+    }, {
+      "id": "57f02f02-4202-408d-8dc0-c32b9703c535",
+      "comment": "",
+      "command": "//in theory it should work but I'm not pushing my luck any further",
+      "target": "got flagged for suspicious activity",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e15c40ea-9232-4675-9f56-e030259aa482",
+    "name": "SettingsInvoice",
+    "commands": [{
+      "id": "75b2ebcd-62aa-465d-af77-3efd0a851e28",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8454f647-7fcd-4bf0-8fc4-e4539a22219c",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/user-settings/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2e6472b-6cc2-43f6-992a-749ffaa8a548",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "41c72cdf-561f-4b2e-a2d1-834eb6517300",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-405v80:nth-child(11) .css-6tfxml",
+      "targets": [
+        ["css=.css-405v80:nth-child(1) .css-6tfxml", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ebcc702-b22b-4568-b38c-d65351792e9b",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6280124-54f9-4af3-a874-710823cac648",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Смени данните за фактура",
+      "targets": [
+        ["linkText=Смени данните за фактура", "linkText"],
+        ["css=section > .css-1ks88m9 .css-v1ndtc", "css:finder"],
+        ["xpath=//a[contains(text(),'Смени данните за фактура')]", "xpath:link"],
+        ["xpath=//div[@id='mainContent']/section/div/div[6]/div/section/button/span/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.olx.bg/myaccount/settings?section=invoice')]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Смени данните за фактура')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "47e28043-eeca-4252-8329-3d956de0cd4d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "refPageUrl"
+    }, {
+      "id": "d6724d5a-37d2-4339-b76b-9b414e3f3fc5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${refPageUrl}.includes('/myaccount/settings/?section=invoice');",
+      "targets": [],
+      "value": "result"
+    }, {
+      "id": "e595a029-aaf7-4844-99d1-2959d47f4f4e",
+      "comment": "",
+      "command": "assert",
+      "target": "result",
+      "targets": [],
+      "value": "true"
+    }]
   }],
   "suites": [{
     "id": "67495d95-410e-46eb-8d79-50ef8f4e26a3",
@@ -6042,7 +6580,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["16f2b7c3-5808-419c-aa53-3c640da7a111"]
+    "tests": ["16f2b7c3-5808-419c-aa53-3c640da7a111", "dd80d1ef-e558-405f-b2b6-78697f322555", "cf91b4da-5bfc-450c-aa7f-ba7a2f4a2fcd", "01a920e2-2b8f-42e0-8bfd-e4b9824d3146", "e301134c-1c72-4c3e-9aa1-633b1437d324", "e15c40ea-9232-4675-9f56-e030259aa482"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
