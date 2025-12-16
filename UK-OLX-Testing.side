@@ -164,13 +164,6 @@
     "id": "333e9ae1-9aa0-4960-b26c-2126162599ba",
     "name": "FilterFaultyListing",
     "commands": [{
-      "id": "08cfefc6-23cc-4a2a-833f-59886af275ee",
-      "comment": "",
-      "command": "",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "7a30d149-d6dc-4d60-a5c3-9ea596467573",
       "comment": "",
       "command": "open",
@@ -213,6 +206,13 @@
       ],
       "value": ""
     }, {
+      "id": "8749f269-dd6c-4d7a-8a24-97c2bbad7976",
+      "comment": "",
+      "command": "pause",
+      "target": "2500",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "5d4c6718-537e-4745-8bd8-b4f393ba2b67",
       "comment": "",
       "command": "click",
@@ -237,6 +237,20 @@
       ],
       "value": ""
     }, {
+      "id": "3b61b1fa-4df3-4ba9-ac0d-4783d254c425",
+      "comment": "",
+      "command": "pause",
+      "target": "2500",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16c7a759-6618-4bc1-9129-40ac18723e55",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var titles = document.querySelectorAll('[data-testid=\"ad-card-title\"] h4');   for (var i = 0; i < titles.length; i++) {     if (titles[i].textContent.includes('Продавам домашно направени')) {       return true;     }   }   return false;",
+      "targets": [],
+      "value": "hasFaultyAd"
+    }, {
       "id": "083f830f-c901-4efb-a6cd-9ef08d886f1a",
       "comment": "",
       "command": "click",
@@ -257,67 +271,6 @@
       "target": "2500",
       "targets": [],
       "value": ""
-    }, {
-      "id": "7317e535-6bc3-467f-afe7-86c2ddd0f787",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.history.back();",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "8faf8d22-145b-4f76-93aa-e5baff9df76e",
-      "comment": "",
-      "command": "pause",
-      "target": "2500",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "137ac82a-0f77-4934-a766-cbab890fb47b",
-      "comment": "",
-      "command": "click",
-      "target": "css=#\\31 39814485 .css-1apmciz .css-1tqlkj0",
-      "targets": [
-        ["css=#\\31 39814485 .css-1apmciz .css-1tqlkj0", "css:finder"],
-        ["xpath=//div[@id='139814485']/div/div/div[2]/div/a", "xpath:idRelative"],
-        ["xpath=(//a[contains(@href, '/d/ad/prodavam-domashno-gledani-puycheta-kokoshki-yarki-pred-pronasyane-CID632-ID9sE8l.html')])[2]", "xpath:href"],
-        ["xpath=//div[6]/div/div/div[2]/div/a", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "161d456a-599b-455e-9453-e251679d36bd",
-      "comment": "",
-      "command": "pause",
-      "target": "2500",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "c2c42551-401f-4a90-89ad-44abf6374192",
-      "comment": "",
-      "command": "//pauses are used for visualization",
-      "target": "",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "0108846f-cea3-46c1-96b9-ac10e2bc7398",
-      "comment": "",
-      "command": "runScript",
-      "target": "window.history.back();",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "72c4d00b-1d1e-4e22-8e41-c01d2df76603",
-      "comment": "",
-      "command": "pause",
-      "target": "2500",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "16c7a759-6618-4bc1-9129-40ac18723e55",
-      "comment": "",
-      "command": "executeScript",
-      "target": "var titles = document.querySelectorAll('[data-testid=\"ad-card-title\"] h4');   for (var i = 0; i < titles.length; i++) {     if (titles[i].textContent.includes('Продавам домашно направени')) {       return true;     }   }   return false;",
-      "targets": [],
-      "value": "hasFaultyAd"
     }, {
       "id": "52f72762-4cad-4554-890e-47b06e61f085",
       "comment": "",
@@ -347,43 +300,8 @@
       "id": "c25e3e5d-85d2-4957-82bd-de7c50855a85",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "/antiki-i-kolektsii/izkustvo/",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "ace2c6ef-0c89-42f5-8022-369011c457b0",
-      "comment": "",
-      "command": "click",
-      "target": "css=.css-1gw3rcq:nth-child(1) > .css-16tr9nw",
-      "targets": [
-        ["css=.css-1gw3rcq:nth-child(1) > .css-16tr9nw", "css:finder"],
-        ["xpath=//img[contains(@src,'https://categories.olxcdn.com/assets/categories/olxbg/antiki-i-kolektsii-1609-1x.png')]", "xpath:img"],
-        ["xpath=//div[@id='searchmain-container']/div[2]/div/div/div/a/img", "xpath:idRelative"],
-        ["xpath=//img", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "1b52757d-9efb-43ac-83a9-423545619a33",
-      "comment": "",
-      "command": "click",
-      "target": "css=.css-jsfayd",
-      "targets": [
-        ["css=.css-jsfayd", "css:finder"],
-        ["xpath=//div[@id='searchmain-container']/div[2]/div/div/div/div[4]/div/div", "xpath:idRelative"],
-        ["xpath=//div[4]/div/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c6ae93f4-3640-44af-b0c8-2362d2d9cda9",
-      "comment": "",
-      "command": "click",
-      "target": "css=.css-1vegftz:nth-child(3) > span",
-      "targets": [
-        ["css=.css-1vegftz:nth-child(3) > span", "css:finder"],
-        ["xpath=//div[@id='searchmain-container']/div[2]/div/div/div/div[4]/div/div/a[3]/span", "xpath:idRelative"],
-        ["xpath=//a[3]/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Изкуство')]", "xpath:innerText"]
-      ],
       "value": ""
     }, {
       "id": "e3b052da-2fbc-4e5b-ac10-6de2eddb479f",
@@ -443,19 +361,6 @@
       "comment": "",
       "command": "click",
       "target": "name=range-from-input",
-      "targets": [
-        ["name=range-from-input", "name"],
-        ["css=.css-eie7o:nth-child(1) .n-textinput-input", "css:finder"],
-        ["xpath=//input[@name='range-from-input']", "xpath:attributes"],
-        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div/div/div[4]/div[2]/div/div/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div[4]/div[2]/div/div/div/div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "20d95ebb-fa76-4fbb-ab35-b003ee307ad5",
-      "comment": "",
-      "command": "click",
-      "target": "name=range-to-input",
       "targets": [
         ["name=range-from-input", "name"],
         ["css=.css-eie7o:nth-child(1) .n-textinput-input", "css:finder"],
@@ -837,17 +742,10 @@
     }, {
       "id": "c22da18f-40cc-4b89-bc3b-f707d17ebfb6",
       "comment": "",
-      "command": "//assert",
+      "command": "assert",
       "target": "isItOnlyEuro",
       "targets": [],
       "value": "true"
-    }, {
-      "id": "789e0628-500f-41d1-864a-dde717d91fef",
-      "comment": "",
-      "command": "echo",
-      "target": "${isItOnlyEuro}",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "cc943669-44c6-4d1e-826d-5b714c4f7898",
@@ -919,13 +817,6 @@
       "target": "css=.css-j0t2x2",
       "targets": [],
       "value": "list"
-    }, {
-      "id": "c2762afa-ff56-48b1-a53f-f30a474a263c",
-      "comment": "",
-      "command": "//pauses are needed so pages can vizualise.",
-      "target": "css classes were pulled from f12 inspection",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "ccf8f688-0c96-4fe0-b665-d6e03fbdb3b1",
@@ -999,12 +890,9 @@
       "id": "df5e0bfa-5a31-4885-9825-7f47ccf6c2bb",
       "comment": "",
       "command": "click",
-      "target": "css=.css-17rwwbl",
+      "target": "css=.css-1s723oh",
       "targets": [
-        ["css=.css-17rwwbl", "css:finder"],
-        ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[4]/div/div/div/div/div/button/div/span", "xpath:idRelative"],
-        ["xpath=//button/div/span", "xpath:position"],
-        ["xpath=//span[contains(.,'Препоръчано')]", "xpath:innerText"]
+        ["css=.css-1s723oh", "css:finder"]
       ],
       "value": ""
     }, {
@@ -1902,14 +1790,14 @@
       "id": "74fd61eb-57dd-40ad-8162-1cbb834a4707",
       "comment": "",
       "command": "click",
-      "target": "linkText=Телевизори4190",
+      "target": "xpath=//a[contains(text(),'Телевизори')]",
       "targets": [
-        ["linkText=Телевизори4190", "linkText"],
+        ["linkText=Телевизори4148", "linkText"],
         ["css=.css-14syomj:nth-child(1) > .css-1q7zkos", "css:finder"],
         ["xpath=//div[@id='mainContent']/div/div[2]/form/div[3]/div[5]/ul/li/a", "xpath:idRelative"],
         ["xpath=//a[contains(@href, '/elektronika/televizori/televizori/')]", "xpath:href"],
         ["xpath=//ul/li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Телевизори4190')]", "xpath:innerText"]
+        ["xpath=//a[contains(.,'Телевизори4148')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
@@ -6365,13 +6253,6 @@
         ["xpath=//button[contains(.,'Смени паролата')]", "xpath:innerText"]
       ],
       "value": ""
-    }, {
-      "id": "f6e49aab-df2d-4cb5-9100-c9bf130b1a52",
-      "comment": "",
-      "command": "//Need to find a reason to assert",
-      "target": "",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "01a920e2-2b8f-42e0-8bfd-e4b9824d3146",
@@ -6460,13 +6341,6 @@
       "target": " css=h3.css-1i4gktg",
       "targets": [],
       "value": "${expectedMsg}"
-    }, {
-      "id": "57f02f02-4202-408d-8dc0-c32b9703c535",
-      "comment": "",
-      "command": "//in theory it should work but I'm not pushing my luck any further",
-      "target": "got flagged for suspicious activity",
-      "targets": [],
-      "value": ""
     }]
   }, {
     "id": "e15c40ea-9232-4675-9f56-e030259aa482",
