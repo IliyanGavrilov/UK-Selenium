@@ -165,26 +165,33 @@
     "id": "a1def4ba-bdbc-4afc-9af4-dcbb4356369f",
     "name": "LogInIfLoggedOut",
     "commands": [{
-      "id": "c285b746-ef5b-4109-83db-884ee5c659da",
+      "id": "93a48f13-5611-4667-8858-8fab20005b35",
       "comment": "",
       "command": "store",
       "target": "jocico1711@feralrex.com",
       "targets": [],
       "value": "email"
     }, {
-      "id": "8cd99706-9377-4198-a959-680e573b13d5",
+      "id": "40e21082-de87-40bc-aa11-1d9df79d71f2",
       "comment": "",
       "command": "store",
       "target": "parola123123123aA",
       "targets": [],
       "value": "password"
     }, {
-      "id": "6b95ecb3-141d-44b4-9250-93617651507c",
+      "id": "7e848ea0-75b1-4e00-8686-0d81fd3f1ac9",
       "comment": "",
       "command": "open",
       "target": "/",
       "targets": [],
       "value": ""
+    }, {
+      "id": "6b95ecb3-141d-44b4-9250-93617651507c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=a[data-testid=\"olx-logo-link\"]",
+      "targets": [],
+      "value": "3000"
     }, {
       "id": "4a3ba445-2d8b-4ce1-8bf4-187ce050a2b4",
       "comment": "",
@@ -207,43 +214,25 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "c9c1ebd5-735c-45cb-8d19-9a34ca44eb0b",
+      "id": "4c61700c-599e-4f93-9bc1-23c30bedc784",
       "comment": "",
       "command": "type",
       "target": "id=username",
-      "targets": [
-        ["id=username", "id"],
-        ["name=username", "name"],
-        ["css=#username", "css:finder"],
-        ["xpath=//input[@id='username']", "xpath:attributes"],
-        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
+      "targets": [],
       "value": "${email}"
     }, {
-      "id": "61eac095-f7d0-4f91-a006-b56e2bc15d9f",
+      "id": "c9c1ebd5-735c-45cb-8d19-9a34ca44eb0b",
       "comment": "",
       "command": "type",
       "target": "id=password",
-      "targets": [
-        ["id=password", "id"],
-        ["name=password", "name"],
-        ["css=#password", "css:finder"],
-        ["xpath=//input[@id='password']", "xpath:attributes"],
-        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div[2]/div/div/div/input", "xpath:idRelative"],
-        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
-      ],
+      "targets": [],
       "value": "${password}"
     }, {
-      "id": "36ce6a88-d530-4bb8-bb01-21816ca1fbda",
+      "id": "7643b04d-2ee7-4f8f-b409-e753caabab7b",
       "comment": "",
       "command": "click",
-      "target": "css=#Login > .n-button-text-wrapper",
-      "targets": [
-        ["css=#Login > .n-button-text-wrapper", "css:finder"],
-        ["xpath=//button[@id='Login']/span", "xpath:idRelative"],
-        ["xpath=//form/button[2]/span", "xpath:position"]
-      ],
+      "target": "css=#Login",
+      "targets": [],
       "value": ""
     }, {
       "id": "5bf533ac-8563-4371-ae4a-cd377e081e14",
@@ -1429,6 +1418,3852 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "6d2cf85f-f7b5-4aa8-82ac-28645d507f51",
+    "name": "ChatWhenLoggedOut",
+    "commands": [{
+      "id": "429c019b-f421-424b-a5a2-0653e3c74a3e",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e6288848-bd50-4712-820c-32a4c6c14b4f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22738246-4fc4-4313-9111-aeaadecf3dfd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-py8enh",
+      "targets": [
+        ["css=.css-py8enh", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3214353-900e-4baf-8a25-d2fa5bc080a2",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3000"
+    }]
+  }, {
+    "id": "8e29bd5d-1477-49ba-89f1-0b03e7d7509d",
+    "name": "NotificationsHubWhenLoggedOut",
+    "commands": [{
+      "id": "4b667765-8d50-477a-894b-c29a4252c3f2",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7177159e-5982-4c7a-a1d6-12782adcd8cd",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e5e3f13-13a2-4fc8-aa02-bdbafbd2cf27",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-cy=\"h-notification\"]",
+      "targets": [
+        ["css=.css-1acola7", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "e30edef8-3329-4804-8f6d-60f61ff29701",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3000"
+    }]
+  }, {
+    "id": "47746d23-74c5-4a4d-82fc-edfa689ef670",
+    "name": "MyProfileWhenLoggedOut",
+    "commands": [{
+      "id": "8795e37c-ea24-44ca-9d41-187fbd36a8c8",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98299cc1-f1ff-499a-aff6-563cf9627853",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e4f9e7c-c605-4151-b15b-eb065b5644f7",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"myolx-link\"]",
+      "targets": [
+        ["css=.css-1acola7", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "4084247a-6adb-4b47-89c3-9c3b86dffd4f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3000"
+    }]
+  }, {
+    "id": "d09a0112-983e-4a56-b7ef-a4a1319931e4",
+    "name": "AddListingWhenLoggedOut",
+    "commands": [{
+      "id": "f25bec76-1546-454c-8f2e-4da7517df839",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8236004-8c63-4c0d-bc34-1f9138effa6c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96f9f26d-6434-460b-b76e-c0d1a73ba75d",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"post-new-ad-button\"]",
+      "targets": [
+        ["css=.css-1acola7", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "f5cfaf7d-a310-4b78-beaf-81f90eb3b555",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=username",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3000"
+    }]
+  }, {
+    "id": "bb940a19-500b-49e0-a7a6-33c5ecbc6143",
+    "name": "FavouritesWhenLoggedOut",
+    "commands": [{
+      "id": "ee4c5067-bb30-472e-a843-6114fc33aeab",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d005e3b-8385-447a-8f77-f77242ff8b87",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "52e4f7b9-81fa-4705-b804-61bdbb6e8d73",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observed-page-link\"]",
+      "targets": [
+        ["css=.css-oo5g20", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec8b83b0-5865-4b2c-aebe-41735ee1f790",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(1)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(1) > .css-3cz5o2", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div/div[2]/div/div/div/div/header/button/span", "xpath:idRelative"],
+        ["xpath=//button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Любими обяви')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e130024-b771-4459-9886-085057f6f93a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"observed-log-in-button\"]",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "735c167c-40f3-40cc-b4e0-ddd73595025d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(3)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(3) > .css-3cz5o2", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div/div[2]/div/div/div/div/header/button[3]/span", "xpath:idRelative"],
+        ["xpath=//button[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Последно разглеждани')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "251edc30-a0e1-4e06-b473-3b82fdba5029",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "url"
+    }, {
+      "id": "8fec6e23-4c58-4d42-94a9-ba6b74962bed",
+      "comment": "",
+      "command": "assert",
+      "target": "url",
+      "targets": [],
+      "value": "https://www.olx.bg/observed/lastseen/"
+    }]
+  }, {
+    "id": "4c77c3e4-7933-49b5-835b-3058bfa9f0d0",
+    "name": "LastSeenListings",
+    "commands": [{
+      "id": "27a7ac4f-f882-4b61-a921-6e4e40a2e25e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d4dadb51-14d9-4d83-8946-8fc9381ce4b5",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "const card = document.querySelector('[data-testid=\"l-card\"]:first-of-type'); const isJob = card.querySelector('.jobs-ad-card') !== null; if (isJob) { return card.querySelector('h4.css-ox76l0').textContent.trim(); } else { return card.querySelector('p.css-1pktvhb a').textContent.trim(); }",
+      "targets": [],
+      "value": "listingTitle"
+    }, {
+      "id": "3ee38d1e-31ae-4598-90c9-2220a9a065a0",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=[data-testid=\"l-card\"]:first-of-type .jobs-ad-card h4, [data-testid=\"l-card\"]:first-of-type p.css-1pktvhb a",
+      "targets": [],
+      "value": "listingTitle"
+    }, {
+      "id": "5c386eb9-f382-46b9-9713-73a3694c181c",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"]:first-of-type a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b446e34e-5bbc-40d3-990d-b5c6051d792c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"breadcrumbs\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "0089a304-8863-4a5b-aa5a-c3a7e6f64f56",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observed-page-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fabc918-e026-4deb-b8e5-cf780657987f",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fdee3f68-ad5a-4e20-b4d2-998c91a33041",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(3)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div/div[2]/div/div/div/div/header/button[3]", "xpath:idRelative"],
+        ["xpath=//button[3]", "xpath:position"],
+        ["xpath=//button[contains(.,'Последно разглеждани')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7d652421-994c-4457-98ae-4f71ad63f098",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-cy=\"l-card\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "8d63b4d2-31dc-4b4f-89b3-e1706b47c173",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=[data-cy=\"l-card\"]:first-of-type .jobs-ad-card h4, [data-cy=\"l-card\"]:first-of-type [data-cy=\"ad-card-title\"] h4",
+      "targets": [],
+      "value": "firstListingInLastSeen"
+    }, {
+      "id": "26f9f76d-1ba6-4546-9872-74219c1a606a",
+      "comment": "",
+      "command": "//executeScript",
+      "target": "const card = document.querySelector('[data-cy=\"l-card\"]'); const isJob = card.querySelector('.jobs-ad-card') !== null; if (isJob) { return card.querySelector('h4.css-ox76l0').textContent.trim(); } else { return card.querySelector('[data-cy=\"ad-card-title\"] h4').textContent.trim(); }",
+      "targets": [],
+      "value": "firstListingInLastSeen"
+    }, {
+      "id": "48b4dd6b-20d4-4f02-9e8b-d7d7274e8683",
+      "comment": "",
+      "command": "assert",
+      "target": "firstListingInLastSeen",
+      "targets": [],
+      "value": "${listingTitle}"
+    }]
+  }, {
+    "id": "d78efc4e-9483-43e4-86d8-27485640ad57",
+    "name": "MainCategoryListing",
+    "commands": [{
+      "id": "35c98a0f-71ae-476d-94c5-3ff034306d89",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49e2f461-723f-4d31-b9c3-dfddacf5c7ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"cat-632\"]",
+      "targets": [
+        ["css=.css-1gw3rcq > .css-lpehs7", "css:finder"],
+        ["xpath=//img[contains(@src,'https://categories.olxcdn.com/assets/categories/olxbg/elektronika-632-1x.png')]", "xpath:img"],
+        ["xpath=//div[@id='searchmain-container']/div[2]/div/div/div/a[5]/img", "xpath:idRelative"],
+        ["xpath=//a[5]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea72d85c-476b-4baf-991b-d50b721d93bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"sub-cat-632-child-link\"]",
+      "targets": [
+        ["css=.css-1vegftz:nth-child(6) > span", "css:finder"],
+        ["xpath=//div[@id='searchmain-container']/div[2]/div/div/div/div[4]/div/div/a[6]/span", "xpath:idRelative"],
+        ["xpath=//a[6]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Телевизори')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a3b59ee2-a31c-46cc-a1e5-748407609c90",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fbb9eeb-03ed-4064-9846-6201ad6ce809",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"breadcrumbs\"]",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "67294f81-e860-4c8c-9ad8-361ec8ba0a3e",
+    "name": "ListingPhoneNumber",
+    "commands": [{
+      "id": "33e6be3d-2269-4d96-a5f1-79e6359a326d",
+      "comment": "",
+      "command": "store",
+      "target": "Обади се",
+      "targets": [],
+      "value": "initialButtonText"
+    }, {
+      "id": "0ceafaa9-5596-48b6-9654-1f56e9f60b98",
+      "comment": "",
+      "command": "store",
+      "target": "xxx xxx xxx",
+      "targets": [],
+      "value": "hiddenNumber"
+    }, {
+      "id": "a4c5f497-9f88-49a5-9b09-102a13e92d48",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f56a1ae-b1ac-4fc0-adb6-b59affb673cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7cc97615-7abb-42cc-ad32-fc8277804e4d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"offer_title\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "16d6c4ef-91bc-4cf8-94ea-1fe6209f2ab1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "url"
+    }, {
+      "id": "9863d280-d1b0-4643-9f67-f5bd475f4a3c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector('[data-testid=\"ad-login-dialog\"]') !== null",
+      "targets": [],
+      "value": "loginRequired"
+    }, {
+      "id": "d3640df0-4f9a-464d-a0fd-bab56e609107",
+      "comment": "",
+      "command": "if",
+      "target": "${loginRequired}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e907b0d-c127-4d1c-8a04-e4841c9ecc7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"login-button\"]",
+      "targets": [
+        ["css=.css-1hfqj1m > .css-1ks88m9", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[2]/div/div/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "700276f8-3b49-4a7f-b6e5-9133c9ac41fa",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "386cc4d8-75f5-4a65-8295-f24d9481c00e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"qa-user-dropdown\"]",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "5c736979-cdd4-4151-9b4e-fac825c8369a",
+      "comment": "",
+      "command": "open",
+      "target": "${url}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8de0102-ec33-4999-886f-dfaef1134734",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b22ab791-783f-4415-8c47-428baee290be",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"offer_title\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "6b0a6d6f-86a4-421e-a504-ab1e40a69ca4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector('[data-testid=\"show-phone\"]') !== null",
+      "targets": [],
+      "value": "listingHasPhone"
+    }, {
+      "id": "c8cfff8e-4bd9-4843-845a-1aafe832c3c4",
+      "comment": "",
+      "command": "if",
+      "target": "${listingHasPhone}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ff4a65d-1749-47c2-aabe-78b29ff732c5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.css-1k93fmv > .n-button-text-wrapper > span",
+      "targets": [
+        ["css=.css-1k93fmv > .n-button-text-wrapper > span", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[2]/div/div/div[5]/div/button[3]/span/span", "xpath:idRelative"],
+        ["xpath=//button[3]/span/span", "xpath:position"]
+      ],
+      "value": "${initialButtonText}"
+    }, {
+      "id": "84fd2b27-6f83-4db5-8011-e6430407da72",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=[data-testid=\"phones-container\"] p",
+      "targets": [],
+      "value": "${hiddenNumber}"
+    }, {
+      "id": "062be2e6-664c-427b-a3ac-35a8c2fae410",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"show-phone\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "002b5422-2e5a-4808-b15e-597b5c819272",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1k93fmv",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b91efc3-9101-4201-9213-292f3c35cc29",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=a[data-testid=\"contact-phone\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "60fb6796-99c6-445d-bead-4ca729f9de55",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=[data-testid=\"ad-contact-phone\"] a[data-testid=\"contact-phone\"]",
+      "targets": [],
+      "value": "phone1"
+    }, {
+      "id": "9b519847-5664-462f-93bf-39c0b890909c",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=[data-testid=\"phones-container\"] a[data-testid=\"contact-phone\"]",
+      "targets": [],
+      "value": "phone2"
+    }, {
+      "id": "c2e647a2-5b44-43c8-be56-141c1f0f3e10",
+      "comment": "",
+      "command": "assert",
+      "target": "phone1",
+      "targets": [],
+      "value": "${phone2}"
+    }, {
+      "id": "cae9f2a5-9345-4aac-9a5b-fcd78996fa34",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c0338295-f3f3-42a8-a85b-3de355d89ef7",
+    "name": "ErrorOnNonExistingPage",
+    "commands": [{
+      "id": "c1ec984e-fc68-4a3e-a08a-f7e8ff37ebd5",
+      "comment": "",
+      "command": "store",
+      "target": "Хюстън, имаме проблем!",
+      "targets": [],
+      "value": "pageHeadError"
+    }, {
+      "id": "d83b873a-48c8-4502-a29b-bc767735125d",
+      "comment": "",
+      "command": "store",
+      "target": "Страницата не е открита",
+      "targets": [],
+      "value": "titleError"
+    }, {
+      "id": "ce0a7e22-2752-4805-895f-82a71af91a1b",
+      "comment": "",
+      "command": "store",
+      "target": "Провери отново адреса на страницата",
+      "targets": [],
+      "value": "descriptionError"
+    }, {
+      "id": "fa9f5fb4-5eec-47d3-af6d-8a535da7c30e",
+      "comment": "",
+      "command": "open",
+      "target": "/kotka/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cfabe7f5-a88e-4443-aab6-8beab50ee569",
+      "comment": "",
+      "command": "assertTitle",
+      "target": "${pageHeadError}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97b50227-15fc-48cc-b4de-ebbe166b6880",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.c-container__title",
+      "targets": [],
+      "value": "${titleError}"
+    }, {
+      "id": "958d03d8-a127-453b-b8b5-06d345482fa5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.c-container__description",
+      "targets": [],
+      "value": "${descriptionError}"
+    }, {
+      "id": "af779df1-547a-4454-8df2-e160f44cfe66",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Отиди на заглавна страница')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f009dd5-5f44-4f07-8546-374607f8ffa6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "url"
+    }, {
+      "id": "f66170f7-be51-4893-a805-a92d8bea77fe",
+      "comment": "",
+      "command": "assert",
+      "target": "url",
+      "targets": [],
+      "value": "https://www.olx.bg/"
+    }]
+  }, {
+    "id": "f2d98f31-af50-46c7-a814-79f156a8b249",
+    "name": "MobileApps",
+    "commands": [{
+      "id": "a51ea2c8-9f8b-480d-85f1-601ed8386180",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6fcb4a30-9f94-4eb8-bbed-6be982d55584",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"google\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ee7bc91f-ad2f-46f4-a0ed-21483578758c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"apple\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7ad3cfd-9882-4f78-8ab2-235ef17034d9",
+      "comment": "",
+      "command": "open",
+      "target": "/mobileapps/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "040b59e0-890b-48ac-bd5a-dc6520d3f395",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=OLX.bg AppStore",
+      "targets": [
+        ["linkText=OLX.bg AppStore", "linkText"],
+        ["css=.app-icon--app-store", "css:finder"],
+        ["xpath=//a[contains(text(),'OLX.bg AppStore')]", "xpath:link"],
+        ["xpath=//section[@id='hero']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://itunes.apple.com/bg/app/prodavalnik/id688184262?mt=8&utm_source=mobpage&utm_medium=page&utm_campaign=button_ios')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'OLX.bg AppStore')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a375105-d81b-4101-b69f-01ce6ead7885",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=OLX.bg GooglePlay",
+      "targets": [
+        ["linkText=OLX.bg GooglePlay", "linkText"],
+        ["css=.app-icon--google-play", "css:finder"],
+        ["xpath=//a[contains(text(),'OLX.bg GooglePlay')]", "xpath:link"],
+        ["xpath=//section[@id='hero']/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://play.google.com/store/apps/details?id=com.sirmamobile.prodavalnik&utm_source=mobpage&utm_medium=page&utm_campaign=button_android&referrer=utm_source%3Dolx.bg%26utm_medium%3Dcpc%26utm_campaign%3Dandroid-app-landing')]", "xpath:href"],
+        ["xpath=//div/div/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'OLX.bg GooglePlay')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1e8ee2b4-6c22-4cb3-9e5e-282ceff4828f",
+    "name": "ListingMessageWhenLoggedOut",
+    "commands": [{
+      "id": "2c127813-9753-4110-8d32-3480832ca75f",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5049f06f-bd9f-47b0-aaae-ce691740aec9",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ae1cee8-3ca5-4288-b332-9a7d586cb4d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cf7ee6f-eab2-4723-8add-e05977bd2582",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"ad-contact-message-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "49e7c6fd-617b-40f8-9e6f-1de3e259d7d8",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=username",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "a5ba1478-8e12-4f5d-9097-30b9e942e960",
+    "name": "PromoteListingWhenLoggedOut",
+    "commands": [{
+      "id": "b8462feb-7b0d-4443-b201-560de0ecf651",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed560e1a-031b-4707-8286-a38de7cbb200",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "906f563d-ad86-42c3-af88-af7c39cfa3f3",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eda7e079-22cc-4b8c-80c0-92ab5733ee51",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"promotion-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32a121ff-6e71-4367-86e7-ba9d4257c90c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=username",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "1ec3fcb3-f674-4bd5-8877-2adf95eef2cc",
+    "name": "ListingLocation",
+    "commands": [{
+      "id": "ea38f866-fb48-4c85-9acb-101b0cad7341",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0f78cf9-64ec-49f5-98a9-baf6d934029b",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "968dd689-620f-4a48-836e-c546315ae6a6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-149mw5z",
+      "targets": [
+        ["css=.css-149mw5z", "css:finder"],
+        ["xpath=//img[@alt='Област Варна, гр. Варна, ХЕИ']", "xpath:img"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[2]/div[3]/div/section/div[2]/img", "xpath:idRelative"],
+        ["xpath=//section/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ed141fa-42ca-498e-a346-df32bfb003ed",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"qa-map-overlay-visible\"]",
+      "targets": [],
+      "value": "3000 "
+    }]
+  }, {
+    "id": "4f6e39a0-e11d-4c08-a283-cf0f6a33a399",
+    "name": "ReportListingOrJob",
+    "commands": [{
+      "id": "42f25f8b-7184-4d0f-aff4-bdc76e5622ae",
+      "comment": "",
+      "command": "store",
+      "target": "aaaaaaaaaa",
+      "targets": [],
+      "value": "reason"
+    }, {
+      "id": "7aff1bc8-c4ea-4a2e-9d54-cab3b7c3adbc",
+      "comment": "",
+      "command": "store",
+      "target": "aa",
+      "targets": [],
+      "value": "name"
+    }, {
+      "id": "8bc107d6-4358-470d-89a4-e918d2ac4bcd",
+      "comment": "",
+      "command": "store",
+      "target": "a@a.aa",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "776ef870-6a5d-48e4-ac48-178f28f6faaf",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d0a65e22-baac-4e40-97f0-8b4a8cc9eb86",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll('[data-testid=\"qa-user-dropdown\"]').length > 0",
+      "targets": [],
+      "value": "isLoggedIn"
+    }, {
+      "id": "fa7ff2ef-3fda-4cc0-8daf-b8d2a06fd4f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "962d281f-e142-47ba-88e6-d05f460b7d07",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"ad-report-button\"]",
+      "targets": [
+        ["css=.css-149mw5z", "css:finder"],
+        ["xpath=//img[@alt='Област Варна, гр. Варна, ХЕИ']", "xpath:img"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[2]/div[3]/div/section/div[2]/img", "xpath:idRelative"],
+        ["xpath=//section/div[2]/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bd767e9-716d-4ca1-8e0b-3e46086a9f42",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1cd6v2o:nth-child(1)",
+      "targets": [
+        ["css=.css-1cd6v2o:nth-child(1)", "css:finder"],
+        ["xpath=//ul/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "531c541e-0fdb-4245-90bd-4486e3e979e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1cd6v2o:nth-child(1)",
+      "targets": [
+        ["css=.css-1cd6v2o:nth-child(1)", "css:finder"],
+        ["xpath=//ul/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8d19f2c-272a-4cac-b9dd-283705a386fc",
+      "comment": "",
+      "command": "type",
+      "target": "id=reasons-text",
+      "targets": [],
+      "value": "${reason}"
+    }, {
+      "id": "a6c01c1c-2f6c-4c6a-83cd-b4be56e13967",
+      "comment": "",
+      "command": "type",
+      "target": "id=reasons-text",
+      "targets": [],
+      "value": "${reason}"
+    }, {
+      "id": "21f36d1a-937c-42a4-9ac0-1b2ca3cac233",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"report-form-btn\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db95a054-da47-4f4f-98df-787306ab85ab",
+      "comment": "",
+      "command": "if",
+      "target": "${isLoggedIn} == false",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2de15fec-420a-46fa-b3b2-4edece643c5b",
+      "comment": "",
+      "command": "type",
+      "target": "id=reporter-name",
+      "targets": [
+        ["id=reporter-name", "id"],
+        ["name=name", "name"],
+        ["css=#reporter-name", "css:finder"],
+        ["xpath=//input[@id='reporter-name']", "xpath:attributes"],
+        ["xpath=//form[@id='reportForm']/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": "${name}"
+    }, {
+      "id": "e739c298-8ebc-456d-b903-e7626b254f94",
+      "comment": "",
+      "command": "type",
+      "target": "id=reporter-email",
+      "targets": [
+        ["id=reporter-email", "id"],
+        ["name=email", "name"],
+        ["css=#reporter-email", "css:finder"],
+        ["xpath=//input[@id='reporter-email']", "xpath:attributes"],
+        ["xpath=//form[@id='reportForm']/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "df492a44-1433-41dc-9bc4-0b903b483b78",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"report-form-btn\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c09681f2-a213-4c36-b396-ee1a0eb788d6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a9a6b7e-e34d-48b7-9c66-45d7d62de0fb",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"reporting-thanks\"]",
+      "targets": [],
+      "value": "3000 "
+    }, {
+      "id": "f79c9360-2472-47c7-b8a0-4c8231f9f4c3",
+      "comment": "",
+      "command": "//waitForElementPresent",
+      "target": "css=[data-testid=\"check-email\"]",
+      "targets": [],
+      "value": "3000 "
+    }]
+  }, {
+    "id": "dec70e5b-6e14-48b2-9f36-58fd573e0442",
+    "name": "ListingFavouriteWhenLoggedOut",
+    "commands": [{
+      "id": "46e35295-243e-42b6-ab1e-c7fd04ff19f1",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25a4149c-05a7-4cce-bd78-2fdea2c1cb6a",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4436238a-943b-466d-b654-622af9f7835d",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5c21099-b3c6-40dd-bb8b-27cc6d334efd",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observe-ad\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e0b7dd7-8497-4100-b9e8-c7c56cd4adf6",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observed-log-in-button\"]",
+      "targets": [
+        ["css=.css-1ks88m9:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='button'])[57]", "xpath:attributes"],
+        ["xpath=//div[10]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Влез или се регистрирай')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b77c10d2-0e9e-4bc4-9c3f-853edfb1310e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=username",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "3ec75edc-324e-40f8-9373-0de6b4dc561e",
+    "name": "RefreshListingWhenLoggedOut",
+    "commands": [{
+      "id": "02a552b8-f07c-469e-9dd6-db35327f49ad",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e02da672-5ea5-4f92-a472-eb759ec06a27",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18286cd0-a5b7-46f1-b33d-5662f2896a28",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "898ffe19-34df-4b8d-9f59-cd10b4b2813d",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"refresh-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "621b52be-7301-4232-947d-2374074ee2f2",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=username",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "9e7a3c4f-eb68-4cee-a723-ed2d8ccd592d",
+    "name": "ListingOrJobOwnerProfile",
+    "commands": [{
+      "id": "78a7c4a1-2ebd-4056-9ed8-ae979ee8a120",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe84742d-5a60-467e-9866-dca94bf575aa",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9bcdaa6-6f5a-4216-b84d-e7ae007b112b",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"user-profile-link\"]",
+      "targets": [
+        ["css=.css-rnqkz0 .css-14tb3q5", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[2]/div[2]/div[2]/div/div/a/div/div[2]/h4", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/div/div[2]/h4", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57a0fd61-c5ce-4825-bae3-df3b5730e105",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"member-since\"]",
+      "targets": [],
+      "value": "3000 "
+    }]
+  }, {
+    "id": "1b4998d7-28a2-4f0d-ab2c-0871e7d82b08",
+    "name": "ListingImages",
+    "commands": [{
+      "id": "02ec5288-8a78-4a7b-96db-d46015d39d2b",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ebefc00c-47fe-4e46-9fc7-76a1e79fd025",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64adf06e-effd-4ca3-9c3b-d2231ad339ab",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"breadcrumbs\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "9e1346ff-9efd-4f40-9d93-9b02ca48831c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector('[data-testid=\"image-galery-container\"]') !== null",
+      "targets": [],
+      "value": "hasImageGallery"
+    }, {
+      "id": "171168f7-a1ce-487b-8367-f342e4d9c2e9",
+      "comment": "",
+      "command": "// Has photos",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afe1fa5f-fb9f-41f4-a85e-3b7b4cce8358",
+      "comment": "",
+      "command": "if",
+      "target": "${hasImageGallery}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "754645f9-40b2-491b-b7e5-5f70a3195daa",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelectorAll('[data-testid=\"ad-photo\"]').length",
+      "targets": [],
+      "value": "imageCount"
+    }, {
+      "id": "6863c196-6251-4451-b4b5-8b82cfad815d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swiper-slide-active .css-1bmvjcs",
+      "targets": [
+        ["css=.swiper-slide-active .css-1bmvjcs", "css:finder"],
+        ["xpath=//img[@alt='Спортен КАРГО панталон  от памук']", "xpath:img"],
+        ["xpath=//div[@id='swiper-wrapper-b2c10ca03bff10e869']/div/div/img", "xpath:idRelative"],
+        ["xpath=//div/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3495b6b-2839-4f37-926d-fb14f0e9462d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.swiper-button-prev:nth-child(3)",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "b6447c11-43ab-4e04-82c2-a4dcac91d0a7",
+      "comment": "",
+      "command": "// Has more than 1 photo",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "74e5c226-f1c6-4f7d-b513-09116238f72f",
+      "comment": "",
+      "command": "if",
+      "target": "${imageCount} > 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b3261b63-0d40-422f-92e5-ea56943e70f0",
+      "comment": "",
+      "command": "// Check for prev disabled and next enabled on first image",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc0639d6-c50d-42cf-87ca-a442c18732a6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const container = document.querySelector('[data-testid=\"image-galery-container\"]'); const btn = container ? container.querySelector('.swiper-button-prev') : null; return btn ? btn.getAttribute('aria-disabled') : null;",
+      "targets": [],
+      "value": "prevDisabled"
+    }, {
+      "id": "e6d45037-d12a-4bd8-8797-763fd06860b9",
+      "comment": "",
+      "command": "assert",
+      "target": "prevDisabled",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "a91b546d-04c9-4162-bebb-0f6f4d27e40f",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const container = document.querySelector('[data-testid=\"image-galery-container\"]'); const btn = container ? container.querySelector('.swiper-button-next') : null; return btn ? btn.getAttribute('aria-disabled') : null;",
+      "targets": [],
+      "value": "nextDisabled"
+    }, {
+      "id": "86752f62-bfb2-421f-8861-c6893b1f55c4",
+      "comment": "",
+      "command": "assert",
+      "target": "nextDisabled",
+      "targets": [],
+      "value": "false"
+    }, {
+      "id": "f16b14fa-24a8-4470-9421-f5024da41b8d",
+      "comment": "",
+      "command": "// Iterate through all photos",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95887d48-b2fe-48bc-9722-ee6a17cc0151",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "loopIteration"
+    }, {
+      "id": "5f9a19d7-8065-4318-a246-e19585df0b1c",
+      "comment": "",
+      "command": "times",
+      "target": "${imageCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bef581fb-7439-47cb-9780-37a9a93679ad",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector('[data-cy=\"adPhotos-slidesNum\"]').childNodes[0].textContent",
+      "targets": [],
+      "value": "currentImageIndex"
+    }, {
+      "id": "47cf01c3-5648-4e7c-936b-460fb73f0c3a",
+      "comment": "",
+      "command": "// Check if going to second photo unlocks prev button",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8863cbc-99f3-4c43-aae2-5e7fc817fb81",
+      "comment": "",
+      "command": "if",
+      "target": "${currentImageIndex} == 2",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "933a6981-43c7-4448-9a8d-b0c594307fe6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const container = document.querySelector('[data-testid=\"image-galery-container\"]'); const btn = container ? container.querySelector('.swiper-button-prev') : null; return btn ? btn.getAttribute('aria-disabled') : null;",
+      "targets": [],
+      "value": "prevDisabled"
+    }, {
+      "id": "649fee4f-a28d-45d1-bd37-0ba8ca2cc18b",
+      "comment": "",
+      "command": "assert",
+      "target": "prevDisabled",
+      "targets": [],
+      "value": "false"
+    }, {
+      "id": "2cbabc95-adb8-4bb4-bda9-6a4f2509204f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c0695d5-7385-4d5e-bd40-1c0c99ab5767",
+      "comment": "",
+      "command": "// Check image counter",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eef6b4b6-55de-421a-8dd1-6afc0e186b2d",
+      "comment": "",
+      "command": "assert",
+      "target": "currentImageIndex",
+      "targets": [],
+      "value": "${loopIteration}"
+    }, {
+      "id": "82aa7af5-a8c6-46fa-ac86-b64c73769a44",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swiper-button-next:nth-child(4)",
+      "targets": [
+        ["css=.swiper-button-next:nth-child(4)", "css:finder"],
+        ["xpath=//section[@id='modalRoot']/div/div/div/div/div[2]/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81ac79da-dadb-45c4-abdf-7f3b4b673283",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${loopIteration} + 1",
+      "targets": [],
+      "value": "loopIteration"
+    }, {
+      "id": "6020a5c3-fa13-4fcc-8aa3-9f395584cb49",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc1ef3e8-a7e6-4f4b-b07c-82452bdc8234",
+      "comment": "",
+      "command": "// Check for next disabled on last image",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e28dd35f-7bfc-482c-a133-c22e1903bb67",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector('[data-cy=\"adPhotos-slidesNum\"]').childNodes[0].textContent",
+      "targets": [],
+      "value": "currentImageIndex"
+    }, {
+      "id": "f8676597-ee8b-486f-8825-caabd366b9e8",
+      "comment": "",
+      "command": "assert",
+      "target": "currentImageIndex",
+      "targets": [],
+      "value": "${imageCount}"
+    }, {
+      "id": "84107b0c-35b5-48e0-93fa-f1d1742b0044",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const container = document.querySelector('[data-testid=\"image-galery-container\"]'); const btn = container ? container.querySelector('.swiper-button-next') : null; return btn ? btn.getAttribute('aria-disabled') : null;",
+      "targets": [],
+      "value": "nextDisabled"
+    }, {
+      "id": "eb98efbd-4042-497b-8d52-7d577497d282",
+      "comment": "",
+      "command": "assert",
+      "target": "nextDisabled",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "75b67df5-66e6-48cd-9efe-7b702c4c00f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.swiper-button-prev:nth-child(3)",
+      "targets": [
+        ["css=.swiper-button-prev:nth-child(3)", "css:finder"],
+        ["xpath=//section[@id='modalRoot']/div/div/div/div/div[2]/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/div/div[2]/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2500c3ee-201c-48b5-97d8-3222c5ae82ec",
+      "comment": "",
+      "command": "// Check for next enabled again on penultimate image",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56400adf-2479-4fc9-a07c-e020b712aff0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const container = document.querySelector('[data-testid=\"image-galery-container\"]'); const btn = container ? container.querySelector('.swiper-button-next') : null; return btn ? btn.getAttribute('aria-disabled') : null;",
+      "targets": [],
+      "value": "nextDisabled"
+    }, {
+      "id": "275864e2-d1d1-4f1b-9590-9ccd5512d203",
+      "comment": "",
+      "command": "assert",
+      "target": "nextDisabled",
+      "targets": [],
+      "value": "false"
+    }, {
+      "id": "9b195c4b-1fd1-4bdb-946a-74fd8583ff32",
+      "comment": "",
+      "command": "// Exactly one photo",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed2a7a02-784a-40ec-ac65-7120b8fcacc6",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "54f686e5-f289-4b60-a7f5-dda87fae30a6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector('[data-cy=\"adPhotos-slidesNum\"]').childNodes[0].textContent",
+      "targets": [],
+      "value": "currentImageIndex"
+    }, {
+      "id": "869c5ad6-d03f-49d3-983b-97741fd5a51c",
+      "comment": "",
+      "command": "// Check image counter",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "064ee3b6-f8a1-4fe0-af4f-fec8220cce58",
+      "comment": "",
+      "command": "assert",
+      "target": "currentImageIndex",
+      "targets": [],
+      "value": "${imageCount}"
+    }, {
+      "id": "dc323d42-3491-4c1f-a2e5-404f81eed5a2",
+      "comment": "",
+      "command": "// Check if both buttons disabled",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ebc13ce-468d-48d7-9322-0c2e9da96228",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const container = document.querySelector('[data-testid=\"image-galery-container\"]'); const btn = container ? container.querySelector('.swiper-button-prev') : null; return btn ? btn.getAttribute('aria-disabled') : null;",
+      "targets": [],
+      "value": "prevDisabled"
+    }, {
+      "id": "0aa4ac1b-31fe-4428-8d0c-4a9f75350565",
+      "comment": "",
+      "command": "assert",
+      "target": "prevDisabled",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "2e4d5444-bee5-4cd0-af9f-e93c6c4ed130",
+      "comment": "",
+      "command": "executeScript",
+      "target": "const container = document.querySelector('[data-testid=\"image-galery-container\"]'); const btn = container ? container.querySelector('.swiper-button-next') : null; return btn ? btn.getAttribute('aria-disabled') : null;",
+      "targets": [],
+      "value": "nextDisabled"
+    }, {
+      "id": "7cd91eaa-164b-4b69-aabe-a26760ff9182",
+      "comment": "",
+      "command": "assert",
+      "target": "nextDisabled",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "95e5bc3b-1b66-4562-a517-0661d6c563fa",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "923a3a4f-36d6-4415-bebd-d0883b6c6696",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f838663f-4189-4460-aacd-c885e1ae5a16",
+    "name": "ListingRecommendations",
+    "commands": [{
+      "id": "e43f57d2-0b2a-433b-a969-11f5a8c0c031",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cca2f8df-328c-4cea-b858-0bc7175aace5",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df642139-87f3-437c-aabf-63dce30a3b92",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-15a9obg .swiper-button-next",
+      "targets": [
+        ["css=.css-15a9obg .swiper-button-next", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[4]/div[3]/div/section/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/section/div/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57933be0-3ddb-419a-b617-65c6570e8724",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-15a9obg .swiper-button-prev",
+      "targets": [
+        ["css=.css-15a9obg .swiper-button-prev", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[4]/div[3]/div/section/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[3]/div/section/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "41d51d73-f1a3-4fcd-921b-ddb94d9d97a7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"ad-recommendations\"]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7e56badc-e691-4b49-a585-0a32db73fa2f",
+    "name": "ChangeLanguage",
+    "commands": [{
+      "id": "eba5e424-fbbf-466f-9feb-b44d17b36a51",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f2991db-e155-48a2-ab96-5450c240d0de",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=a[data-testid=\"partner-logos-strip\"]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0a983f5b-57e9-46e3-b91e-0784d6ad52c0",
+    "name": "CookieSettings",
+    "commands": [{
+      "id": "fb8a4eb3-c4c0-49a6-932b-e98352efb75e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f2e2978-f167-445a-a072-818f2ac9a750",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Настройки за бисквитките",
+      "targets": [
+        ["linkText=Настройки за бисквитките", "linkText"],
+        ["css=.css-s213mv:nth-child(2) > li:nth-child(9) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Настройки за бисквитките')]", "xpath:link"],
+        ["xpath=//div[@id='footerContent']/div/div/ul[2]/li[9]/a", "xpath:idRelative"],
+        ["xpath=//ul[2]/li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Настройки за бисквитките')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a05b54d7-0119-4113-85e1-d3d190830148",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-accordion-layout:nth-child(3) > .ot-acc-hdr .ot-switch-nob",
+      "targets": [
+        ["css=.ot-accordion-layout:nth-child(3) > .ot-acc-hdr .ot-switch-nob", "css:finder"],
+        ["xpath=//div[@id='ot-pc-content']/section/div[2]/div/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88a549e2-777d-448e-8cc2-f40e9e2e36e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-accordion-layout:nth-child(4) > .ot-acc-hdr .ot-switch-nob",
+      "targets": [
+        ["css=.ot-accordion-layout:nth-child(4) > .ot-acc-hdr .ot-switch-nob", "css:finder"],
+        ["xpath=//div[@id='ot-pc-content']/section/div[3]/div/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "552bcee8-7f3a-46cc-9da3-1b32f68fe7f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-accordion-layout:nth-child(5) > .ot-acc-hdr .ot-switch-nob",
+      "targets": [
+        ["css=.ot-accordion-layout:nth-child(5) > .ot-acc-hdr .ot-switch-nob", "css:finder"],
+        ["xpath=//div[@id='ot-pc-content']/section/div[4]/div/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55dbd256-028f-4641-bc68-aad62e51b10f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-accordion-layout:nth-child(6) > .ot-acc-hdr .ot-switch-nob",
+      "targets": [
+        ["css=.ot-accordion-layout:nth-child(6) > .ot-acc-hdr .ot-switch-nob", "css:finder"],
+        ["xpath=//div[@id='ot-pc-content']/section/div[5]/div/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ec59a65-98b6-4a16-96a3-e959115f4721",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-accordion-layout:nth-child(7) > button",
+      "targets": [
+        ["css=.ot-accordion-layout:nth-child(7) > button", "css:finder"],
+        ["xpath=//div[@id='ot-pc-content']/section/div[6]/button", "xpath:idRelative"],
+        ["xpath=//section/div[6]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39824b25-222f-4eff-8b8b-2cf8e197370d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-accordion-layout:nth-child(6) > button",
+      "targets": [
+        ["css=.ot-accordion-layout:nth-child(6) > button", "css:finder"],
+        ["xpath=//div[@id='ot-pc-content']/section/div[5]/button", "xpath:idRelative"],
+        ["xpath=//section/div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4675d837-4944-45d3-9f51-c32ae0794b07",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-accordion-layout:nth-child(5) > button",
+      "targets": [
+        ["css=.ot-accordion-layout:nth-child(5) > button", "css:finder"],
+        ["xpath=//div[@id='ot-pc-content']/section/div[4]/button", "xpath:idRelative"],
+        ["xpath=//section/div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3598b24-c37a-4efb-8d84-693b35a3d3b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-accordion-layout:nth-child(4) > button",
+      "targets": [
+        ["css=.ot-accordion-layout:nth-child(4) > button", "css:finder"],
+        ["xpath=//div[@id='ot-pc-content']/section/div[3]/button", "xpath:idRelative"],
+        ["xpath=//section/div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2ac0711-b5a4-4ec5-91a5-5eca4351bbe3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-accordion-layout:nth-child(3) > button",
+      "targets": [
+        ["css=.ot-accordion-layout:nth-child(3) > button", "css:finder"],
+        ["xpath=//div[@id='ot-pc-content']/section/div[2]/button", "xpath:idRelative"],
+        ["xpath=//section/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3d92b42-515b-423d-babc-91c62198b892",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-accordion-layout:nth-child(2) > button",
+      "targets": [
+        ["css=.ot-accordion-layout:nth-child(2) > button", "css:finder"],
+        ["xpath=//div[@id='ot-pc-content']/section/div/button", "xpath:idRelative"],
+        ["xpath=//section/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff885f0a-0f88-40b9-8af4-fb3f5866d566",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ot-pc-refuse-all-handler",
+      "targets": [
+        ["css=.ot-pc-refuse-all-handler", "css:finder"],
+        ["xpath=//div[@id='onetrust-pc-sdk']/div/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Отхвърляне на всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e47c64c5-1247-4916-a37f-271a710b6f47",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Настройки за бисквитките",
+      "targets": [
+        ["linkText=Настройки за бисквитките", "linkText"],
+        ["css=.css-s213mv:nth-child(2) > li:nth-child(9) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Настройки за бисквитките')]", "xpath:link"],
+        ["xpath=//div[@id='footerContent']/div/div/ul[2]/li[9]/a", "xpath:idRelative"],
+        ["xpath=//ul[2]/li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Настройки за бисквитките')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bcd561d8-6adb-4e7d-95ee-86c260c7bba2",
+      "comment": "",
+      "command": "click",
+      "target": "id=accept-recommended-btn-handler",
+      "targets": [
+        ["id=accept-recommended-btn-handler", "id"],
+        ["css=#accept-recommended-btn-handler", "css:finder"],
+        ["xpath=//button[@id='accept-recommended-btn-handler']", "xpath:attributes"],
+        ["xpath=//div[@id='ot-pc-content']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Разрешаване на всички')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9c0634e-8d24-4179-bef3-ebea26c58507",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Настройки за бисквитките",
+      "targets": [
+        ["linkText=Настройки за бисквитките", "linkText"],
+        ["css=.css-s213mv:nth-child(2) > li:nth-child(9) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Настройки за бисквитките')]", "xpath:link"],
+        ["xpath=//div[@id='footerContent']/div/div/ul[2]/li[9]/a", "xpath:idRelative"],
+        ["xpath=//ul[2]/li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Настройки за бисквитките')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7f01a90-c6e0-4869-9468-d271bb53d1a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.save-preference-btn-handler",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "917801c5-5e5f-4e68-9973-285d5b779644",
+    "name": "ListingMessageWhenLoggedIn",
+    "commands": [{
+      "id": "3084d8e0-587f-4584-a4b2-bb08678507d9",
+      "comment": "",
+      "command": "store",
+      "target": "a",
+      "targets": [],
+      "value": "message"
+    }, {
+      "id": "55e206fc-91b5-48e8-8a3c-0b6563c27681",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "660d28b8-5c3e-40b1-81da-6fe2ec6c5ca7",
+      "comment": "",
+      "command": "open",
+      "target": "/d/ad/znachka-mvr-otlichnik-CID1609-ID9E2IX.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "53b23624-8654-4925-8821-227999c426eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"ad-contact-message-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5314aba3-6d7c-4b4f-a7c5-c8eaf94f6840",
+      "comment": "",
+      "command": "type",
+      "target": "name=message.text",
+      "targets": [
+        ["name=message.text", "name"],
+        ["css=.css-tq486t", "css:finder"],
+        ["xpath=//textarea[@name='message.text']", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[3]/div/section[2]/div/form/div/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "${message}"
+    }, {
+      "id": "31198754-2b9f-4211-a17a-f7c392387b03",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-15wjrqi",
+      "targets": [
+        ["css=.css-15wjrqi", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "570fc3ff-41a3-482e-ae33-346f6d157a5d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"status-icon-SENT\"]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "af300224-5c5e-4fbe-b837-88e58558dd4c",
+    "name": "DeleteAndRestoreChat",
+    "commands": [{
+      "id": "5d298a83-dce4-4ae2-8ab5-756ba7daa88c",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79cd0745-0529-4af2-8efb-433b0e7dbdba",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6bdf121-caf8-4eee-8d14-16813e5fc903",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"header-chat-button\"]",
+      "targets": [
+        ["css=.css-8hfe9g:nth-child(2) .css-15dqzk8", "css:finder"],
+        ["xpath=(//a[contains(text(),'Чат')])[2]", "xpath:link"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.olx.bg/myaccount/answers')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "82cba13f-9456-4252-9cc9-836f59710c09",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"conversations-list-item-ed84a8ba-5773-4d62-b353-0346acafa433\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06479974-beaf-47f5-b416-51bd4f1dbe76",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-xfzmqu:nth-child(4)",
+      "targets": [
+        ["css=.css-xfzmqu:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div/div/div[2]/div/div/section[2]/section/div/div/div/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fbc917b-36ce-4769-b00b-2dcbd398baa5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.css-5b6ggn",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "a210fc09-2b6f-4f9a-b6b9-637f23eb4c19",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/answers/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34ab8dca-c62b-4a18-9e71-fadc27b20f77",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=[data-testid=\"conversations-list-item-ed84a8ba-5773-4d62-b353-0346acafa433\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06721a0b-62f1-4acf-9823-c43eea0f24f9",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"empty-list\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "ae9f1b15-a352-4da2-8c67-8560b89a0a80",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"archived-conversations-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ed0af9e-e436-4d43-ab7d-4dcf601e8778",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"conversations-list-item-ed84a8ba-5773-4d62-b353-0346acafa433\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb43bc08-f22a-4fdf-9f0f-23d2a82ff296",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-xfzmqu:nth-child(4)",
+      "targets": [
+        ["css=.css-xfzmqu:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div/div/div[2]/div/div/section[2]/section/div/div/div/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "910fad39-cfe4-4472-a531-20ecb8f1c262",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.css-5b6ggn",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "b6ce23c0-401f-4a3b-8292-441499b7e523",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/answers/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01411673-bae3-4bba-9fda-1143827a40c2",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"conversations-list-item-ed84a8ba-5773-4d62-b353-0346acafa433\"]",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "8c781ac3-0e99-4961-9f95-0df0cb2920c1",
+    "name": "MyProfileWhenLoggedIn",
+    "commands": [{
+      "id": "966eca99-7f8c-4264-9a1f-3e06bcb3dbeb",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "efede43f-a371-4e70-af95-235490b29c0e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d971817-3890-4865-9c27-8fc13b29ca3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"myolx-link\"]",
+      "targets": [
+        ["css=.css-1acola7", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f4bc522-6fdb-46bf-86bb-9e9c69ab2159",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"qa-user-dropdown\"]",
+      "targets": [
+        ["id=username", "id"],
+        ["name=username", "name"],
+        ["css=#username", "css:finder"],
+        ["xpath=//input[@id='username']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/div/div/div/div/div/div[2]/div[3]/div[2]/form/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "3000"
+    }]
+  }, {
+    "id": "f4e874f7-c1e3-43dd-b48c-8bccbaaa0c5c",
+    "name": "Payments",
+    "commands": [{
+      "id": "49d0fe1d-3f86-4f53-8fa6-e99657e0b70f",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f88a6641-1e60-42ac-adb1-8011c9ffee4f",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4baf3412-5b77-4cc8-a85b-884b67cfe373",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-8hfe9g:nth-child(3) .css-15dqzk8",
+      "targets": [
+        ["css=.css-8hfe9g:nth-child(3) .css-15dqzk8", "css:finder"],
+        ["xpath=(//a[contains(text(),'Плащания')])[2]", "xpath:link"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[3]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/myaccount/history/')])[2]", "xpath:href"],
+        ["xpath=//div[3]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d8062a8-774b-462d-a03b-5f1a987a99f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1c1xubp > .n-button-text-wrapper",
+      "targets": [
+        ["css=.css-1c1xubp > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/div/a[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Е-фактури')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cf4615d-28e5-49d1-aeb9-6b835ce7b537",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-r6s2ou > .n-button-text-wrapper",
+      "targets": [
+        ["css=.css-r6s2ou > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/div/a[3]/button/span", "xpath:idRelative"],
+        ["xpath=//a[3]/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Баланс')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8055cdd-a89a-4202-8321-93626e2ac15f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=th:nth-child(2)",
+      "targets": [
+        ["css=th:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='body-container']/div/div/div[2]/table/thead/tr/th[2]", "xpath:idRelative"],
+        ["xpath=//th[2]", "xpath:position"],
+        ["xpath=//th[contains(.,'Описание')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0f3c83af-c1e1-41dd-af0a-605ed336a390",
+    "name": "SaveChat",
+    "commands": [{
+      "id": "ceec4104-4531-4836-83dd-515db02f6c67",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8946e67f-5706-4e01-ad22-96eb2073a983",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/answers/?observed=1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3efe95b-5636-43c0-8307-3cbc0d1ef7c6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"empty-list\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "ee6ea5da-fec8-4c53-b9fa-020e8b5c0f74",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/answers/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abff77f4-6e04-45ab-be1b-1b5224decf9b",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"conversations-list-item-ed84a8ba-5773-4d62-b353-0346acafa433\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f7eed5e5-9fb4-4d94-a41e-6a522fc2819f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-xfzmqu:nth-child(1)",
+      "targets": [
+        ["css=.css-xfzmqu:nth-child(1)", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div/div/div[2]/div/div/section[2]/section/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//section/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff9c4824-05da-4b2f-a6ac-202fe968c6fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observed-conversations-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24ee1d42-dc05-4fab-8922-9118b87ae9be",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"conversations-list-item-ed84a8ba-5773-4d62-b353-0346acafa433\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de56f2e7-47bd-4219-a212-055e446d0045",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"list-item-fav-button-filled\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca839a81-9895-4fd4-9046-ba7ef4c5ef22",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"empty-list\"]",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "3a48cd0d-a6ff-4ccf-b00f-ed26cf5d5495",
+    "name": "PermanentlyDeleteChat",
+    "commands": [{
+      "id": "61bd7bbb-9c6d-4126-a6f2-136b2a28faff",
+      "comment": "",
+      "command": "store",
+      "target": "b",
+      "targets": [],
+      "value": "message"
+    }, {
+      "id": "2de99486-bb81-4346-b00b-406199913814",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5cdb275-a0af-4f12-a064-e75a2df5b6a0",
+      "comment": "",
+      "command": "// Type message",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dfa76e38-6cd8-4b33-9d2e-3a2d120bb8b7",
+      "comment": "",
+      "command": "open",
+      "target": "/d/ad/medal-45-godini-organi-na-mvr-CID1609-ID9E2Kg.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e09ce2a8-babe-4d48-a6bf-1c2418c4c881",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"ad-contact-message-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c80abb3-d291-4c59-9489-8170578f20c4",
+      "comment": "",
+      "command": "type",
+      "target": "name=message.text",
+      "targets": [],
+      "value": "${message}"
+    }, {
+      "id": "63ec5410-0d5a-4aef-b380-2423a7632f09",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-15wjrqi",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4096defe-5771-4e6a-ba78-94ddc576597a",
+      "comment": "",
+      "command": "// Permanently delete message",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3bc132f5-251b-41fa-a91a-517f5147ee80",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1fd4cc22-1099-449f-8ff4-e2958d78ea90",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-8hfe9g:nth-child(2) .css-15dqzk8",
+      "targets": [
+        ["css=.css-8hfe9g:nth-child(2) .css-15dqzk8", "css:finder"],
+        ["xpath=(//a[contains(text(),'Чат')])[2]", "xpath:link"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.olx.bg/myaccount/answers')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "31e68432-c76a-4c44-a9f1-1f602e5927a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"conversations-list-item-1867ae75-e3b2-4907-9354-9b2f40ef4617\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18076d6d-fe27-4a5b-adec-35289ddf9160",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-xfzmqu:nth-child(4)",
+      "targets": [
+        ["css=.css-xfzmqu:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div/div/div[2]/div/div/section[2]/section/div/div/div/button[4]", "xpath:idRelative"],
+        ["xpath=//button[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72234876-5c61-4982-b593-99b4fc90ea9a",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.css-5b6ggn",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "845e2ca6-dd31-47eb-8936-d3dc6cd060e7",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/answers/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e4f8bff-4f8d-457b-be4d-82b0f5ae39a3",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=[data-testid=\"conversations-list-item-ed84a8ba-5773-4d62-b353-0346acafa433\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4e0122b-5fe6-4142-b64b-b5bf51efca2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"archived-conversations-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82b9fe81-2786-46b1-83c2-828ff3e9f297",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"conversations-list-item-1867ae75-e3b2-4907-9354-9b2f40ef4617\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "829f3772-8483-4ae2-ad6a-b9fd90e4535b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-xfzmqu:nth-child(5)",
+      "targets": [
+        ["css=.css-xfzmqu:nth-child(5)", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div/div/div[2]/div/div/section[2]/section/div/div/div/button[5]", "xpath:idRelative"],
+        ["xpath=//button[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "593d0996-e59d-4f81-a1ff-eb79f7007266",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1ks88m9:nth-child(2)",
+      "targets": [
+        ["css=.css-1ks88m9:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div/div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Изтрий съобщението')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8308aca0-3dc2-41ab-a14f-5a59846773eb",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/answers/?archived=1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "578d1985-d423-428d-9d28-9e6cea3e78a6",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"empty-list\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "54fda276-1498-4ec9-9a82-7c6e84ae3b32",
+      "comment": "",
+      "command": "waitForElementNotPresent",
+      "target": "css=[data-testid=\"conversations-list-item-1867ae75-e3b2-4907-9354-9b2f40ef4617\"]",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "28bb50f3-a908-4a2b-8a6f-8f70512e4cba",
+    "name": "TopUpBalance",
+    "commands": [{
+      "id": "9e1582eb-d268-4169-92aa-a459adef75b0",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c2eab065-5a97-4d1c-903d-9da8b7e8bcd5",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38bc7180-9971-47f7-8757-ca2d74098580",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"topup-wallet-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e5f8810-d483-4e8e-8bff-16d65b87905f",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"label\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3dfc2fa1-fd65-4bd4-853f-3491ab999c76",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"purchase-pay-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e4af822-db4f-4d67-8466-b445971713a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"provider-epaybgcard\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e2ff1f8-af8f-4afe-8cd6-7850bb7b5e0b",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"purchase-pay-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7559aa64-1997-4e84-888d-82e32c029048",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=container",
+      "targets": [],
+      "value": "5000"
+    }]
+  }, {
+    "id": "308ac9c1-0e68-48ca-9c8b-adfecbe3ec63",
+    "name": "BuyPackage",
+    "commands": [{
+      "id": "b1524294-f97f-4f63-b955-07bb7863de58",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7dc9d35a-828a-48b0-b018-6398ccb91bd4",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b21d7709-b7de-4469-bfc9-6595b34fe1d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"buy-package-link-top\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "008c895b-92f7-4cd1-a196-570491dce535",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Услуги",
+      "targets": [
+        ["linkText=Услуги", "linkText"],
+        ["css=.css-1f0s3sj:nth-child(1) > .css-1da5oxz", "css:finder"],
+        ["xpath=//div[@id='purchase-mf-container']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/purchase/packages/group/?category-id=555&index=0&bs=myaccount_buypackage')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Услуги')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a777223e-248d-400b-84f2-11f053c3499a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=MAX Услуги-Болногледачи, хосписи",
+      "targets": [
+        ["linkText=MAX Услуги-Болногледачи, хосписи", "linkText"],
+        ["css=.css-17fi19b:nth-child(1) > a", "css:finder"],
+        ["xpath=//div[@id='purchase-mf-container']/div[3]/div[2]/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/purchase/packages/variant/?group-id=b4796796-46ea-4b8f-9b48-d1f6a1e65d28&bs=myaccount_buypackage')]", "xpath:href"],
+        ["xpath=//div[2]/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'MAX Услуги-Болногледачи, хосписи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27437148-65e3-462f-81c2-da3d54e24a57",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"select-5\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7c78e6a6-23e7-4cc3-a8de-4db9a9778c83",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"show-category-modal\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9ae62923-f25d-4ee1-9d86-61ef0c4fa91e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-o2mp51 path",
+      "targets": [
+        ["css=.css-o2mp51 path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fa0011e-6ffd-4e0c-96ae-2e34c2941151",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"offered-product-submit-button\"]",
+      "targets": [
+        ["css=.css-o2mp51 path", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "243873a8-f375-4884-a766-56af546cf06a",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"provider-epaybgcard\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "56768b66-c3bc-4982-97cc-eef4f62c5a0d",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"purchase-pay-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66f08faf-58bd-41e4-abbe-d42799f7a0d5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=container",
+      "targets": [],
+      "value": "5000"
+    }]
+  }, {
+    "id": "5af6757f-e877-4014-9598-7c1b2721caa4",
+    "name": "BlockAndRestoreChat",
+    "commands": [{
+      "id": "41082112-9766-45a0-a2c3-cf20ee2a9954",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "163e5961-96ad-4c71-8bfe-1353ffa1bf13",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd8dba33-bfb4-4a10-976f-9c3efacaeb7d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-8hfe9g:nth-child(2) .css-15dqzk8",
+      "targets": [
+        ["css=.css-8hfe9g:nth-child(2) .css-15dqzk8", "css:finder"],
+        ["xpath=(//a[contains(text(),'Чат')])[2]", "xpath:link"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.olx.bg/myaccount/answers')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "672cb275-d24f-4739-be52-c178afef8ad0",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"conversations-list-item-ed84a8ba-5773-4d62-b353-0346acafa433\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8f79fcd-5a60-4ebc-b5d8-5712b8bb3e26",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"chat-form-container\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12c88fc5-c9ec-4c25-83ad-09175b8c5b60",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-xfzmqu:nth-child(2)",
+      "targets": [
+        ["css=.css-xfzmqu:nth-child(2)", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div/div/div[2]/div/div/section[2]/section/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div/div/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abbd4e65-57bf-4141-84b9-418d2e9f5a69",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"accept-btn\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aada5742-defb-47d9-a224-8b3b24fff16f",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38d3df95-ac5c-46a0-8203-222e7e8cc56d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-16pdvt0",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa60e82b-ed2c-4889-a44c-e6f0a4c793da",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=[data-testid=\"chat-form-container\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed5db35f-82de-44ab-bf26-432fcf4ffd3a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.css-1th02is",
+      "targets": [
+        ["css=.css-1th02is", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div/div/div[2]/div/div/section[2]/section[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//section[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e536b23-7d0a-4b12-8c6b-40037e4b0c19",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-s8o8pm > .css-1ks88m9",
+      "targets": [
+        ["css=.css-s8o8pm > .css-1ks88m9", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div/div/div[2]/div/div/section[2]/section[2]/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Отблокирай')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "506b0f70-34be-4e04-b2f7-c2b069dab22c",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"chat-form-container\"]",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "00cb2852-972f-438c-b7c4-cb0fad0d3742",
+    "name": "Delivery",
+    "commands": [{
+      "id": "e3221a71-b068-4612-b38d-551396ae2ac1",
+      "comment": "",
+      "command": "store",
+      "target": "aaaaaa",
+      "targets": [],
+      "value": "name"
+    }, {
+      "id": "3b00ab02-6a42-4492-ad63-c6efe7e4e8e7",
+      "comment": "",
+      "command": "store",
+      "target": "0891234567",
+      "targets": [],
+      "value": "phone"
+    }, {
+      "id": "7f16aac6-15ce-49ca-8406-d5f92e8b4542",
+      "comment": "",
+      "command": "store",
+      "target": "a@a.com",
+      "targets": [],
+      "value": "email"
+    }, {
+      "id": "876cb847-a6d9-4e5f-b4e9-5c2b0b5d9f41",
+      "comment": "",
+      "command": "store",
+      "target": "С",
+      "targets": [],
+      "value": "cityStartingLetter"
+    }, {
+      "id": "a0ddd03c-f436-492f-9c57-8c23d5ed1be6",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15bad8bf-e61e-4219-bb21-23896075c55a",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "950ac107-70c9-4043-b7cd-1eae9c0cccd9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Доставка",
+      "targets": [
+        ["linkText=Доставка", "linkText"],
+        ["css=.css-8hfe9g:nth-child(6) .css-15dqzk8", "css:finder"],
+        ["xpath=//a[contains(text(),'Доставка')]", "xpath:link"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[6]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'https://www.olx.bg/shipping')])[2]", "xpath:href"],
+        ["xpath=//div[6]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "047c30c5-2a77-48a0-83e4-d5b4289da92d",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "a544ff85-92cb-4e1c-ab8e-b2c82d64ec0f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Избери",
+      "targets": [
+        ["linkText=Избери", "linkText"],
+        ["css=.text-center:nth-child(1) > .forward-button", "css:finder"],
+        ["xpath=//a[contains(text(),'Избери')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/bg/8?culture=bg&userId=391411914&token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozOTE0MTE5MTQsImlzcyI6Im9seGJnIiwiaWF0IjoxNzY2NTE1NTIyLCJleHAiOjE3NjY1MTczMjJ9.HKg2vWwiQQgOX2qQMvPGtPEEDQVQ4Ap6XRhoSjJEwZc')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Избери')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d501a833-ad17-4e1e-b473-a71f99a74eba",
+      "comment": "",
+      "command": "// Enter sender info",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26a92b3e-b0cd-4b67-9465-1dfed10c1b42",
+      "comment": "",
+      "command": "type",
+      "target": "id=senderName",
+      "targets": [
+        ["id=senderName", "id"],
+        ["name=senderName", "name"],
+        ["css=#senderName", "css:finder"],
+        ["xpath=//input[@id='senderName']", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${name}"
+    }, {
+      "id": "9ee0de4d-44ab-4fe5-be1d-2d3a28fb1d68",
+      "comment": "",
+      "command": "type",
+      "target": "id=senderPhone",
+      "targets": [
+        ["id=senderPhone", "id"],
+        ["name=senderPhone", "name"],
+        ["css=#senderPhone", "css:finder"],
+        ["xpath=//input[@id='senderPhone']", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div/div/div[4]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/input", "xpath:position"]
+      ],
+      "value": "${phone}"
+    }, {
+      "id": "06cbad68-2b97-4f64-91ac-4359c0e70d3e",
+      "comment": "",
+      "command": "type",
+      "target": "id=senderEmail",
+      "targets": [
+        ["id=senderEmail", "id"],
+        ["name=senderEmail", "name"],
+        ["css=#senderEmail", "css:finder"],
+        ["xpath=//input[@id='senderEmail']", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div/div/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "eb7434d7-b3c0-4653-a26a-369b6627e773",
+      "comment": "",
+      "command": "type",
+      "target": "id=senderPopulatedPlace",
+      "targets": [
+        ["id=senderPopulatedPlace", "id"],
+        ["name=senderPopulatedPlace", "name"],
+        ["css=#senderPopulatedPlace", "css:finder"],
+        ["xpath=//input[@id='senderPopulatedPlace']", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div/div/div[6]/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/input", "xpath:position"]
+      ],
+      "value": "${cityStartingLetter}"
+    }, {
+      "id": "02c07746-61bf-4e7c-96be-174ae22aac82",
+      "comment": "",
+      "command": "click",
+      "target": "css=.autocomplete-option:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd18eac5-9a21-4a2f-9eaf-93ff696246e7",
+      "comment": "",
+      "command": "select",
+      "target": "id=senderFixedPoint",
+      "targets": [],
+      "value": "label=[econt] София 24/7 Еконтомат - Кауфланд Изгрев - София жк Изгрев бул. Д-р Г. М. Димитров №12"
+    }, {
+      "id": "e8b22108-a0b7-4dc9-b562-f81f740a3a5a",
+      "comment": "",
+      "command": "// Open sender map",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "793e91cb-d733-48be-8725-5c3fb8dd029d",
+      "comment": "",
+      "command": "click",
+      "target": "id=sender_map_button",
+      "targets": [
+        ["id=sender_map_button", "id"],
+        ["css=#sender_map_button", "css:finder"],
+        ["xpath=//button[@id='sender_map_button']", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div/div/div[9]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Карта')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "510c1ed0-b617-46c8-8865-3124f009ba09",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Затворете",
+      "targets": [
+        ["linkText=Затворете", "linkText"],
+        ["css=.dialog-close", "css:finder"],
+        ["xpath=//a[contains(text(),'Затворете')]", "xpath:link"],
+        ["xpath=//body/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Затворете')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "beabc104-a9a2-4a39-81f5-4b5e01b03d74",
+      "comment": "",
+      "command": "// Enter recipient info",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c6202f6-1a13-47e7-8448-0a55c0a26492",
+      "comment": "",
+      "command": "type",
+      "target": "id=recipientName",
+      "targets": [
+        ["id=recipientName", "id"],
+        ["name=recipientName", "name"],
+        ["css=#recipientName", "css:finder"],
+        ["xpath=//input[@id='recipientName']", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "${name}"
+    }, {
+      "id": "ae61064c-306e-461f-8aff-636cb017ea43",
+      "comment": "",
+      "command": "type",
+      "target": "id=recipientPhone",
+      "targets": [
+        ["id=recipientPhone", "id"],
+        ["name=recipientPhone", "name"],
+        ["css=#recipientPhone", "css:finder"],
+        ["xpath=//input[@id='recipientPhone']", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div/div[2]/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[4]/input", "xpath:position"]
+      ],
+      "value": "${phone}"
+    }, {
+      "id": "128cdbad-913b-448a-84d5-ad6aff9053d3",
+      "comment": "",
+      "command": "type",
+      "target": "id=recipientEmail",
+      "targets": [
+        ["id=recipientEmail", "id"],
+        ["name=recipientEmail", "name"],
+        ["css=#recipientEmail", "css:finder"],
+        ["xpath=//input[@id='recipientEmail']", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div/div[2]/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[5]/div/input", "xpath:position"]
+      ],
+      "value": "${email}"
+    }, {
+      "id": "3db42df3-6600-4bbc-95c4-57bdfaa1c282",
+      "comment": "",
+      "command": "type",
+      "target": "id=recipientPopulatedPlace",
+      "targets": [
+        ["id=recipientPopulatedPlace", "id"],
+        ["name=recipientPopulatedPlace", "name"],
+        ["css=#recipientPopulatedPlace", "css:finder"],
+        ["xpath=//input[@id='recipientPopulatedPlace']", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div/div[2]/div[6]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[6]/div/input", "xpath:position"]
+      ],
+      "value": "${cityStartingLetter}"
+    }, {
+      "id": "aa6420f7-64c8-4862-a8ac-b13e24d2e99f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.visible > .autocomplete-option:nth-child(1)",
+      "targets": [
+        ["css=.visible > .autocomplete-option:nth-child(1)", "css:finder"],
+        ["xpath=//form[@id='courier_form']/div/div/div[2]/div[6]/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[6]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bd86b1a-85d6-443a-a4c6-59a54639196f",
+      "comment": "",
+      "command": "select",
+      "target": "id=recipientFixedPoint",
+      "targets": [],
+      "value": "label=[econt] София 24/7 Еконтомат - Кауфланд Изгрев - София жк Изгрев бул. Д-р Г. М. Димитров №12"
+    }, {
+      "id": "a4a73d8d-f2ac-4341-bd2f-8817d75d0088",
+      "comment": "",
+      "command": "// Open recipient map",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d55f36d6-5dfd-4064-a1da-17152a2f9835",
+      "comment": "",
+      "command": "click",
+      "target": "id=recipient_map_button",
+      "targets": [
+        ["id=recipient_map_button", "id"],
+        ["css=#recipient_map_button", "css:finder"],
+        ["xpath=//button[@id='recipient_map_button']", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div/div[2]/div[9]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[9]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fbc91cc-0de8-4e3f-9991-1a2f53fb3edc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Затворете",
+      "targets": [
+        ["linkText=Затворете", "linkText"],
+        ["css=.dialog-close", "css:finder"],
+        ["xpath=//a[contains(text(),'Затворете')]", "xpath:link"],
+        ["xpath=//body/div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Затворете')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed50f8a1-e407-43a4-9bd4-f9b6ac877476",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(4) .forward-button",
+      "targets": [
+        ["css=.row:nth-child(4) .forward-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//form[@id='courier_form']/div/div[2]/div[2]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Продължи')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ee7d562-8f56-4a8d-959e-f3c6dd9893a1",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.row:nth-child(2) > .col-6 .forward-button",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "3f2f811f-3f15-46e4-952d-2467f798df5e",
+    "name": "NotificationsHubWhenLoggedIn",
+    "commands": [{
+      "id": "ebf7aad3-bd1e-4d36-8e73-b507b48b4cd3",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "874b2a36-197a-4ec5-ad18-4f3a40cd869e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9c18a0f-90e8-4241-89eb-c54396ddb2e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-cy=\"h-notification\"]",
+      "targets": [
+        ["css=.css-1acola7", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "11c2f874-237a-4452-b3aa-88c4522f1e75",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"notification-hub-dropdown\"]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "86770619-5755-4865-90a0-4e4cb332f5af",
+    "name": "FavouriteSearchesWhenLoggedIn",
+    "commands": [{
+      "id": "40ac889f-381a-41a7-aa26-869537b1290f",
+      "comment": "",
+      "command": "store",
+      "target": "котка",
+      "targets": [],
+      "value": "search"
+    }, {
+      "id": "aad17eeb-feda-4cf9-96ac-3bc0a6d3e824",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "948858fd-ebe0-491f-9b80-ca725b1f476a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21f0184c-3aeb-45b0-b0fb-60d0b8ef2b83",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observed-page-link\"]",
+      "targets": [
+        ["css=.css-oo5g20", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "b247539a-5620-4b7d-8f0f-edfe208b13f5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"empty-searches-list\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "e639dadb-0902-4af5-86f4-c2884588fed8",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"olx-logo-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c59bf57f-4e61-4117-b560-d13ea52c704c",
+      "comment": "",
+      "command": "type",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='searchmain-container']/div/div[2]/div/div/form/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${search}"
+    }, {
+      "id": "69f4ee22-7c99-4469-b260-76cdc2631126",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"search-submit\"]",
+      "targets": [
+        ["name=searchBtn", "name"],
+        ["css=.css-kfd0s0", "css:finder"],
+        ["xpath=//button[@name='searchBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='searchmain-container']/div/div[2]/div/div/form/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Търсене')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de418c18-18ed-4b2b-a520-0be4e959cddf",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"fav-search-btn\"]",
+      "targets": [
+        ["name=searchBtn", "name"],
+        ["css=.css-kfd0s0", "css:finder"],
+        ["xpath=//button[@name='searchBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='searchmain-container']/div/div[2]/div/div/form/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Търсене')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6341e84-4d3c-4834-b09e-13e2bd6673b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observed-page-link\"]",
+      "targets": [
+        ["css=.css-oo5g20", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "61b66515-b134-4e9d-bc86-6f9dfbd8d6e5",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-cy=\"observed-search-item\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "b7569b7c-3319-4c34-ac38-3961853c9dac",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"search-remove\"]",
+      "targets": [
+        ["css=.css-oo5g20", "css:finder"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3f2b5597-59db-4953-92a5-8859d4b2ea1c",
+    "name": "ListingFavouriteWhenLoggedIn",
+    "commands": [{
+      "id": "52473cd3-2bd2-4487-b390-1b92a7217891",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c18aa958-ddb5-4c81-abf6-cada99a59b32",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e150f652-2161-4252-81e8-058a8f4d0a9a",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=[data-testid=\"l-card\"]:first-of-type .jobs-ad-card h4, [data-testid=\"l-card\"]:first-of-type p.css-1pktvhb a",
+      "targets": [],
+      "value": "listingTitle"
+    }, {
+      "id": "095e64b2-baf3-4991-8ec7-4a2ae333ab11",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"]:first-of-type a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6101afe-58df-48b1-88da-24a52d42c019",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observe-ad\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df02db32-28d6-4e53-b3f2-565a5aa38ac4",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observed-page-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8bd667eb-529e-4554-9a08-a1963449199c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(1)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div/div[2]/div/div/div/div/header/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Любими обяви (1/150)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c6d7099-3f3c-4373-bb17-3f60621edf38",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=[data-cy=\"l-card\"]:first-of-type .jobs-ad-card h4, [data-cy=\"l-card\"]:first-of-type [data-cy=\"ad-card-title\"] h4",
+      "targets": [],
+      "value": "firstListingInFavourites"
+    }, {
+      "id": "99bfd96c-c7dd-4cd0-9393-78f85ebf1d90",
+      "comment": "",
+      "command": "assert",
+      "target": "firstListingInFavourites",
+      "targets": [],
+      "value": "${listingTitle}"
+    }, {
+      "id": "d14eca4d-e813-42f6-b864-e93889c1dbe5",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"adAddToFavorites\"]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "8034b26d-de55-485e-9954-93085ffad11d",
+    "name": "PromoteListingWhenLoggedIn",
+    "commands": [{
+      "id": "d06b5bb8-a5e0-49bf-939c-8cb057e85607",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5aede6d0-e0b0-4535-8742-b36fb1b0d555",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca5560f7-c6ab-465b-a128-e21d1fd8d368",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc53091c-ef7f-4ceb-9bd7-f491fb941193",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"promotion-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b1894ee-8010-42f8-a521-e9027dcde923",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"promoted_ad_7\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c35fd74e-0b5b-41db-92f1-2e5380235f25",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"pushup_automatic\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6160d0bd-b151-41ad-a981-585eb18bda52",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"homepageads_7\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5425fc6e-4b6b-42ce-b0b5-4bdae2521b10",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"purchase-pay-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "de55a2e7-abb7-4281-bcb4-c1bbda61cd0c",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"provider-epaybgcard\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24146338-94a2-46d1-9b86-d217b86ab882",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"purchase-pay-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91e93cbf-b7f0-48e0-a3fe-580f5e3b971b",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=container",
+      "targets": [],
+      "value": "5000"
+    }]
+  }, {
+    "id": "381e0338-0b48-4094-96ec-8f809e3b1961",
+    "name": "RefreshListingWhenLoggedIn",
+    "commands": [{
+      "id": "093d2a45-9765-47d0-900f-f4d9f4e4d662",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef1e0923-0af7-4793-aef1-50c3e60ab5ea",
+      "comment": "",
+      "command": "open",
+      "target": "/ads/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f33ca4ca-641e-46e9-baf9-89a20149cafe",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab4ac47b-2c4c-4e8e-b8f7-4cab8eba145c",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"refresh-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0821ea96-5e65-4035-8bff-7d0f66ac3ffb",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"provider-epaybgcard\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31b4f227-97df-4139-aaf3-4e546567b464",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"purchase-pay-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8634c5ec-13ed-463f-863a-c7b3f479a525",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=container",
+      "targets": [],
+      "value": "5000"
+    }]
+  }, {
+    "id": "9e89c803-23e0-4b17-af74-6f6d6160e9c1",
+    "name": "JobLocation",
+    "commands": [{
+      "id": "0efd5fe0-697b-43bb-95f2-014c7cf97d68",
+      "comment": "",
+      "command": "open",
+      "target": "/rabota/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35abb885-6429-45ce-be35-2f6394ac6270",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fab985e4-0300-493b-9ca8-a9fccd063f0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"open-dialog\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9444cb89-c09e-4912-998b-af2db8d34f2f",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"dialog-body-desktop\"]",
+      "targets": [],
+      "value": "3000 "
+    }]
+  }, {
+    "id": "9a69edf9-b54c-466a-a13c-cce678b5481c",
+    "name": "JobPhoneNumber",
+    "commands": [{
+      "id": "1ef97243-1749-44ed-878a-3f4ffe56ea00",
+      "comment": "",
+      "command": "store",
+      "target": "Обади се / SMS",
+      "targets": [],
+      "value": "initialButtonText"
+    }, {
+      "id": "a5c4b415-4835-4275-9034-f8cfae044ead",
+      "comment": "",
+      "command": "open",
+      "target": "/rabota/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4d3a3c1d-1804-4618-8052-2ee2e2641361",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "39389f2c-b201-4c0d-9e04-221fce9f3391",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"job-ad-desktop-container\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "b40e0907-1967-4942-ad66-48329ad85114",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href;",
+      "targets": [],
+      "value": "url"
+    }, {
+      "id": "e1e7c86e-68b1-41d4-9c86-8250a0601383",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector('[data-testid=\"ad-login-dialog\"]') !== null",
+      "targets": [],
+      "value": "loginRequired"
+    }, {
+      "id": "d4df4edd-ac13-4012-934e-d689841cc12e",
+      "comment": "",
+      "command": "if",
+      "target": "${loginRequired}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5a3ee830-f837-4cc6-9e9c-7ac4a958a632",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"login-button\"]",
+      "targets": [
+        ["css=.css-1hfqj1m > .css-1ks88m9", "css:finder"],
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//div[@id='mainContent']/div/div[2]/div[3]/div[2]/div/div/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30bc8bc8-4891-4b3d-932a-8ce48d50289f",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa97aa55-1a54-4b12-9f16-c261106918ef",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"qa-user-dropdown\"]",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "91106beb-85ff-4d67-bc57-0b1bf2a8adb5",
+      "comment": "",
+      "command": "open",
+      "target": "${url}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6275a3c3-0371-4f06-b45c-14cc560558c6",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e73603a6-14fc-4d65-afad-9e8f21732eea",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"job-ad-desktop-container\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "eb80345e-fcdc-4e8b-af3d-6bcb80998fc1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector('[data-testid=\"call-button\"]') !== null",
+      "targets": [],
+      "value": "jobHasPhone"
+    }, {
+      "id": "4d1c59b7-ac69-4e27-98bc-67feb10380b9",
+      "comment": "",
+      "command": "if",
+      "target": "${jobHasPhone}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fb8ed750-2586-4cbd-8880-54fa16677d2f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.n-button-text-wrapper > span",
+      "targets": [
+        ["css=.n-button-text-wrapper > span", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/main/aside/div/section/div/button/span/span", "xpath:idRelative"],
+        ["xpath=//button/span/span", "xpath:position"]
+      ],
+      "value": "${initialButtonText}"
+    }, {
+      "id": "f0ddc1e3-8bce-4448-b816-0fafe6342a9d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=[data-testid=\"call-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0fd16b11-ad81-4eca-940f-38068913c576",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"call-button\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84054daa-683d-4c2f-ab81-98bf2afce242",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"primary-phone\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "53fc5ca6-49b2-4c89-b12b-750f20b3e183",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0975cb35-a58d-445d-a586-17e1afb343ca",
+    "name": "JobFavouriteWhenLoggedIn",
+    "commands": [{
+      "id": "c592483a-e6db-4152-b094-be8870b5125c",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a70a7842-b440-476b-82e6-8d4dd8116446",
+      "comment": "",
+      "command": "open",
+      "target": "/rabota/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c9ef06a-e21f-447d-9577-4cab1df8eba5",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=[data-testid=\"l-card\"]:first-of-type h4",
+      "targets": [],
+      "value": "jobTitle"
+    }, {
+      "id": "93fb8991-50ae-4217-ae2a-d1c760f3fe40",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"]:first-of-type a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c6baed2-3a4f-45e9-a6f5-9eaaedeae808",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1qjtpnp",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2f8dff01-8d85-4c0f-8db7-a623a02ac274",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observed-page-link\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f0a019f-ecf0-4674-af87-27bc870af8b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-ztlboi:nth-child(1)",
+      "targets": [
+        ["css=.css-ztlboi:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div/div/div[2]/div/div/div/div/header/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Любими обяви (1/150)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "902e5e3c-3afe-4ad4-b07a-80d7a6c663b0",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=[data-cy=\"l-card\"]:first-of-type .jobs-ad-card h4, [data-cy=\"l-card\"]:first-of-type [data-cy=\"ad-card-title\"] h4",
+      "targets": [],
+      "value": "firstJobInFavourites"
+    }, {
+      "id": "42d5cff9-6031-4967-84b2-c3ce782cedc7",
+      "comment": "",
+      "command": "assert",
+      "target": "firstJobInFavourites",
+      "targets": [],
+      "value": "${jobTitle}"
+    }, {
+      "id": "041dc27f-9d78-4d4b-8476-3542b0bdbc6b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1gwss3h",
+      "targets": [
+        ["css=.css-1gwss3h", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='146488822']/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "9a507d00-3f01-4c8d-b200-51bf0e551073",
+    "name": "JobFavouriteWhenLoggedOut",
+    "commands": [{
+      "id": "b77cb622-dc35-42b9-949f-fcadab6396ce",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17ddc02b-86f4-4385-83c3-7a5f25f9f315",
+      "comment": "",
+      "command": "open",
+      "target": "/rabota/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57ba6b8a-f9d0-4547-817a-7865757869a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"] a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e270ce6-7a24-448d-a2fb-a4568de194fa",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-1qjtpnp",
+      "targets": [
+        ["css=.css-1qjtpnp", "css:finder"]
+      ],
+      "value": ""
+    }, {
+      "id": "663445e5-e8eb-4ac1-b4b8-60cb78cdf4ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"observed-log-in-button\"]",
+      "targets": [
+        ["css=.css-1ks88m9:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='button'])[57]", "xpath:attributes"],
+        ["xpath=//div[10]/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Влез или се регистрирай')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22e38966-5e78-4d59-91e5-bd9aa41c9b0e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=username",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "46aafaa2-98f2-4366-a119-d09404c2222b",
+    "name": "JobApplicationWhenLoggedOut",
+    "commands": [{
+      "id": "56dcc076-b9d1-4898-9b4a-f8764c4e83e4",
+      "comment": "",
+      "command": "run",
+      "target": "LogOutIfLoggedIn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f5d7197-7bdb-4297-8d6c-2b273c0b3a1f",
+      "comment": "",
+      "command": "open",
+      "target": "/rabota/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0528af50-e3f7-4057-a938-71305d23b058",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"]:first-of-type a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ddfad27-f722-4f2d-80c7-982796b6f7a5",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"apply-button\"]",
+      "targets": [
+        ["css=.css-194emtx", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/main/aside/div/section/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ad/job/kandidatstvane/montazhnik-na-ovik-CID606-ID9QQe3.html?search_reason=search%7Cpromoted&ad_applied=0&ad_visited=1')])[2]", "xpath:href"],
+        ["xpath=//section/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32369423-e26a-4fa3-8854-8f35bfbd2c93",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "id=username",
+      "targets": [],
+      "value": "3000"
+    }]
+  }, {
+    "id": "334579ec-6910-4c58-97e8-f1bde060c21a",
+    "name": "JobApplicationWhenLoggedIn",
+    "commands": [{
+      "id": "07c57263-fb30-48ac-9438-6ce62cf909cf",
+      "comment": "",
+      "command": "run",
+      "target": "LogInIfLoggedOut",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f377b1c9-2b04-40b3-8645-68177dd678bf",
+      "comment": "",
+      "command": "open",
+      "target": "/rabota/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47fb985b-cbac-477e-a12c-6a42ff0fe7b6",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=[data-testid=\"l-card\"]:first-of-type h4",
+      "targets": [],
+      "value": "jobTitle"
+    }, {
+      "id": "93cdba73-4744-42e7-9a72-aa541c2b640d",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"l-card\"]:first-of-type a",
+      "targets": [
+        ["css=#\\31 36104810 .css-1apmciz .css-1tqlkj0", "css:finder"],
+        ["xpath=//div[@id='136104810']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/d/ad/video-proektor-apeman-lc450-CID632-ID9d54S.html')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b94edd4-a1d1-4c61-bc5d-e9183a78dc0c",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"apply-button\"]",
+      "targets": [
+        ["css=.css-194emtx", "css:finder"],
+        ["xpath=//div[@id='mainContent']/div[2]/main/aside/div/section/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/ad/job/kandidatstvane/montazhnik-na-ovik-CID606-ID9QQe3.html?search_reason=search%7Cpromoted&ad_applied=0&ad_visited=1')])[2]", "xpath:href"],
+        ["xpath=//section/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e81369bf-bb73-4d87-9ff6-867d36605776",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=[data-testid=\"apply-form-container\"]",
+      "targets": [],
+      "value": "3000"
+    }, {
+      "id": "d870aa00-c9b2-4fde-a214-d8fe79993eed",
+      "comment": "",
+      "command": "click",
+      "target": "css=[data-testid=\"submit-btn\"]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e974beb8-2b25-4bca-8404-79e5e54ff743",
+      "comment": "",
+      "command": "open",
+      "target": "/myaccount/tarsiarabota/kandidatstvania/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c27acda9-a999-4f36-ad0c-cf988266e908",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=tr.css-19rmsgk:first-of-type h2.css-1jgucvk",
+      "targets": [],
+      "value": "firstJobInApplications"
+    }, {
+      "id": "8a7bc6c4-43c4-4802-9e7e-537bf6bcf248",
+      "comment": "",
+      "command": "assert",
+      "target": "firstJobInApplications",
+      "targets": [],
+      "value": "${jobTitle}"
+    }, {
+      "id": "965f0552-f02c-464a-9909-e59c06d2a986",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr.css-19rmsgk:first-of-type button[aria-label=\"Expand application details\"]",
+      "targets": [
+        ["id=expand-toggle-7dc8d8e6-97e9-4dc9-bf8a-da5e2a2da1a7", "id"],
+        ["css=#expand-toggle-7dc8d8e6-97e9-4dc9-bf8a-da5e2a2da1a7", "css:finder"],
+        ["xpath=//button[@id='expand-toggle-7dc8d8e6-97e9-4dc9-bf8a-da5e2a2da1a7']", "xpath:attributes"],
+        ["xpath=//div[@id='candidate-profile-fm-content']/main/div/div[2]/article/div/table/tbody/tr/td[4]/button", "xpath:idRelative"],
+        ["xpath=//td[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Детайли и редакция')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dee210e-843f-4e1b-a0d4-c3c6a4d0501b",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr.css-19rmsgk:first-of-type + tr button.css-16yv2an",
+      "targets": [
+        ["id=expand-toggle-7dc8d8e6-97e9-4dc9-bf8a-da5e2a2da1a7", "id"],
+        ["css=#expand-toggle-7dc8d8e6-97e9-4dc9-bf8a-da5e2a2da1a7", "css:finder"],
+        ["xpath=//button[@id='expand-toggle-7dc8d8e6-97e9-4dc9-bf8a-da5e2a2da1a7']", "xpath:attributes"],
+        ["xpath=//div[@id='candidate-profile-fm-content']/main/div/div[2]/article/div/table/tbody/tr/td[4]/button", "xpath:idRelative"],
+        ["xpath=//td[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Детайли и редакция')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b562f245-ab66-4eea-8774-6201558535d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.css-19t1w01",
+      "targets": [
+        ["css=.css-16yv2an > .n-button-text-wrapper", "css:finder"],
+        ["xpath=//tr[@id='details-row.7dc8d8e6-97e9-4dc9-bf8a-da5e2a2da1a7']/td/div/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//tr[2]/td/div/div/div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Оттеглена кандидатура')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "419a2a44-d816-4944-b219-d788605dc6f0",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.css-c3a7yt",
+      "targets": [],
+      "value": "3000"
+    }]
   }],
   "suites": [{
     "id": "4ab18def-163f-47fd-a012-94d6746c8483",
@@ -1458,6 +5293,27 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["6fdeff4e-429e-4a0b-b300-2268d9603ffb", "32201624-1c34-469d-aa95-4d1cd75c23da", "5f98e782-132c-4868-b4b3-9cebe017e10f", "575b24f8-9b7b-4c4d-b1ec-c5b79f54235c", "d6c900ea-e0cf-48bf-8e20-1a2bd8528b8a", "e97959cc-0330-4dbb-a9d5-640e9767f0ff", "00141c87-d11d-49ca-9a85-f5e2d122eacc", "16d2c47c-9fa0-49e9-a842-805ada4e1bc4", "7133d40d-a487-4168-b504-b99d07d5de44"]
+  }, {
+    "id": "42c2459a-2b9d-4c1d-9d56-0b5456f58588",
+    "name": "NavigationSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e76762dd-184b-43b7-b33d-74d740a60b70", "d09a0112-983e-4a56-b7ef-a4a1319931e4", "6d2cf85f-f7b5-4aa8-82ac-28645d507f51", "47746d23-74c5-4a4d-82fc-edfa689ef670", "8c781ac3-0e99-4961-9f95-0df0cb2920c1", "8e29bd5d-1477-49ba-89f1-0b03e7d7509d", "3f2f811f-3f15-46e4-952d-2467f798df5e", "bb940a19-500b-49e0-a7a6-33c5ecbc6143", "86770619-5755-4865-90a0-4e4cb332f5af", "4c77c3e4-7933-49b5-835b-3058bfa9f0d0", "d78efc4e-9483-43e4-86d8-27485640ad57", "c0338295-f3f3-42a8-a85b-3de355d89ef7", "f2d98f31-af50-46c7-a814-79f156a8b249", "7e56badc-e691-4b49-a585-0a32db73fa2f", "0a983f5b-57e9-46e3-b91e-0784d6ad52c0"]
+  }, {
+    "id": "beb10964-cde4-4607-9c94-447ab8b0ef39",
+    "name": "ListingSuite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["1e8ee2b4-6c22-4cb3-9e5e-282ceff4828f", "917801c5-5e5f-4e68-9973-285d5b779644", "a5ba1478-8e12-4f5d-9097-30b9e942e960", "8034b26d-de55-485e-9954-93085ffad11d", "3ec75edc-324e-40f8-9373-0de6b4dc561e", "381e0338-0b48-4094-96ec-8f809e3b1961", "1ec3fcb3-f674-4bd5-8877-2adf95eef2cc", "9e89c803-23e0-4b17-af74-6f6d6160e9c1", "4f6e39a0-e11d-4c08-a283-cf0f6a33a399", "dec70e5b-6e14-48b2-9f36-58fd573e0442", "9a507d00-3f01-4c8d-b200-51bf0e551073", "3f2b5597-59db-4953-92a5-8859d4b2ea1c", "0975cb35-a58d-445d-a586-17e1afb343ca", "9e7a3c4f-eb68-4cee-a723-ed2d8ccd592d", "1b4998d7-28a2-4f0d-ab2c-0871e7d82b08", "67294f81-e860-4c8c-9ad8-361ec8ba0a3e", "9a69edf9-b54c-466a-a13c-cce678b5481c", "f838663f-4189-4460-aacd-c885e1ae5a16", "46aafaa2-98f2-4366-a119-d09404c2222b", "334579ec-6910-4c58-97e8-f1bde060c21a"]
+  }, {
+    "id": "9a1601b2-0e0d-46a4-98bf-dbc839311f33",
+    "name": "MyProfile",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["af300224-5c5e-4fbe-b837-88e58558dd4c", "f4e874f7-c1e3-43dd-b48c-8bccbaaa0c5c", "3a48cd0d-a6ff-4ccf-b00f-ed26cf5d5495", "28bb50f3-a908-4a2b-8a6f-8f70512e4cba", "308ac9c1-0e68-48ca-9c8b-adfecbe3ec63", "5af6757f-e877-4014-9598-7c1b2721caa4", "0f3c83af-c1e1-41dd-af0a-605ed336a390", "00cb2852-972f-438c-b7c4-cb0fad0d3742"]
   }],
   "urls": ["https://www.olx.bg/"],
   "plugins": []
